@@ -4,12 +4,8 @@
 int main(void)
 {
 
-    long n;
-    do
-    {
-        long n = get_long("Credit card number: ");
-    }
-    while( )
+    long n = get_long("Number: ");
+    if ()
 
 
 
