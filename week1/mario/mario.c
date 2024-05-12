@@ -19,10 +19,11 @@ int main(void)
     for ()
     {
         // creating each # or space in a row
-        for ()
+        for (w = 0; w < i; w++)
         {
             
         }
+        w = 0
     }
 
 }
