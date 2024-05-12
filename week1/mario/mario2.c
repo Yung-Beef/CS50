@@ -29,11 +29,11 @@ int main(void)
         printf("  ");
 
         // right side
-        for (int rc = 0; rc > h; rc--)
+        for (int rc = i; rc < h; rc++)
         {
             printf("#");
         }
-        for (int rd = i; rd < h; rd++)
+        for (int rd = 0; rd < h; rd++)
         {
             printf(" ");
         }
