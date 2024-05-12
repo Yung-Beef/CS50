@@ -3,20 +3,37 @@
 
 int main(void)
 {
-    // get user input for n
+    // get user input
     int i;
     do
     {
         i = get_int("Size: ");
     }
-    while (1 <=i <= 8);
+    while (i < 1 || i > 8);
 
-    int c = 0;
-    while (c < n)
+    // create pyramid
+
+    for (int h = 1; h <= i; h++)
     {
-        printf("#");
-        c++;
-    }
-    printf("\n");
+        for (int d = i; d > h; d--)
+        {
+            printf(" ");
+        }
+        for (int c = 0; c < h; c++)
+        {
+            printf("#");
+        }
+        printf("  ");
+        for (int c = 0; c > h; c--)
+        {
+            printf("#");
+        for (int d = i; d < h; d++)
+        {
+            printf(" ");
+        }
 
+
+
+        printf("\n");
+    }
 }
