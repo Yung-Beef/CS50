@@ -15,4 +15,14 @@ int main(void)
 
     // create pyramid
 
+    // creating each row
+    for ()
+    {
+        // creating each # or space in a row
+        for ()
+        {
+            
+        }
+    }
+
 }
