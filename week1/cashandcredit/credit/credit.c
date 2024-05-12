@@ -47,6 +47,7 @@ int main(void)
     if ((sum3 % 10) != 0)
     {
         printf("Invalid");
+        return 0;
     }
     else
     {
