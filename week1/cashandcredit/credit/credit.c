@@ -49,9 +49,13 @@ int main(void)
         printf("Invalid");
         return 0;
     }
-    else
+
+    // type of card
+    int length = 0;
+    while (n > 0)
     {
-        if ()
+        n = n / 10;
+        length++;
     }
 
 
