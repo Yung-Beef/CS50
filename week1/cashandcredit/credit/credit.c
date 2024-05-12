@@ -8,7 +8,10 @@ int main(void)
 
 
     // checksum
-        // 
+        // get n1 via modulo
+        int n1 = n % 10;
+
+        printf("%i\n", n1);
 
 
 
