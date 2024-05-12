@@ -3,8 +3,8 @@
 
 int main(void)
 {
-    int x = get_int("X ");
-    int y = get_int("Y ");
+    long x = get_long("X ");
+    long y = get_long("Y ");
 
-    printf("%i\n", x + y);
+    printf("%li\n", x + y);
 }
