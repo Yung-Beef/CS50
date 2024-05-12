@@ -6,13 +6,11 @@ int main(void)
     // get user input for n
     int n = get_int("Size: ");
 
-    for (int r = 0; r < n; r++)
+    int c = 0;
+    while (c < n)
     {
-        for (int w = (n - (n - 1)); w < n; w++)
-        {
-            printf("#");
-        }
-        printf("\n");
+        printf("#");
+        c++;
     }
     printf("\n");
 
