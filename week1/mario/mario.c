@@ -29,7 +29,7 @@ int main(void)
             // i - w is how many spaces (s)
             // i - s is how many #s
 
-
+            while (e < )
             printf(");
 
         }
