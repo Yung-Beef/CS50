@@ -9,7 +9,7 @@ int main(void)
     {
         i = get_int("Size: ");
     }
-    while (i < 0 || i > 9);
+    while (i < 1 || i > 8);
 
     // create pyramid
 
@@ -17,7 +17,7 @@ int main(void)
     {
         for (int d = i; d > h; d--)
         {
-            printf(".");
+            printf(" ");
         }
         for (int c = 0; c < h; c++)
         {
