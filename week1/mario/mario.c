@@ -21,7 +21,7 @@ int main(void)
 
     for (w = 0; w < i; w++)
     {
-        while (e > 0)
+        while (e >= 0)
         {
             printf(" ");
             e--;
