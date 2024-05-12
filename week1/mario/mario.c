@@ -25,7 +25,7 @@ int main(void)
             printf(" ");
             e--;
         }
-        e = (i - w);
+        //e = (i - w);
         int h = w;
         while (h == w)
         {
