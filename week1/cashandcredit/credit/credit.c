@@ -6,7 +6,7 @@ int main(void)
     long n;
     do
     {
-        long n = get_long("Number: ");
+        n = get_long("Number: ");
     }
     while (n < 0);
 
@@ -71,7 +71,7 @@ int main(void)
     if (visa == 4 && (length == 13 || length == 16))
     {
         printf("VISA\n");
-        return 0
+        return 0;
     }
 
     // amex?
@@ -82,7 +82,7 @@ int main(void)
     if ((amex == 34 || amex == 37) && length == 15)
     {
         printf("AMEX\n");
-        return 0
+        return 0;
     }
 
     // mastercard?
@@ -93,7 +93,7 @@ int main(void)
     if (master == 51 || master == 52 || master == 53 || master == 54 || master == 55) && length == 16)
     {
         printf("MasterCard\n");
-        return 0
+        return 0;
     }
 
 }
