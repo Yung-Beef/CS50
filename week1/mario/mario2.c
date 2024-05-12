@@ -16,11 +16,11 @@ int main(void)
     for (int h = 1; h <= i; h++)
     {
         // left side
-        for (int ld = i; ld > h; ld--)
+        for (int ls = i; ls > h; ls--)
         {
             printf(" ");
         }
-        for (int lc = 0; lc < h; lc++)
+        for (int lh = 0; lh < h; lh++)
         {
             printf("#");
         }
@@ -29,11 +29,11 @@ int main(void)
         printf("  ");
 
         // right side
-        for (int rc = 0; rc < h; rc++)
+        for (int rh = 0; rh < h; rh++)
         {
             printf("#");
         }
-        for (int rd = i; rd > h; rd--)
+        for (int rs = i; rs > h; rs--)
         {
             printf(" ");
         }
