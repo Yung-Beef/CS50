@@ -6,5 +6,13 @@ int main(void)
     long x = get_long("X ");
     long y = get_long("Y ");
 
-    printf("%li\n", x + y);
+    printf("%li\n", x / y);
 }
+
+// int main(void)
+//{
+  //  long x = get_long("X ");
+  //  long y = get_long("Y ");
+
+  //  printf("%li\n", x + y);
+//}
