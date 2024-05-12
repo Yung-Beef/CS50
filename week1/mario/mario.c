@@ -9,8 +9,8 @@ int main(void)
     {
         i = get_int("Size: ");
     }
-    while (0 < i);
-    while (i < 9);
+    while (1 > i > 8);
 
-    printf("%i", i);
+
+    printf("%i\n", i);
 }
