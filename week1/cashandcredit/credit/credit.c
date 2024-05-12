@@ -3,9 +3,12 @@
 
 int main(void)
 {
-
-    long n = get_long("Number: ");
-
+    long n;
+    do
+    {
+        long n = get_long("Number: ");
+    }
+    while (n < 0);
 
     // checksum
         // get n1 via modulo
