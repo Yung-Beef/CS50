@@ -19,9 +19,12 @@ int main(void)
     for ()
     {
         // creating each # or space in a row
-        for (w = 0; w < i; w++)
+        for (w = 1; w <= i; w++)
         {
-            
+            // how many spaces to print
+            printf();
+            // how many #s to print
+            printf();
         }
         w = 0
     }
