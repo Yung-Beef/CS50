@@ -9,7 +9,7 @@ int main(void)
     {
         i = get_int("Size: ");
     }
-    while (1 <= i);
+    while (0 < i < 9);
 
     printf("%i", i);
 }
