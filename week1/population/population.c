@@ -3,17 +3,27 @@
 
 int main(void)
 {
-    // TODO: Prompt for start size
-    while (s < 1)
+    // Prompt for start size
+    int s;
+    do
     {
-        int s = get_int("Starting population: ");
+        s = get_int("Starting population: ");
     }
+    while (s < 9);
 
+    // Prompt for end size
+    int e;
+    do
+    {
+        e = get_int("Ending population: ");
+    }
+    while (e <= s);
 
-    printf("%i", s);
-    // TODO: Prompt for end size
+    printf("%i and %i\n", s, e);
 
     // TODO: Calculate number of years until we reach threshold
+    for (y = 0; )
+
 
     // TODO: Print number of years
     //printf("%f", y);
