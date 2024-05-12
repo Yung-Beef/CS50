@@ -6,8 +6,9 @@ int main(void)
 
     long n = get_long("Number: ");
 
-    
 
+    // checksum
+        // 
 
 
 
