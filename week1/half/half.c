@@ -19,5 +19,6 @@ int main(void)
 float half(float bill, float tax, int tip)
 {
     float total = bill * (1 + (tax / 100)) * (1 + (tip / 100));
-    return total;
+    float pay = total / 2;
+    return pay;
 }
