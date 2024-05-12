@@ -15,6 +15,7 @@ int main(void)
 
     for (int h = 1; h <= i; h++)
     {
+        // left side
         for (int d = i; d > h; d--)
         {
             printf(" ");
@@ -23,10 +24,15 @@ int main(void)
         {
             printf("#");
         }
+
+        // middle spaces
         printf("  ");
+
+        // right side
         for (int c = 0; c > h; c--)
         {
             printf("#");
+        }
         for (int d = i; d < h; d++)
         {
             printf(" ");
