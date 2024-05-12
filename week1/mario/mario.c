@@ -19,9 +19,6 @@ int main(void)
     int w = 1;
     int e = (i - w);
     int h = w;
-    for (int r = 1; r <= i; r++)
-    {
-        e =
 
         // creating each # or space in a row
         for (w = 1; w <= i; w++)
@@ -29,12 +26,18 @@ int main(void)
             // i - w is how many spaces (s)
             // i - s is how many #s
 
-            while (e < )
-            printf(");
+            while (e > 0)
+            {
+                printf(" ");
+                e--;
+            }
+            e = (i - w);
+            while (h == w)
+            {
+                printf("#");
+                h++;
+            }
+
 
         }
-
-
-    }
-
 }
