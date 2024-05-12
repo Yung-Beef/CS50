@@ -44,28 +44,56 @@ int main(void)
     int sum2 = n9 + n10 + n11 + n12 + n13 + n14 + n15 + n16;
     int sum3 = sum1 + sum2;
 
+    int length = 0;
+    long visa = n;
+    long amex = n;
+    long master = n;
+
+
     if ((sum3 % 10) != 0)
     {
-        printf("Invalid");
+        printf("Invalid\n");
         return 0;
     }
 
     // type of card
-    int length = 0;
     while (n > 0)
     {
         n = n / 10;
         length++;
     }
 
+    // visa?
+    while (visa >= 10)
+    {
+        visa /= 10;
+    }
+    if (visa == 4 && (length == 13 || length == 16))
+    {
+        printf("VISA\n");
+        return 0
+    }
 
+    // amex?
+    while (amex >= 100)
+    {
+        amex /= 10;
+    }
+    if ((amex == 34 || amex == 37) && length == 15)
+    {
+        printf("AMEX\n");
+        return 0
+    }
 
-
-        printf("%i\n", n1);
-
-
-
-
-
+    // mastercard?
+    while (master >= 100)
+    {
+        master /= 10;
+    }
+    if (master == 51 || master == 52 || master == 53 || master == 54 || master == 55) && length == 16)
+    {
+        printf("MasterCard\n");
+        return 0
+    }
 
 }
