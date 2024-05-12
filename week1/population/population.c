@@ -25,7 +25,7 @@ int main(void)
     {
         p = (p + (p / 3) - (p / 4));
     }
-
+    printf("%i", p);
     // TODO: Print number of years
     printf("%i", y);
 }
