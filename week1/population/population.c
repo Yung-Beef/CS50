@@ -27,5 +27,5 @@ int main(void)
     }
 
     // TODO: Print number of years
-    printf("%i\n", y);
+    printf("It will take %i years.\n", y);
 }
