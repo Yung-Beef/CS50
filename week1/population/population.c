@@ -4,10 +4,12 @@
 int main(void)
 {
     // TODO: Prompt for start size
+    int s = get_int("Starting population: ");
 
     // TODO: Prompt for end size
 
     // TODO: Calculate number of years until we reach threshold
 
     // TODO: Print number of years
+    printf("%f", y);
 }
