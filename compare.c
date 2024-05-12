@@ -4,8 +4,8 @@
 int main(void)
 
 {
-    int X = get_int{"What's X? "};
-    int Y = get_int{"What's Y? "};
+    int X = get_int("What's X? ");
+    int Y = get_int("What's Y? ");
 
     if (X < Y)
     {
