@@ -49,7 +49,6 @@ int main(void)
     long amex = n;
     long master = n;
 
-
     if ((sum3 % 10) != 0)
     {
         printf("Invalid\n");
