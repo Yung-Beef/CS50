@@ -15,29 +15,21 @@ int main(void)
 
     // create pyramid
 
-    // creating each row
     int w = 1;
     int e = (i - w);
     int h = w;
 
-        // creating each # or space in a row
-        for (w = 1; w <= i; w++)
+        while (e > 0)
         {
-            // i - w is how many spaces (s)
-            // i - s is how many #s
-
-            while (e > 0)
-            {
-                printf(" ");
-                e--;
-            }
-            e = (i - w);
-            while (h == w)
-            {
-                printf("#");
-                h++;
-            }
-            printf("\n");
-
+            printf(" ");
+            e--;
         }
+        e = (i - w);
+        while (h == w)
+        {
+            printf("#");
+            h++;
+        }
+        printf("\n");
+
 }
