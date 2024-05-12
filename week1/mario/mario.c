@@ -17,16 +17,16 @@ int main(void)
 
     int w = 1;
     int e = (i - w);
-    int h = w;
 
     for (w = 0; w < i; w++)
     {
-        while (e >= 0)
+        while (e > 0)
         {
             printf(" ");
             e--;
         }
         e = (i - w);
+        int h = w;
         while (h == w)
         {
             printf("#");
