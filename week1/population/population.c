@@ -22,7 +22,7 @@ int main(void)
     printf("%i and %i\n", s, e);
 
     // TODO: Calculate number of years until we reach threshold
-    for (y = 0; )
+    for (p = 1200; p < e; p = (p + (p / 3) - (p / 4)))
 
 
     // TODO: Print number of years
