@@ -2,7 +2,10 @@
 
 int main(void)
 {
-    printf("Meow\n");
-    printf("Meow\n");
-    printf("Meow\n");
+    int i = 0;
+    while (i < 3)
+    {
+        printf("Meow\n");
+        i++;
+    }
 }
