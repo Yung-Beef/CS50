@@ -22,9 +22,11 @@ int main(void)
         for (w = 1; w <= i; w++)
         {
             // how many spaces to print
-            // i - w is how many spaces
-            // i is how many #s
-            printf();
+            // i - w is how many spaces (s)
+            // i - s is how many #s
+            int s = (i - w);
+            int h = (i - s);
+            printf(");
             // how many #s to print
             printf();
         }
