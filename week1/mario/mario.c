@@ -11,26 +11,13 @@ int main(void)
     }
     while (i < 0 || i > 9);
 
-    printf("%i\n", i);
-
     // create pyramid
 
-    int w = 1;
-    int e = (i - w);
-
-    for (w = 0; w < i; w++)
+    for (int h = 1; h <= i; h++)
     {
-        while (e > 0)
-        {
-            printf(" ");
-            e--;
-        }
-        e = (i - w);
-        int h = w;
-        while (h == w)
+        for (int c = 0; c < h; c++)
         {
             printf("#");
-            h++;
         }
         printf("\n");
     }
