@@ -37,7 +37,7 @@ int main(void)
                 printf("#");
                 h++;
             }
-
+            printf("\n");
 
         }
 }
