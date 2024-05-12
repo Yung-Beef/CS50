@@ -95,5 +95,8 @@ int main(void)
         printf("MasterCard\n");
         return 0;
     }
-
+    else
+    {
+        printf("Invalid\n");
+    }
 }
