@@ -42,32 +42,34 @@ int get_cents(void)
     {
         c = get_int("Cents: ");
     }
-    while (c < 0)
+    while (c < 0);
     return c;
 }
 
 int calculate_quarters(int cents)
 {
     // TODO
-    int q
-    
+    int q = (int c / 25);
     return q;
 }
 
 int calculate_dimes(int cents)
 {
     // TODO
-    return 0;
+    int d = (c / 10);
+    return d;
 }
 
 int calculate_nickels(int cents)
 {
     // TODO
-    return 0;
+    int n = (c / 5);
+    return n;
 }
 
 int calculate_pennies(int cents)
 {
     // TODO
-    return 0;
+    int p = c;
+    return p;
 }
