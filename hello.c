@@ -3,7 +3,6 @@
 
 int main(void)
 {
-    string first = get_string("What's your first name?\n");
-    string last = get_string("What's your last name?\n");
-    printf("hello, %s %s\n", first, last);
+    string answer = get_string("What's your name?\n");
+    printf("hello, %s \n", answer);
 }
