@@ -11,6 +11,8 @@ int main(void)
     }
     while (i < 0 || i > 9);
 
-
     printf("%i\n", i);
+
+    // create pyramid
+
 }
