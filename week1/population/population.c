@@ -19,8 +19,6 @@ int main(void)
     }
     while (e <= s);
 
-    //printf("%i and %i\n", s, e);
-
     // TODO: Calculate number of years until we reach threshold
     int y = 0;
     for (int p = s; p < e; y++)
