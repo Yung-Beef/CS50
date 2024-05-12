@@ -79,7 +79,7 @@ int main(void)
     {
         amex /= 10;
     }
-    if ((amex == 34 || amex == 37) && length == 15)
+    if (length == 15 && (amex == 34 || amex == 37))
     {
         printf("AMEX\n");
         return 0;
@@ -90,7 +90,7 @@ int main(void)
     {
         master /= 10;
     }
-    if (master == 51 || master == 52 || master == 53 || master == 54 || master == 55) && length == 16)
+    if (length == 16 && (master == 51 || master == 52 || master == 53 || master == 54 || master == 55))
     {
         printf("MasterCard\n");
         return 0;
