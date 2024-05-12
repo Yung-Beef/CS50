@@ -17,7 +17,7 @@ int main(void)
     {
         e = get_int("Ending population: ");
     }
-    while (e <= s);
+    while (e < s);
 
     // TODO: Calculate number of years until we reach threshold
     int y = 0;
@@ -27,5 +27,5 @@ int main(void)
     }
 
     // TODO: Print number of years
-    printf("%i", y);
+    printf("%i\n", y);
 }
