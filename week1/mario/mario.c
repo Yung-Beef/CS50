@@ -17,7 +17,7 @@ int main(void)
 
     // creating each row
     int w = 1;
-    int e = (i - 1);
+    int e = (i - w);
     int h = w;
     for (int r = 1; r <= i; r++)
     {
