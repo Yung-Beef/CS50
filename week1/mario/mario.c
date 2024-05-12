@@ -22,6 +22,8 @@ int main(void)
         for (w = 1; w <= i; w++)
         {
             // how many spaces to print
+            // i - w is how many spaces
+            // i is how many #s
             printf();
             // how many #s to print
             printf();
