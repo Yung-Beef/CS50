@@ -1,6 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
+int get_size(void);
+void print_grid(int size);
 int main(void)
 {
     // Gets the size of the grid as a positive integer
@@ -9,6 +11,9 @@ int main(void)
     // Prints a grid of bricks
     print_grid(n);
 }
+
+
+
 
 int get_size(void)
 {
