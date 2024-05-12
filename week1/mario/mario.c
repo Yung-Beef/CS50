@@ -19,6 +19,8 @@ int main(void)
     int e = (i - w);
     int h = w;
 
+    for (w = 0; w < i; w++)
+    {
         while (e > 0)
         {
             printf(" ");
@@ -31,5 +33,5 @@ int main(void)
             h++;
         }
         printf("\n");
-
+    }
 }
