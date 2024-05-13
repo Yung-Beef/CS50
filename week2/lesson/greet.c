@@ -1,3 +1,4 @@
+#include <cs50.h>
 #include <stdio.h>
 
 int main (int argc, string argv[]) // gives you an int of the length of the user input, and an array of each word they entered
