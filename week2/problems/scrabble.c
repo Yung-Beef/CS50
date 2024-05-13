@@ -7,8 +7,11 @@ int main(void)
 {
     // get input
 
-    string words[2];
-    for (i = 0; i < )
+    string words[n];
+    for (i = 0; i < n; i++)
+    {
+        
+    }
 
     string p1 = get_string("Player 1: ");
 
