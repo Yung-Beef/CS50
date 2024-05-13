@@ -6,5 +6,5 @@ int main(void)
     int score2 = 73;
     int score3 = 33;
 
-    printf("My average is: %i\n", (score1 + score2 + score3) / 3);
+    printf("My average is: %f\n", (score1 + score2 + score3) / 3);
 }
