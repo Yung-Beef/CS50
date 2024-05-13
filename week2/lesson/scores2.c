@@ -14,5 +14,5 @@ int main(void)
         scores[i] = get_int("Score: ");
     }
 
-    printf("My average is: %f\n", (scores[0] + scores[1] + scores[2]) / (float) N);
+    printf("Average: %f\n", average(N, scores));
 }
