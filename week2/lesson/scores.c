@@ -1,3 +1,4 @@
+#include <cs50.h>
 #include <stdio.h>
 
 //int main(void)
@@ -11,11 +12,11 @@
 
 int main(void)
 {
-    int score[3];
-    scores[0] = 72;
-    scores[1] = 73;
-    scores[2] = 33;
+    int scores[3];
+    scores[0] = get_int("Score: ");
+    scores[1] = get_int("Score: ");
+    scores[2] = get_int("Score: ");
 
     // can fix this a few ways: make at least one number on the right a float (like 3.0), or do " / (float) 3"
-    printf("My average is: %f\n", (score[0] + score[1] + score[2]) / 3.0);
+    printf("My average is: %f\n", (scores[0] + scores[1] + scores[2]) / 3.0);
 }
