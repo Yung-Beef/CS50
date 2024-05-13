@@ -13,9 +13,10 @@
 int main(void)
 {
     int scores[3];
-    scores[0] = get_int("Score: ");
-    scores[1] = get_int("Score: ");
-    scores[2] = get_int("Score: ");
+    for (int i = 0; i < 3; i++ )
+    {
+        scores[i] = get_int("Score: ");
+    }
 
     // can fix this a few ways: make at least one number on the right a float (like 3.0), or do " / (float) 3"
     printf("My average is: %f\n", (scores[0] + scores[1] + scores[2]) / 3.0);
