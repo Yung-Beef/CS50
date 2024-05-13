@@ -13,6 +13,11 @@ int main(void)
     //printf("%s\n", s);
     //printf("%c%c%c\n", s[0], s[1], s[2]); // shows that strings are just an array
 
+    //string s = "HI!";
+    //printf("%i %i %i %i\n", s[0], s[1], s[2], s[3]); // shows the extra hidden 0 (known as NUL) that's at the end of all strings in C
+
     string s = "HI!";
-    printf("%i %i %i %i\n", s[0], s[1], s[2], s[3]);
+    string t = "BYE!";
+    printf("%s\n", s);
+    printf("%s\n", t);
 }
