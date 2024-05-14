@@ -7,6 +7,7 @@ int main(void)
 {
     // get input
 
+    string players[2] = 
     string words[2];
     for (i = 0; i < 2; i++)
     {
