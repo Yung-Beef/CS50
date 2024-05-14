@@ -12,7 +12,7 @@ int main(void)
     {
         text = get_string("Text: ");
     }
-    while ()
+    while (text == 0);
 
     // determine number of letters, words, sentences
 
@@ -24,7 +24,7 @@ int main(void)
 
 }
 
-int countletters(string text)
-{
+//int countletters(string text)
+//{
 
-}
+//}
