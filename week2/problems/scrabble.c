@@ -47,7 +47,7 @@ int main(void)
 
     }
 
-    //printf("%i\n", score1);
+    printf("%i\n", score1);
     //go letter by letter
 
     //determine value of each letter - give each letter a variable, determine the value and then assign that value to the variable
