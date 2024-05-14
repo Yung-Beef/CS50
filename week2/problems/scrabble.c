@@ -7,10 +7,10 @@ int main(void)
 {
     // get input
 
-    string words[n];
-    for (i = 0; i < n; i++)
+    string words[2];
+    for (i = 0; i < 2; i++)
     {
-        
+        words[i] = get_string("Player ");
     }
 
     string p1 = get_string("Player 1: ");
