@@ -31,38 +31,25 @@ int main(void)
     // create score variables
     int score1 = 0;
     int score2 = 0;
+    int score[2];
 
-    //goes letter by letter through player 1's word
-    for (int i = 0, n = strlen(words[0]); i < n; i++)
-    {
-        for (int j = 0; alphabet[j] <= words[0][i]; j++)
+    //calculate the score for each player
+    for (int p = 0; p < 2; p++)
+    {       //get each letter of the word
+        for (int i = 0, n = strlen(words[p]); i < n; i++)
         {
-            while (alphabet[j] == words[0][i])
-            {
-                score1 += points[j];
+            //iterate through the alphabet to find that letter
+            for (int j = 0; alphabet[j] <= words[p][i]; j++)
+            {   //apply the score corresponding to the correct letter
+                while (alphabet[j] == words[p][i])
+                {
+                    score[p] += points[j];
+                    break;
+                }
             }
-            //if (alphabet[j] == words[0][i]) // the for loop does this until the middle expression above is false
-            //{
-                //score1 += points[j];
-                //printf("%i\n", j);
-            //}
         }
     }
 
-    printf("%i\n", score1);
-    //go letter by letter
-
-    //determine value of each letter - give each letter a variable, determine the value and then assign that value to the variable
-
-    //sum the values
-
-    //repeat for player 2/word 2
-
-
-
-
-    //say who won
-
-
-
+    printf("Player 1: %i\n", score[0]);
+    printf("Player 2: %i\n", score[1]);
 }
