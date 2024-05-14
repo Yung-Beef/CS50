@@ -41,7 +41,7 @@ int main(void)
 
     //sum the values
 
-    //repeat for player 2
+    //repeat for player 2/word 2
 
 
 
