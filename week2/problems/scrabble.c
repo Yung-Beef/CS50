@@ -35,7 +35,7 @@ int main(void)
         //%c through each letter of the string/array and save them in
 
         // this is the first letter, now do the math - save the result to a sum (need to predefine) and keep updating it while it loops
-        for (int j = 0; alphabet[j] < words[0][i]; j++)
+        for (int j = 0; alphabet[j] == words[0][i]; j++)
         {
             score1 += points[j + 1];
         }
