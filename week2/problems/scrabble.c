@@ -18,12 +18,14 @@ int main(void)
         words[i] = get_string("%s: ", players[i]);
     }
 
+    //implement the letter values
+    
+
 
     // calculate scores
     // determine string length
 
-    for (int i = 0, n = strlen(words[1]); i < n; i++) // this just prints a string character by character (i+2 would print every other char)
-    // initializing 2 variables here with a comma (as long as they are the same type) and strlen only gets called once at the beginning
+    for (int i = 0, n = strlen(words[1]); i < n; i++)
     {
         //does whatever is here character by character
         //%c through each letter of the string/array and save them in
