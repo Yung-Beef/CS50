@@ -1,6 +1,6 @@
 #include <cs50.h>
-#include <stdio.h>
 #include <ctype.h>
+#include <stdio.h>
 #include <string.h>
 
 int main(void)
@@ -27,14 +27,16 @@ int main(void)
     int points[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
     int score[2];
 
-    //calculate the score for each player
+    // calculate the score for each player
     for (int p = 0; p < 2; p++)
-    {       //get each letter of the word
+    {
+        // get each letter of the word
         for (int i = 0, n = strlen(words[p]); i < n; i++)
         {
-            //iterate through the alphabet to find that letter
+            // iterate through the alphabet to find that letter
             for (int j = 0; alphabet[j] <= words[p][i]; j++)
-            {   //apply the score corresponding to the correct letter
+            {
+                // apply the score corresponding to the correct letter
                 while (alphabet[j] == words[p][i])
                 {
                     score[p] += points[j];
@@ -47,7 +49,7 @@ int main(void)
     printf("Player 1: %i\n", score[0]);
     printf("Player 2: %i\n", score[1]);
 
-    //declare the winner
+    // declare the winner
     if (score[0] > score[1])
     {
         printf("Player 1 wins!\n");
@@ -60,6 +62,4 @@ int main(void)
     {
         printf("Tie!\n");
     }
-
-
 }
