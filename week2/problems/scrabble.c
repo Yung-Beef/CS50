@@ -36,6 +36,7 @@ int main(void)
 
         // this is the first letter, now do the math - save the result to a sum (need to predefine) and keep updating it while it loops
         words[1][i]
+        for (int i = 0; alphabet[i]; i++)
     }
 
     //go letter by letter
