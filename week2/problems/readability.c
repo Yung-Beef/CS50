@@ -10,7 +10,8 @@ int main(void)
     string text = get_string("Text: ");
 
     // determine number of letters, words, sentences
-    
+    // check if it's punctuation, if it's a period, save all that to some arrow or some shit, otherwise ignore
+    // check if each character is alphabetical
 
     // computer the score with the algorithm
 
