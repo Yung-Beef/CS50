@@ -10,7 +10,7 @@ int main(void)
     string text = get_string("Text: ");
 
     // determine number of letters, words, sentences
-
+    
 
     // computer the score with the algorithm
 
