@@ -41,6 +41,7 @@ int main(void)
             if (alphabet[j] == letter)
             {
                 score1 += points[j];
+                printf("%i\n", j);
             }
         }
 
