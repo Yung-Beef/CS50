@@ -19,7 +19,7 @@ int main(void)
     }
 
     //implement the letter values
-    char alphabet[25] = 
+    char alphabet[] = {};
 
 
     //put alphabet in a 25 array, if the letter is <z keep going? then find it's place, and find that in another array with the scores
