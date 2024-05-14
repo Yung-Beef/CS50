@@ -35,10 +35,9 @@ int main(void)
     //goes letter by letter through player 1's word
     for (int i = 0, n = strlen(words[0]); i < n; i++)
     {
-        int letter = words[0][i];
-        for (int j = 0; alphabet[j] == letter; j++)
+        for (int j = 0; alphabet[j] == words[0][i]; j++)
         {
-            if (alphabet[j] == letter)
+            if (alphabet[j] == words[0][i])
             {
                 score1 += points[j];
                 printf("%i\n", j);
