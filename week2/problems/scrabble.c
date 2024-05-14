@@ -34,6 +34,7 @@ int main(void)
         // this is the first letter, now do the math - save the result to a sum (need to predefine) and keep updating it while it loops
         printf("%c\n", words[0][i]);
         int letter = words[0][i];
+        printf("%i\n", letter);
         for (int j = 0; alphabet[j] == letter; j++)
         {
             score1 += points[j];
