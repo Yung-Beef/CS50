@@ -37,7 +37,10 @@ int main(void)
         printf("%i\n", letter);
         for (int j = 0; alphabet[j] == letter; j++)
         {
-            score1 += points[j];
+            if (alphabet[j] == letter)
+            {
+                score1 += points[j];
+            }
         }
 
 
