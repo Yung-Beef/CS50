@@ -19,7 +19,7 @@ int main(void)
     }
 
     //implement the letter values
-    char alphabet[] = {A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z};
+    char alphabet[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
     int points[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
 
     //put alphabet in a 25 array, if the letter is <z keep going? then find it's place, and find that in another array with the scores
@@ -43,6 +43,7 @@ int main(void)
 
     }
 
+    printf("%i\n", score1);
     //go letter by letter
 
     //determine value of each letter - give each letter a variable, determine the value and then assign that value to the variable
