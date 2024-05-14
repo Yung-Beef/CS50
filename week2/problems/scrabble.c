@@ -37,7 +37,7 @@ int main(void)
         // this is the first letter, now do the math - save the result to a sum (need to predefine) and keep updating it while it loops
         for (int j = 0; alphabet[j] < words[0][i]; j++)
         {
-            score1 += points[j];
+            score1 += points[j + 1];
         }
 
 
