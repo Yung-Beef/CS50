@@ -32,7 +32,8 @@ int main(void)
     {
         //does whatever is here character by character
         //%c through each letter of the string/array and save them in
-        
+        //go through the array of words[n] to get each letter
+        words[1][i]
     }
 
     //go letter by letter
