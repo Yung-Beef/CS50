@@ -24,7 +24,6 @@ int main(void)
 
     //put alphabet in a 25 array, if the letter is <z keep going? then find it's place, and find that in another array with the scores
 
-
     // calculate scores
     // determine string length
     int score1;
@@ -34,7 +33,6 @@ int main(void)
     {
         //does whatever is here character by character
         //%c through each letter of the string/array and save them in
-
 
         // this is the first letter, now do the math - save the result to a sum (need to predefine) and keep updating it while it loops
         words[1][i]
