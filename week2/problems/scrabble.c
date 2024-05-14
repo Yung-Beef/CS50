@@ -40,6 +40,7 @@ int main(void)
             score1 += points[j];
         }
 
+
     }
 
     printf("%i\n", score1);
