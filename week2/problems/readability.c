@@ -7,12 +7,7 @@
 int main(void)
 {
     // prompt user for text
-    string text;
-    do
-    {
-        text = get_string("Text: ");
-    }
-    while (text == 0);
+    string text = get_string("Text: ");
 
     // determine number of letters, words, sentences
 
