@@ -29,14 +29,13 @@ int main(void)
     int score1 = 0;
     int score2 = 0;
 
-    for (int i = 0, n = strlen(words[1]); i < n; i++)
+    for (int i = 0, n = strlen(words[0]); i < n; i++)
     {
         //does whatever is here character by character
         //%c through each letter of the string/array and save them in
 
         // this is the first letter, now do the math - save the result to a sum (need to predefine) and keep updating it while it loops
-        words[1][i]
-        for (int j = 0; alphabet[j] < words[1][i]; j++)
+        for (int j = 0; alphabet[j] < words[0][i]; j++)
         {
             score1 += points[j];
         }
