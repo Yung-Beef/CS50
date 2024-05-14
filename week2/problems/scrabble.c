@@ -47,8 +47,6 @@ int main(void)
                 //printf("%i\n", j);
             //}
         }
-
-
     }
 
     printf("%i\n", score1);
