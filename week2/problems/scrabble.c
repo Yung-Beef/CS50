@@ -6,15 +6,13 @@
 int main(void)
 {
     // get a word from each player
-    string players[2];
-    players[0] = "Player 1";
-    players[1] = "Player 2";
+    string players[] = {"Player 1", "Player 2"};
     string words[2];
     for (int i = 0; i < 2; i++)
     {
         words[i] = get_string("%s: ", players[i]);
     }
-
+    
     // convert to uppercase
     for (int i = 0; i < 2; i++)
     {
