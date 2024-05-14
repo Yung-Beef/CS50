@@ -35,9 +35,7 @@ int main(void)
     //goes letter by letter through player 1's word
     for (int i = 0, n = strlen(words[0]); i < n; i++)
     {
-        //printf("%c\n", words[0][i]);
         int letter = words[0][i];
-        //printf("%i\n", letter);
         for (int j = 0; alphabet[j] == letter; j++)
         {
             if (alphabet[j] == letter)
