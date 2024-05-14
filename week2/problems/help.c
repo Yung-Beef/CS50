@@ -12,7 +12,7 @@ int main(void)
 
     int letter = 81
 
-    for (int j = 0; alphabet[j] == words[0][i]; j++)
+    for (int j = 0; alphabet[j] < letter; j++)
         {
             if (alphabet[j] == words[0][i])
             {
