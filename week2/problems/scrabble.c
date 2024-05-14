@@ -37,11 +37,15 @@ int main(void)
     {
         for (int j = 0; alphabet[j] <= words[0][i]; j++)
         {
-            if (alphabet[j] == words[0][i]) // the for loop does this until the middle expression above is false
+            while (alphabet[j] == words[0][i])
             {
                 score1 += points[j];
-                printf("%i\n", j);
             }
+            //if (alphabet[j] == words[0][i]) // the for loop does this until the middle expression above is false
+            //{
+                //score1 += points[j];
+                //printf("%i\n", j);
+            //}
         }
 
 
