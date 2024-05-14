@@ -12,7 +12,7 @@ int main(void)
     {
         words[i] = get_string("%s: ", players[i]);
     }
-    
+
     // convert to uppercase
     for (int i = 0; i < 2; i++)
     {
@@ -46,4 +46,20 @@ int main(void)
 
     printf("Player 1: %i\n", score[0]);
     printf("Player 2: %i\n", score[1]);
+
+    //declare the winner
+    if (score[0] > score[1])
+    {
+        printf("Player 1 wins!\n");
+    }
+    else if (score[1] > score[0])
+    {
+        printf("Player 2 wins!\n");
+    }
+    else
+    {
+        printf("Tie!\n");
+    }
+
+
 }
