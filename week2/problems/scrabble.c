@@ -20,6 +20,7 @@ int main(void)
 
     //implement the letter values
     char alphabet[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+    string alphabet1[] = {"ABCDEFGHIJKLMNOPQRSTUVWXYZ"};
     int points[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
 
     //put alphabet in a 25 array, if the letter is <z keep going? then find it's place, and find that in another array with the scores
@@ -35,11 +36,11 @@ int main(void)
         //%c through each letter of the string/array and save them in
 
         // this is the first letter, now do the math - save the result to a sum (need to predefine) and keep updating it while it loops
-        for (int j = 0; alphabet[j] == words[0][i]; j++)
+        for (int j = 0; alphabet1[j] == words[0][i]; j++)
         {
             score1 += points[j + 1];
         }
-        
+
     }
 
     printf("%i\n", score1);
