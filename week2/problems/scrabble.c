@@ -19,7 +19,7 @@ int main(void)
     }
 
     //implement the letter values
-    char alphabet[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+    int alphabet[] = {65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90};
     //string alphabet1[] = {"ABCDEFGHIJKLMNOPQRSTUVWXYZ"};
     int points[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
 
@@ -45,7 +45,7 @@ int main(void)
 
     }
 
-    //printf("%i\n", score1);
+    printf("%i\n", score1);
     //go letter by letter
 
     //determine value of each letter - give each letter a variable, determine the value and then assign that value to the variable
