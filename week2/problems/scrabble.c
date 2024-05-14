@@ -26,8 +26,8 @@ int main(void)
 
     // calculate scores
     // determine string length
-    int score1;
-    int score2;
+    int score1 = 0;
+    int score2 = 0;
 
     for (int i = 0, n = strlen(words[1]); i < n; i++)
     {
@@ -36,10 +36,12 @@ int main(void)
 
         // this is the first letter, now do the math - save the result to a sum (need to predefine) and keep updating it while it loops
         words[1][i]
-        for (int i = 0; alphabet[i] < 'Z'; i++)
+        for (int j = 0; alphabet[j] < words[1][i]; j++)
+        {
+            score1 += points[j];
+        }
 
-        
-        points[i]
+
     }
 
     //go letter by letter
