@@ -35,7 +35,7 @@ int main(void)
     //goes letter by letter through player 1's word
     for (int i = 0, n = strlen(words[0]); i < n; i++)
     {
-        for (int j = 0; alphabet[j] == words[0][i]; j++)
+        for (int j = 0; alphabet[j] <= words[0][i]; j++)
         {
             if (alphabet[j] == words[0][i]) // the for loop does this until the middle expression above is false
             {
