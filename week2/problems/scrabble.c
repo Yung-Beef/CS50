@@ -36,6 +36,7 @@ int main(void)
         //%c through each letter of the string/array and save them in
 
         // this is the first letter, now do the math - save the result to a sum (need to predefine) and keep updating it while it loops
+        printf("%c\n", words[0][i]);
         for (int j = 0; alphabet[j] == words[0][i]; j++)
         {
             score1 += points[j];
@@ -43,7 +44,7 @@ int main(void)
 
     }
 
-    printf("%i\n", score1);
+    //printf("%i\n", score1);
     //go letter by letter
 
     //determine value of each letter - give each letter a variable, determine the value and then assign that value to the variable
