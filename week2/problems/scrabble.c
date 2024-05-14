@@ -19,7 +19,7 @@ int main(void)
     }
 
     //implement the letter values
-    char alphabet[] = {};
+    char alphabet[] = {A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z,};
 
 
     //put alphabet in a 25 array, if the letter is <z keep going? then find it's place, and find that in another array with the scores
@@ -32,6 +32,7 @@ int main(void)
     {
         //does whatever is here character by character
         //%c through each letter of the string/array and save them in
+        
     }
 
     //go letter by letter
