@@ -6,5 +6,20 @@
 
 int main(void)
 {
+    // prompt user for text
 
+
+    // determine number of letters, words, sentences
+
+
+    // computer the score with the algorithm
+
+
+    // print out the reading level
+
+}
+
+int countletters(string)
+{
+    
 }
