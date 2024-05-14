@@ -27,12 +27,16 @@ int main(void)
 
     // calculate scores
     // determine string length
+    int score1;
+    int score2;
 
     for (int i = 0, n = strlen(words[1]); i < n; i++)
     {
         //does whatever is here character by character
         //%c through each letter of the string/array and save them in
-        //go through the array of words[n] to get each letter
+
+
+        // this is the first letter, now do the math - save the result to a sum (need to predefine) and keep updating it while it loops
         words[1][i]
     }
 
