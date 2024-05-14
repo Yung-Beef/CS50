@@ -35,7 +35,7 @@ int main(void)
         printf("%c\n", words[0][i]);
         int letter = words[0][i];
         printf("%i\n", letter);
-        for (int j = 0; alphabet[j] != letter; j++)
+        for (int j = 0; alphabet[j] == letter; j++)
         {
             score1 += points[j];
         }
