@@ -84,3 +84,5 @@ int main(int k, string argv[])
     printf("ciphertext: %s\n", ciphertext);
     return 0;
 }
+
+string substitute(string plaintext, )
