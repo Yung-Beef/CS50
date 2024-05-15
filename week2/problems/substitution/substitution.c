@@ -19,7 +19,6 @@ int main(int k, string argv[])
         printf("Invalid key.\n");
         return 1;
     }
-    char checker[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     for (int i = 0; i < keylen; i++)
     {
         if (!isalpha(argv[1][i]))
@@ -27,6 +26,7 @@ int main(int k, string argv[])
         printf("Invalid key.\n");
         return 1;
         }
+        char checker[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         for (int j = 0; j < 26; j++)
         {
             if (checker[j] == argv[1][i])
