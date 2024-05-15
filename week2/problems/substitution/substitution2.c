@@ -50,7 +50,7 @@ int main(int k, string argv[])
 
 
     // substitute character by character
-    string ciphertext = substitute(plaintext, argv);
+    string ciphertext = substitute(plaintext, argv[1]);
 
     // output ciphertext
     printf("ciphertext: %s\n", ciphertext);
