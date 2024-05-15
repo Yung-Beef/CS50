@@ -57,7 +57,7 @@ int main(int k, string argv[])
     return 0;
 }
 
-string substitute(string plaintext, string arvg[])
+string substitute(string plaintext, string key)
 {
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     int plainlen = strlen(plaintext);
@@ -67,7 +67,7 @@ string substitute(string plaintext, string arvg[])
         {
             if (isupper(plaintext[i]))
             {
-                ciphertext[i] = (plaintext[i] + argv[1][i] - alphabet[i]);
+                ciphertext[i] = (plaintext[i] + key[i] - alphabet[i]);
                 // wrap-around either direction
                 if (ciphertext[i] > 90)
                 {
@@ -80,7 +80,7 @@ string substitute(string plaintext, string arvg[])
             }
             else if (islower(plaintext[i]))
             {
-                ciphertext[i] = (plaintext[i] + argv[1][i] - alphabet[i]);
+                ciphertext[i] = (plaintext[i] + key[i] - alphabet[i]);
                 // wrap-around either direction
                 if (ciphertext[i] > 122)
                 {
