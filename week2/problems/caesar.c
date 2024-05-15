@@ -33,7 +33,8 @@ int main(int k, string argv[])
     key = key % 26;
     printf("%i\n", key);
 
-
+    char keychar = key + 64;
+    printf("%c\n", keychar);
     // turn the key into a character
 
 
