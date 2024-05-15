@@ -10,9 +10,9 @@ int main(int k, string argv[])
     // ensure the whole key is uppercase
     for (int i = 0; i < keylen; i++)
     {
-        if (islower(key[i])
+        if (islower(key[i]))
         {
-            key[i] = toupper(key[i])
+            key[i] = toupper(key[i]);
         }
     }
 
