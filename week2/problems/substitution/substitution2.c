@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-string substitute(string plaintext, string arvg[])
+string substitute(string plaintext, string arvg[]);
 
 int main(int k, string argv[])
 {
@@ -50,7 +50,7 @@ int main(int k, string argv[])
 
 
     // substitute character by character
-    string ciphertext = substitute(plaintext, arvg[]);
+    string ciphertext = substitute(plaintext, arvg);
 
     // output ciphertext
     printf("ciphertext: %s\n", ciphertext);
