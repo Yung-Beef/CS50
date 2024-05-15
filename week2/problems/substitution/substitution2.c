@@ -92,4 +92,5 @@ string substitute(string plaintext, string key)
             }
         }
     }
+    return ciphertext;
 }
