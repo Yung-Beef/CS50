@@ -24,10 +24,6 @@ int main(void)
 
 
 
-
-
-
-
     // computer the score with the algorithm (index = 0.0588 * L - 0.296 * S - 15.8)
     //int score = (0.0588 * ((letters / words) * 100)) - (0.296 * ((sentences / words) * 100)) - 15.8;
     //printf("%i\n", score);
@@ -59,7 +55,7 @@ int countwords(string text)
     for (int i = 0; i < length; i++)
     {
         char c = text[i];
-        // if alphabetical, increment letter variable by one
+        // if space, increment word variable by one
         if (isblank(c))
         {
             w += 1;
@@ -75,7 +71,7 @@ int countsentences(string text)
     for (int i = 0; i < length; i++)
     {
         char c = text[i];
-        // if alphabetical, increment letter variable by one
+        // if sentence ender, increment sentence variable by one
         if (c == '.' || c == '?' || c == '!')
         {
             s += 1;
