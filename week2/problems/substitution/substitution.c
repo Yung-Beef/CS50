@@ -31,8 +31,6 @@ int main(int k, string argv[])
 
     //TODO: FIGURE OUT ABOUT THE BULLSHIT DUPLICATE LETTERS
 
-    char checker[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    int duplicates[26];
     for (int i = 0; i < keylen; i++)
     {
         if (!isalpha(argv[1][i]))
@@ -40,7 +38,7 @@ int main(int k, string argv[])
         printf("Invalid key.\n");
         return 1;
         }
-        for (int j = 0; j < 26; j++)
+        for (int j = i + 1; j < 26; j++)
         {
             if (checker[j] == argv[1][i])
             {
