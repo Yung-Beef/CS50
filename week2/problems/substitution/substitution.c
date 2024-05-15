@@ -34,7 +34,11 @@ int main(int k, string argv[])
             {
                 checker[j] = 0;
             }
-
+            else if (checker[j] == 0)
+            {
+                printf("Invalid key.\n");
+                return 1;
+            }
         }
     }
     // TODO: ensure the key contains 26 characters, every letter once, and only alphabetic characters
