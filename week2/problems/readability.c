@@ -22,6 +22,11 @@ int main(void)
     printf("%i\n", words);
     printf("%i\n", letters);
 
+    int score1 = (0.0588 * ((letters / words) * 100));
+    int score2 = (0.296 * ((sentences / words) * 100));
+    printf("%i\n", score1);
+    printf("%i\n", score2);
+
     // computer the score with the algorithm (index = 0.0588 * L - 0.296 * S - 15.8)
     int score = (0.0588 * ((letters / words) * 100)) - (0.296 * ((sentences / words) * 100)) - 15.8;
     printf("%i\n", score);
