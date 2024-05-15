@@ -23,15 +23,16 @@ int main(void)
     int letters = 0;
     for (int i = 0; i < length; i++)
     {
-        if (text[i] == '.')
+        char c = text[i];
+        if (c == '.')
         {
             sentences += sentences;
         }
-        else if (isblank(text[i]))
+        else if (isblank(c))
         {
             words += words;
         }
-        else if (isalpha(text[i]))
+        else if (isalpha(c))
         {
             letters += letters;
         }
