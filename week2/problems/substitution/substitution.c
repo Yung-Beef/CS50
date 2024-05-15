@@ -27,13 +27,19 @@ int main(int k, string argv[])
         printf("Invalid key.\n");
         return 1;
         }
+        string checker = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         for (j = 0; j < 26; j++)
         {
-            if (alphabet[j] )
+            if (checker[j] = argv[1][i])
+            {
+                checker[j] = 0;
+            }
+
         }
     }
     // TODO: ensure the key contains 26 characters, every letter once, and only alphabetic characters
-
+    // make another alphabet string, go through and if there is a match, set that one to 0 in the new alphabet string
+    // if there's no match, print error
 
 
     // get plaintext input
