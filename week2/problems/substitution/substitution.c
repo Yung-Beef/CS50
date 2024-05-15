@@ -28,6 +28,9 @@ int main(int k, string argv[])
         printf("Invalid key.\n");
         return 1;
     }
+
+    //TODO: FIGURE OUT ABOUT THE BULLSHIT DUPLICATE LETTERS
+
     char checker[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     for (int i = 0; i < keylen; i++)
     {
