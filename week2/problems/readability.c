@@ -26,15 +26,15 @@ int main(void)
         char c = text[i];
         if (c == '.')
         {
-            sentences += sentences;
+            sentences += 1;
         }
         else if (isblank(c))
         {
-            words += words;
+            words += 1;
         }
         else if (isalpha(c))
         {
-            letters += letters;
+            letters += 1;
         }
     }
 
