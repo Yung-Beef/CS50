@@ -13,15 +13,11 @@ int main(void)
     // prompt user for text
     string text = get_string("Text: ");
 
-    // determine length of text
-    int length = strlen(text);
-
     // determine number of letters, words, sentences
     int letters = countletters(text);
     int words = countwords(text);
     int sentences = countsentences(text);
 
-    printf("%i\n", length);
     printf("%i\n", sentences);
     printf("%i\n", words);
     printf("%i\n", letters);
@@ -42,6 +38,7 @@ int main(void)
 
 int countletters(string text)
 {
+    int length = strlen(text);
     int l = 0;
     for (int i = 0; i < length; i++)
     {
@@ -57,6 +54,7 @@ int countletters(string text)
 
 int countwords(string text)
 {
+    int length = strlen(text);
     int w = 1;
     for (int i = 0; i < length; i++)
     {
@@ -72,6 +70,7 @@ int countwords(string text)
 
 int countsentences(string text)
 {
+    int length = strlen(text);
     int s = 0;
     for (int i = 0; i < length; i++)
     {
