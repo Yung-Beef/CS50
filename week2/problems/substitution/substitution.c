@@ -28,7 +28,7 @@ int main(int k, string argv[])
         return 1;
     }
 
-    // ensure no duplicate letters
+    // ensure no duplicate letters or non-letters
     for (int i = 0; i < keylen; i++)
     {
         if (!isalpha(argv[1][i]))

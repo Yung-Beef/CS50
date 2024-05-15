@@ -7,7 +7,17 @@ string substitute(string plaintext, string key);
 
 int main(int k, string argv[])
 {
+    // ensure the whole key is uppercase
+    string key = argv[1];
     int keylen = strlen(argv[1]);
+    for (int i = 0; i < keylen; i++)
+    {
+        if (islower(key[i]))
+        {
+            key[i] = toupper(key[i]);
+        }
+    }
+
     // ensure just one command-line argument
     if (k == 1 || k > 2)
     {
@@ -19,7 +29,8 @@ int main(int k, string argv[])
         printf("Invalid key.\n");
         return 1;
     }
-    char checker[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    // ensure no duplicate letters or non-letters
     for (int i = 0; i < keylen; i++)
     {
         if (!isalpha(argv[1][i]))
@@ -27,23 +38,15 @@ int main(int k, string argv[])
         printf("Invalid key.\n");
         return 1;
         }
-        for (int j = 0; j < 26; j++)
+        for (int j = i + 1; j < 26; j++)
         {
-            if (checker[j] == argv[1][i])
-            {
-                checker[j] = 0;
-            }
-            else if (checker[j] == 0)
+            if (argv[1][j] == argv[1][i])
             {
                 printf("Invalid key.\n");
                 return 1;
             }
         }
     }
-    // TODO: ensure the key contains 26 characters, every letter once, and only alphabetic characters
-    // make another alphabet string, go through and if there is a match, set that one to 0 in the new alphabet string
-    // if there's no match, print error
-
 
     // get plaintext input
     string plaintext = get_string("plaintext:  ");
