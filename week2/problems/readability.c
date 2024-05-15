@@ -18,12 +18,12 @@ int main(void)
     // if alphabetical, increment letter variable by one
     // if other punctuation, ignore
 
-    int sentences;
-    int words;
-    int letters;
+    int sentences = 0;
+    int words = 0;
+    int letters = 0;
     for (int i = 0; i < length; i++)
     {
-        if (text[i] = '.')
+        if (text[i] == '.')
         {
             sentences += sentences;
         }
