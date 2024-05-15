@@ -28,9 +28,12 @@ int main(int k, string argv[])
     string plaintext = get_string("plaintext:  ");
 
     // encrypt
-    // change user input into a k-value of 26 or below
+    // change user input into a value of 26 or below
     argv[1] = k % 26;
     printf("%i\n", k);
+
+
+
     //for (i = 0; i < k; i++)
     //{
         //if (isupper(argv[1][i]))
