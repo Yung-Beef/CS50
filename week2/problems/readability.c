@@ -20,9 +20,20 @@ int main(void)
 
     // computer the score with the algorithm (index = 0.0588 * L - 0.296 * S - 15.8)
     int score = round((0.0588 * letters / words * 100) - (0.296 * sentences / words * 100) - 15.8);
-    printf("Score: %i\n", score);
 
     // print out the reading level
+    if (score < 1)
+    {
+        printf("Before Grade 1\n");
+    }
+    else if (score >= 16)
+    {
+        printf("Grave 16+\n");
+    }
+    else
+    {
+        printf("Grade %i\n", score);
+    }
 
 }
 
