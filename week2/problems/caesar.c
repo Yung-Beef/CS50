@@ -55,7 +55,7 @@ int main(int k, string argv[])
         //}
     }
 
-    //printf("%s\n", cipher);
+    printf("%s\n", ciphertext);
 
 
     // print out ciphertext
