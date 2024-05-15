@@ -17,37 +17,16 @@ int main(void)
     int length = strlen(text);
 
     // determine number of letters, words, sentences
-    int sentences = 0;
-    int words = 1;
-    int letters = 0;
-    for (int i = 0; i < length; i++)
-    {
-        char c = text[i];
-        // if sentence ender, increment sentence variable by one
-        if (c == '.' || c == '?' || c == '!')
-        {
-            sentences += 1;
-        }
-        // if space, increment word variable by one
-        else if (isblank(c))
-        {
-            words += 1;
-        }
-        // if alphabetical, increment letter variable by one
-        else if (isalpha(c))
-        {
-            letters += 1;
-        }
-    }
+    int letters = countletters(text);
+    int words = countwords(text);
+    int sentences = countsentences(text);
 
     printf("%i\n", length);
     printf("%i\n", sentences);
     printf("%i\n", words);
     printf("%i\n", letters);
 
-    int letters = countletters(text);
-    int words = countwords(text);
-    int sentences = countsentences(text);
+
 
 
 
