@@ -42,8 +42,8 @@ int main(void)
     printf("%i\n", letters);
 
     // computer the score with the algorithm (index = 0.0588 * L - 0.296 * S - 15.8)
-    int score = 0.0588 * (L) - 0.296 * (S) - 15.8
-
+    int score = (0.0588 * (letters / words)) - (0.296 * (sentences / words)) - 15.8;
+    printf("%i\n", score);
     // print out the reading level
 
 }
