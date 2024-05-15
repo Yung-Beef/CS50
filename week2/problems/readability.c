@@ -28,7 +28,7 @@ int main(void)
     }
     else if (score >= 16)
     {
-        printf("Grave 16+\n");
+        printf("Grade 16+\n");
     }
     else
     {
