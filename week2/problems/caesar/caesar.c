@@ -38,7 +38,7 @@ int main(int k, string argv[])
         if (isupper(plaintext[i]))
         {
             ciphertext[i] = plaintext[i] + key;
-            // Z is 90, if greater than 90, subract 26
+            // wrap-around
             if (ciphertext[i] > 90)
             {
                 ciphertext[i] -= 26;
@@ -47,7 +47,7 @@ int main(int k, string argv[])
         else if (islower(plaintext[i]))
         {
             ciphertext[i] = plaintext[i] + key;
-            // Z is 90, if greater than 90, subract 26
+            // wrap-around
             if (ciphertext[i] > 122)
             {
                 ciphertext[i] -= 26;
