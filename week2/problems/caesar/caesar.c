@@ -37,7 +37,7 @@ int main(int k, string argv[])
     {
         if (isupper(plaintext[i]))
         {
-            ciphertext[i] = plaintext[i] + argv[1][i];
+            ciphertext[i] = plaintext[i] + key;
             // wrap-around
             if (ciphertext[i] > 90)
             {
