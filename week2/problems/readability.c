@@ -21,16 +21,26 @@ int main(void)
     int sentences;
     int words;
     int letters;
-    for (i = 0; i < length; i++)
+    for (int i = 0; i < length; i++)
     {
         if (text[i] = '.')
         {
             sentences += sentences;
         }
-        else if (text[i])
+        else if (isblank(text[i]))
+        {
+            words += words;
+        }
+        else if (isalpha(text[i]))
+        {
+            letters += letters;
+        }
     }
 
-
+    printf("%i\n", length);
+    printf("%i\n", sentences);
+    printf("%i\n", words);
+    printf("%i\n", letters);
 
 
 
