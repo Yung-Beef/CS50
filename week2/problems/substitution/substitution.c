@@ -13,7 +13,7 @@ int main(int k, string argv[])
         return 1;
     }
 
-    // ensure the key contains 26 characters, every letter once, and only alphabetic characters
+    // TODO: ensure the key contains 26 characters, every letter once, and only alphabetic characters
 
 
     // get plaintext input
