@@ -32,9 +32,10 @@ int main(int k, string argv[])
     {
         if (isupper(argv[1][i]))
         {
-
+            argv[1][i] = argv[1][i] + k;
             // if k is greater than 26, do %26 for the remainder and use that as k to shift
             // if k = 26 do nothing
+            // Z is 90, if greater than 90, subract 26
 
 
         }
