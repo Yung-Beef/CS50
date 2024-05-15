@@ -28,7 +28,7 @@ int main(int k, string argv[])
     {
         if (isupper(plaintext[i]))
         {
-            ciphertext[i] = plaintext[i] + (argv[i] - alphabet[i]);
+            ciphertext[i] = (plaintext[i] + (argv[i] - alphabet[i]));
             if (ciphertext[i] > 90)
             {
                 ciphertext[i] -= 26;
