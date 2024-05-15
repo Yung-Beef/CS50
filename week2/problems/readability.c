@@ -14,22 +14,17 @@ int main(void)
     string text = get_string("Text: ");
 
     // determine number of letters, words, sentences
-    int letters = countletters(text);
-    int words = countwords(text);
-    int sentences = countsentences(text);
+    float letters = countletters(text);
+    float words = countwords(text);
+    float sentences = countsentences(text);
 
-    printf("%i\n", sentences);
-    printf("%i\n", words);
-    printf("%i\n", letters);
-
-    int score1 = 0.0588 * ((float) letters / (float) words * 100);
-    int score2 = (0.296 * ((sentences / words) * 100));
-    printf("%i\n", score1);
-    printf("%i\n", score2);
+    printf("%f\n", sentences);
+    printf("%f\n", words);
+    printf("%f\n", letters);
 
     // computer the score with the algorithm (index = 0.0588 * L - 0.296 * S - 15.8)
-    int score = ((float) (0.0588 * ((float) letters / (float) words * 100))) - ((float) (0.296 * ((float) sentences / (float) words * 100))) - 15.8;
-    printf("Score: %i\n", score);
+    float score = (0.0588 * letters / words * 100) - (0.296 * sentences / words * 100) - 15.8;
+    printf("Score: %f\n", score);
 
     // print out the reading level
 
