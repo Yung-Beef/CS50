@@ -6,7 +6,6 @@
 int main(int k, string argv[])
 {
     int keylen = strlen(argv[1]);
-    string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     // ensure just one command-line argument
     if (k == 1 || k > 2)
     {
@@ -46,43 +45,49 @@ int main(int k, string argv[])
 
     // get plaintext input
     string plaintext = get_string("plaintext:  ");
-    int plainlen = strlen(plaintext);
-    string ciphertext = plaintext;
+
 
     // substitute character by character
-    for (int i = 0; i < plainlen; i++)
-    {
-        if (isupper(plaintext[i]))
-        {
-            ciphertext[i] = (plaintext[i] + argv[1][i] - alphabet[i]);
-            // wrap-around either direction
-            if (ciphertext[i] > 90)
-            {
-                ciphertext[i] -= 26;
-            }
-            else if (ciphertext[i] < 65)
-            {
-                ciphertext[i] += 26;
-            }
-        }
-        else if (islower(plaintext[i]))
-        {
-            ciphertext[i] = (plaintext[i] + argv[1][i] - alphabet[i]);
-            // wrap-around either direction
-            if (ciphertext[i] > 122)
-            {
-                ciphertext[i] -= 26;
-            }
-            else if (ciphertext[i] < 97)
-            {
-                ciphertext[i] += 26;
-            }
-        }
-    }
+    string ciphertext = substitute(plaintext, arvg[]);
 
     // output ciphertext
     printf("ciphertext: %s\n", ciphertext);
     return 0;
 }
 
-string substitute(string plaintext, )
+string substitute(string plaintext, string arvg[])
+{
+    string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    int plainlen = strlen(plaintext);
+    string ciphertext = plaintext;
+
+    for (int i = 0; i < plainlen; i++)
+        {
+            if (isupper(plaintext[i]))
+            {
+                ciphertext[i] = (plaintext[i] + argv[1][i] - alphabet[i]);
+                // wrap-around either direction
+                if (ciphertext[i] > 90)
+                {
+                    ciphertext[i] -= 26;
+                }
+                else if (ciphertext[i] < 65)
+                {
+                    ciphertext[i] += 26;
+                }
+            }
+            else if (islower(plaintext[i]))
+            {
+                ciphertext[i] = (plaintext[i] + argv[1][i] - alphabet[i]);
+                // wrap-around either direction
+                if (ciphertext[i] > 122)
+                {
+                    ciphertext[i] -= 26;
+                }
+                else if (ciphertext[i] < 97)
+                {
+                    ciphertext[i] += 26;
+            }
+        }
+    }
+}
