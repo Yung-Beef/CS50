@@ -24,7 +24,7 @@ int main(int k, string argv[])
     // put the alphabet in an array, and the key, and use a for loop to find the difference between each, which can be used for A and a
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-    ciphertext[i] = alphabet[i] + plaintext[i]
+    ciphertext[i] = plaintext[i] = (key[i] - alphabet[i])
 
 
 
