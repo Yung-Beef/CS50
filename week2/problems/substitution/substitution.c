@@ -6,7 +6,7 @@
 
 int main(int k, string argv[])
 {
-    int keylen = strlen(argv[]);
+    int keylen = strlen(argv[1]);
     // ensure just one command-line argument
     if (k == 1 || k > 2)
     {
@@ -20,7 +20,11 @@ int main(int k, string argv[])
     }
     for (int i = 0; i < keylen; i++)
     {
-        
+        if (!isalpha(argv[1][i]))
+        {
+        printf("Invalid key.\n");
+        return 1;
+        }
     }
     // TODO: ensure the key contains 26 characters, every letter once, and only alphabetic characters
 
