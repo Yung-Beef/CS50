@@ -33,12 +33,12 @@ int main(int k, string argv[])
     key = key % 26;
     printf("%i\n", key);
 
-
+    string cipher = 0;
     for (int i = 0; i < k; i++)
     {
         if (isupper(argv[1][i]))
         {
-            string cipher[i] = argv[1][i] + key;
+            cipher[i] = argv[1][i] + key;
             // Z is 90, if greater than 90, subract 26
 
 
