@@ -7,6 +7,7 @@
 int main(int k, string argv[])
 {
     // define command-line argument, non-negative integer
+    // ensure just one command-line argument
     if (k == 1 || k > 2)
     {
         printf("Please enter just one positive integer.\n");
