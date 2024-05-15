@@ -3,6 +3,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int main(int k, string argv[])
 {
@@ -29,8 +30,8 @@ int main(int k, string argv[])
 
     // encrypt
     // change user input into a value of 26 or below
-    argv[1] = k % 26;
-    printf("%i\n", k);
+    int key = atoi(argv[1]);
+    printf("%i\n", key);
 
 
 
