@@ -29,9 +29,14 @@ int main(int k, string argv[])
 
     // encrypt
     // change user input into a value of 26 or below
-    char key = argv[1];
+    int key = atoi(argv[1]);
     key = key % 26;
-    printf("%c\n", key);
+    printf("%i\n", key);
+
+
+    // turn the key into a character
+
+
 
     //string cipher = 0;
     //for (int i = 0; i < k; i++)
@@ -49,7 +54,7 @@ int main(int k, string argv[])
         //}
     //}
 
-    printf("%s\n", cipher);
+    //printf("%s\n", cipher);
 
 
     // print out ciphertext
