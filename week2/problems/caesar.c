@@ -34,6 +34,7 @@ int main(int k, string argv[])
         {
 
             // if k is greater than 26, do %26 for the remainder and use that as k to shift
+            // if k = 26 do nothing
 
 
         }
