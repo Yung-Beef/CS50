@@ -18,10 +18,6 @@ int main(void)
     float words = countwords(text);
     float sentences = countsentences(text);
 
-    printf("%f\n", sentences);
-    printf("%f\n", words);
-    printf("%f\n", letters);
-
     // computer the score with the algorithm (index = 0.0588 * L - 0.296 * S - 15.8)
     int score = round((0.0588 * letters / words * 100) - (0.296 * sentences / words * 100) - 15.8);
     printf("Score: %i\n", score);
