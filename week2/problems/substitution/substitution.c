@@ -22,11 +22,6 @@ int main(int k, string argv[])
 
     // substitute - case must be preserved, figure out the number difference between each
     // put the alphabet in an array, and the key, and use a for loop to find the difference between each, which can be used for A and a
-    int key[26];
-    for (int i = 0; i < 25; i++)
-    {
-        key[i] = atoi(argv[i]);
-    }
 
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     string ciphertext = plaintext;
@@ -34,7 +29,7 @@ int main(int k, string argv[])
     {
         if (isupper(plaintext[i]))
         {
-            ciphertext[i] = (plaintext[i] + argv[i] - alphabet[i]);
+            ciphertext[i] = (plaintext[i] + argv[1][i] - alphabet[i]);
             if (ciphertext[i] > 90)
             {
                 ciphertext[i] -= 26;
@@ -46,7 +41,7 @@ int main(int k, string argv[])
         }
         else if (islower(plaintext[i]))
         {
-            ciphertext[i] = (plaintext[i] + key[i] - alphabet[i]);
+            ciphertext[i] = (plaintext[i] + argv[1][i] - alphabet[i]);
             if (ciphertext[i] > 122)
             {
                 ciphertext[i] -= 26;
