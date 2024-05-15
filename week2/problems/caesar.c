@@ -6,13 +6,13 @@
 
 int main(int k, string argv[])
 {
-    // define command-line argument, non-negative integer
     // ensure just one command-line argument
     if (k == 1 || k > 2)
     {
         printf("Please enter just one positive integer.\n");
         return 1;
     }
+    // ensure the command-line argument is only positive decimal digits
     for (int i = 0; i < k; i++)
     {
         char c = argv[1][i];
@@ -23,9 +23,6 @@ int main(int k, string argv[])
         }
     }
     printf("%s\n", argv[1]);
-
-        // if they enter 0 or 2+ CLAs, print error and return 1
-        // if any of the CLAs are not decimal digits, print error and return 1
 
     // get user input for plaintext
 
