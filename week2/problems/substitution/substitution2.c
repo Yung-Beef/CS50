@@ -51,7 +51,6 @@ int main(int k, string argv[])
     // get plaintext input
     string plaintext = get_string("plaintext:  ");
 
-
     // substitute character by character
     string ciphertext = substitute(plaintext, argv[1]);
 
