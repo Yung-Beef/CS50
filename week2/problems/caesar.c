@@ -32,7 +32,6 @@ int main(int k, string argv[])
     // change user input into a value of 26 or below
     int key = atoi(argv[1]);
     key = key % 26;
-    printf("%i\n", key);
 
     string ciphertext = plaintext;
     for (int i = 0; i < plainlen; i++)
@@ -58,13 +57,7 @@ int main(int k, string argv[])
         }
     }
 
-    printf("%s\n", ciphertext);
-
-
     // print out ciphertext
-
-
-
-
-
+    printf("ciphertext: %s\n", ciphertext);
+    return 0;
 }
