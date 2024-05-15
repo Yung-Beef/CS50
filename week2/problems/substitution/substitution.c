@@ -5,9 +5,9 @@
 
 int main(int k, string argv[])
 {
+    // ensure the whole key is uppercase
     string key = argv[1];
     int keylen = strlen(argv[1]);
-    // ensure the whole key is uppercase
     for (int i = 0; i < keylen; i++)
     {
         if (islower(key[i]))
@@ -16,7 +16,6 @@ int main(int k, string argv[])
         }
     }
 
-    string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     // ensure just one command-line argument
     if (k == 1 || k > 2)
     {
@@ -29,8 +28,7 @@ int main(int k, string argv[])
         return 1;
     }
 
-    //TODO: FIGURE OUT ABOUT THE BULLSHIT DUPLICATE LETTERS
-
+    // ensure no duplicate letters
     for (int i = 0; i < keylen; i++)
     {
         if (!isalpha(argv[1][i]))
@@ -47,10 +45,6 @@ int main(int k, string argv[])
             }
         }
     }
-    // TODO: ensure the key contains 26 characters, every letter once, and only alphabetic characters
-    // make another alphabet string, go through and if there is a match, set that one to 0 in the new alphabet string
-    // if there's no match, print error
-
 
     // get plaintext input
     string plaintext = get_string("plaintext:  ");
