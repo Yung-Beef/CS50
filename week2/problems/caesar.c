@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(int k)
+int main(int k, string argv[])
 {
     // define command-line argument, non-negative integer
     if (k < 1)
@@ -17,6 +17,7 @@ int main(int k)
         printf("Usage: ./caesar key");
         return 1;
     }
+    else if ()
 
         // if they enter 0 or 2+ CLAs, print error and return 1
         // if any of the CLAs are not decimal digits, print error and return 1
