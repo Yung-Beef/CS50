@@ -41,13 +41,21 @@ int main(int k, string argv[])
         {
             ciphertext[i] = plaintext[i] + key;
             // Z is 90, if greater than 90, subract 26
-
+            if (ciphertext[i] > 90)
+            {
+                ciphertext[i] -= 26;
+            }
 
         }
-        //else if (islower(argv[1][i]))
-        //{
-
-        //}
+        else if (islower(argv[1][i]))
+        {
+            ciphertext[i] = plaintext[i] + key;
+            // Z is 90, if greater than 90, subract 26
+            if (ciphertext[i] > 122)
+            {
+                ciphertext[i] -= 26;
+            }
+        }
     }
 
     printf("%s\n", ciphertext);
