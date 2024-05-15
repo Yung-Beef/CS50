@@ -29,7 +29,7 @@ int main(int k, string argv[])
 
     // encrypt
     // change user input into a k-value of 26 or below
-    k = k % 26;
+    argv[1] = k % 26;
     printf("%i\n", k);
     //for (i = 0; i < k; i++)
     //{
