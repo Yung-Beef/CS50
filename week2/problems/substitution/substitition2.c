@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <string.h>
 
+string substitute(string plaintext, string arvg[])
+
 int main(int k, string argv[])
 {
     int keylen = strlen(argv[1]);
