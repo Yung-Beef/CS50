@@ -23,7 +23,11 @@ int main(void)
     int letters;
     for (i = 0; i < length; i++)
     {
-        
+        if (text[i] = '.')
+        {
+            sentences += sentences;
+        }
+        else if (text[i])
     }
 
 
