@@ -22,14 +22,39 @@ int main(int k, string argv[])
 
     // substitute - case must be preserved, figure out the number difference between each
     // put the alphabet in an array, and the key, and use a for loop to find the difference between each, which can be used for A and a
-    string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
-    ciphertext[i] = plaintext[i] = (key[i] - alphabet[i])
-
-
+    string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    string ciphertext = plaintext;
+    for (int i = 0; i < plainlen; i++)
+    {
+        if (isupper(plaintext[i]))
+        {
+            ciphertext[i] = plaintext[i] + (key[i] - alphabet[i]);
+            if (ciphertext[i] > 90)
+            {
+                ciphertext[i] -= 26;
+            }
+            else if (ciphertext[i] < 65)
+            {
+                ciphertext[i] += 26;
+            }
+        }
+        else if (islower(plaintext[i]))
+        {
+            ciphertext[i] = plaintext[i] + (key[i] - alphabet[i]);
+            if (ciphertext[i] > 122)
+            {
+                ciphertext[i] -= 26;
+            }
+            else if (ciphertext[i] < 97)
+            {
+                ciphertext[i] += 26;
+            }
+        }
+    }
 
     // output ciphertext
-
+    printf("ciphertext: %s\n", ciphertext);
+    return 0;
 
 
 }
