@@ -44,7 +44,6 @@ int main(int k, string argv[])
             {
                 ciphertext[i] -= 26;
             }
-
         }
         else if (islower(plaintext[i]))
         {
