@@ -7,7 +7,7 @@
 int main(int k, string argv[])
 {
     // define command-line argument, non-negative integer
-    if (k < 1)
+    if (k = 0 || k > 1)
     {
         printf("Please enter a positive integer.");
         return 1;
