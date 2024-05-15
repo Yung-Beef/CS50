@@ -12,24 +12,28 @@ int main(int k, string argv[])
         printf("Please enter just one key.\n");
         return 1;
     }
-
+    else if (strlen(argv[]) != 26)
+    {
+        printf("Invalid key.\n");
+        return 1;
+    }
     // TODO: ensure the key contains 26 characters, every letter once, and only alphabetic characters
+
 
 
     // get plaintext input
     string plaintext = get_string("plaintext:  ");
     int plainlen = strlen(plaintext);
-
-    // substitute - case must be preserved, figure out the number difference between each
-    // put the alphabet in an array, and the key, and use a for loop to find the difference between each, which can be used for A and a
-
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     string ciphertext = plaintext;
+
+    // substitute character by character
     for (int i = 0; i < plainlen; i++)
     {
         if (isupper(plaintext[i]))
         {
             ciphertext[i] = (plaintext[i] + argv[1][i] - alphabet[i]);
+            // wrap-around either direction
             if (ciphertext[i] > 90)
             {
                 ciphertext[i] -= 26;
@@ -42,6 +46,7 @@ int main(int k, string argv[])
         else if (islower(plaintext[i]))
         {
             ciphertext[i] = (plaintext[i] + argv[1][i] - alphabet[i]);
+            // wrap-around either direction
             if (ciphertext[i] > 122)
             {
                 ciphertext[i] -= 26;
@@ -56,6 +61,4 @@ int main(int k, string argv[])
     // output ciphertext
     printf("ciphertext: %s\n", ciphertext);
     return 0;
-
-
 }
