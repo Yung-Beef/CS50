@@ -34,24 +34,22 @@ int main(int k, string argv[])
     printf("%i\n", key);
 
 
-    //for (i = 0; i < k; i++)
-    //{
-        //if (isupper(argv[1][i]))
-        //{
-            //argv[1][i] = argv[1][i] + k;
-            // if k is greater than 26, do %26 for the remainder and use that as k to shift
-            // if k = 26 do nothing
+    for (int i = 0; i < k; i++)
+    {
+        if (isupper(argv[1][i]))
+        {
+            string cipher[i] = argv[1][i] + key;
             // Z is 90, if greater than 90, subract 26
 
 
-        //}
+        }
         //else if (islower(argv[1][i]))
         //{
 
         //}
-    //}
+    }
 
-
+    printf("%s\n", cipher);
 
 
     // print out ciphertext
