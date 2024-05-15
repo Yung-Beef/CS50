@@ -28,22 +28,24 @@ int main(int k, string argv[])
     string plaintext = get_string("plaintext:  ");
 
     // encrypt
-    for (i = 0; i < k; i++)
-    {
-        if (isupper(argv[1][i]))
-        {
-            argv[1][i] = argv[1][i] + k;
+    // change user input into a k-value of 26 or below
+    k = k % 26;
+    //for (i = 0; i < k; i++)
+    //{
+        //if (isupper(argv[1][i]))
+        //{
+            //argv[1][i] = argv[1][i] + k;
             // if k is greater than 26, do %26 for the remainder and use that as k to shift
             // if k = 26 do nothing
             // Z is 90, if greater than 90, subract 26
 
 
-        }
-        else if (islower(argv[1][i]))
-        {
+        //}
+        //else if (islower(argv[1][i]))
+        //{
 
-        }
-    }
+        //}
+    //}
 
 
 
