@@ -26,6 +26,7 @@ int main(int k, string argv[])
 
     // get user input for plaintext
     string plaintext = get_string("plaintext:  ");
+    int plainlen = strlen(plaintext);
 
     // encrypt
     // change user input into a value of 26 or below
@@ -33,27 +34,26 @@ int main(int k, string argv[])
     key = key % 26;
     printf("%i\n", key);
 
+    // turn the key into a character
     char keychar = key + 64;
     printf("%c\n", keychar);
-    // turn the key into a character
 
 
-
-    //string cipher = 0;
-    //for (int i = 0; i < k; i++)
-    //{
-        //if (isupper(argv[1][i]))
-        //{
-            //cipher[i] = atoi(argv[1][i]) + key;
+    string ciphertext = "";
+    for (int i = 0; i < plainlen; i++)
+    {
+        if (isupper(plaintext[i]))
+        {
+            ciphertext[i] = plaintext[i] + keychar;
             // Z is 90, if greater than 90, subract 26
 
 
-        //}
+        }
         //else if (islower(argv[1][i]))
         //{
 
         //}
-    //}
+    }
 
     //printf("%s\n", cipher);
 
