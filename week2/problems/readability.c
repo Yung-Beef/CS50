@@ -34,7 +34,6 @@ int main(void)
     {
         printf("Grade %i\n", score);
     }
-
 }
 
 int countletters(string text)
