@@ -47,7 +47,7 @@ int main(int k, string argv[])
             }
 
         }
-        else if (islower(argv[1][i]))
+        else if (islower(plaintext[i]))
         {
             ciphertext[i] = plaintext[i] + key;
             // Z is 90, if greater than 90, subract 26
