@@ -32,7 +32,10 @@ int main(int k, string argv[])
     {
         if (isupper(argv[1][i]))
         {
-            
+
+            // if k is greater than 26, do %26 for the remainder and use that as k to shift
+
+
         }
         else if (islower(argv[1][i]))
         {
