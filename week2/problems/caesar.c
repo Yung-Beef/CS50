@@ -25,12 +25,7 @@ int main(int k, string argv[])
     printf("%s\n", argv[1]);
 
     // get user input for plaintext
-    //printf("Plaintext:  ")
-    do
-    {
-        string plaintext = get_string("plaintext:  \n");
-    }
-    while ()
+    string plaintext = get_string("plaintext:  ");
 
     // encrypt
 
