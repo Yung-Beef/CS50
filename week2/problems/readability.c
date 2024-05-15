@@ -19,7 +19,7 @@ int main(void)
     // if other punctuation, ignore
 
     int sentences = 0;
-    int words = 0;
+    int words = 1;
     int letters = 0;
     for (int i = 0; i < length; i++)
     {
