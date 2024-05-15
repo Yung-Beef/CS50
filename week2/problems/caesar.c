@@ -38,7 +38,7 @@ int main(int k, string argv[])
     {
         if (isupper(argv[1][i]))
         {
-            cipher[i] = argv[1][i] + key;
+            cipher[i] = atoi(argv[1][i]) + key;
             // Z is 90, if greater than 90, subract 26
 
 
