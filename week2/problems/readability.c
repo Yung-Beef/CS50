@@ -13,43 +13,14 @@ int main(void)
     // prompt user for text
     string text = get_string("Text: ");
 
-    // determine length of text
-    int length = strlen(text);
-
     // determine number of letters, words, sentences
-    int sentences = 0;
-    int words = 1;
-    int letters = 0;
-    for (int i = 0; i < length; i++)
-    {
-        char c = text[i];
-        // if sentence ender, increment sentence variable by one
-        if (c == '.' || c == '?' || c == '!')
-        {
-            sentences += 1;
-        }
-        // if space, increment word variable by one
-        else if (isblank(c))
-        {
-            words += 1;
-        }
-        // if alphabetical, increment letter variable by one
-        else if (isalpha(c))
-        {
-            letters += 1;
-        }
-    }
-
-    printf("%i\n", length);
-    printf("%i\n", sentences);
-    printf("%i\n", words);
-    printf("%i\n", letters);
-
     int letters = countletters(text);
     int words = countwords(text);
     int sentences = countsentences(text);
 
-
+    printf("%i\n", sentences);
+    printf("%i\n", words);
+    printf("%i\n", letters);
 
 
 
@@ -59,4 +30,52 @@ int main(void)
 
     // print out the reading level
 
+}
+
+int countletters(string text)
+{
+    int length = strlen(text);
+    int l = 0;
+    for (int i = 0; i < length; i++)
+    {
+        char c = text[i];
+        // if alphabetical, increment letter variable by one
+        if (isalpha(c))
+        {
+            l += 1;
+        }
+    }
+    return l;
+}
+
+int countwords(string text)
+{
+    int length = strlen(text);
+    int w = 1;
+    for (int i = 0; i < length; i++)
+    {
+        char c = text[i];
+        // if space, increment word variable by one
+        if (isblank(c))
+        {
+            w += 1;
+        }
+    }
+    return w;
+}
+
+int countsentences(string text)
+{
+    int length = strlen(text);
+    int s = 0;
+    for (int i = 0; i < length; i++)
+    {
+        char c = text[i];
+        // if sentence ender, increment sentence variable by one
+        if (c == '.' || c == '?' || c == '!')
+        {
+            s += 1;
+        }
+    }
+    return s;
 }
