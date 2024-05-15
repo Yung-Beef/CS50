@@ -5,7 +5,17 @@
 
 int main(int k, string argv[])
 {
+    string key = argv[1];
     int keylen = strlen(argv[1]);
+    // ensure the whole key is uppercase
+    for (int i = 0; i < keylen; i++)
+    {
+        if (islower(key[i])
+        {
+            key[i] = toupper(key[i])
+        }
+    }
+
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     // ensure just one command-line argument
     if (k == 1 || k > 2)
