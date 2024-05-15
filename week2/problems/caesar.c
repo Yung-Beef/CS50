@@ -6,17 +6,20 @@
 
 int main(int k, string argv[])
 {
-    char c = argv[1];
     // define command-line argument, non-negative integer
     if (k == 1 || k > 2)
     {
         printf("Please enter just one positive integer.\n");
         return 1;
     }
-    else if (isalpha(c) || isblank(c) || ispunct(c))
+    for (int i = 0; i < k; i++)
     {
-        printf("Usage: ./caesar key");
-        return 1;
+        char c = argv[1][i];
+        if (isalpha(c) || isblank(c) || ispunct(c))
+        {
+            printf("Usage: ./caesar key\n");
+            return 1;
+        }
     }
     printf("%s\n", argv[1]);
 
