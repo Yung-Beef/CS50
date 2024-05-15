@@ -28,6 +28,19 @@ int main(int k, string argv[])
     string plaintext = get_string("plaintext:  ");
 
     // encrypt
+    for (i = 0; i < k; i++)
+    {
+        if (isupper(argv[1][i]))
+        {
+            
+        }
+        else if (islower(argv[1][i]))
+        {
+
+        }
+    }
+
+
 
 
     // print out ciphertext
