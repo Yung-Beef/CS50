@@ -19,7 +19,11 @@ int main(int k, string argv[])
     // get plaintext input
 
 
-    // 
+    // substitute - case must be preserved, figure out the number difference between each
+    // put the alphabet in an array, and the key, and use a for loop to find the difference between each, which can be used for A and a
+
+
+    // output ciphertext
 
 
 
