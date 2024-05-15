@@ -7,6 +7,8 @@
 int main(int k, string argv[])
 {
     int keylen = strlen(argv[1]);
+    string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    string ciphertext = plaintext;
     // ensure just one command-line argument
     if (k == 1 || k > 2)
     {
@@ -25,6 +27,10 @@ int main(int k, string argv[])
         printf("Invalid key.\n");
         return 1;
         }
+        for (j = 0; j < 26; j++)
+        {
+            if (alphabet[j] )
+        }
     }
     // TODO: ensure the key contains 26 characters, every letter once, and only alphabetic characters
 
@@ -33,8 +39,7 @@ int main(int k, string argv[])
     // get plaintext input
     string plaintext = get_string("plaintext:  ");
     int plainlen = strlen(plaintext);
-    string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    string ciphertext = plaintext;
+
 
     // substitute character by character
     for (int i = 0; i < plainlen; i++)
