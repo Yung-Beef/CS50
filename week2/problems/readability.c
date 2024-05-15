@@ -13,25 +13,23 @@ int main(void)
     int length = strlen(text);
 
     // determine number of letters, words, sentences
-    // if period, increment sentence variable by one
-    // if space, increment word variable by one
-    // if alphabetical, increment letter variable by one
-    // if other punctuation, ignore
-
     int sentences = 0;
     int words = 1;
     int letters = 0;
     for (int i = 0; i < length; i++)
     {
         char c = text[i];
+        // if sentence ender, increment sentence variable by one
         if (c == '.' || c == '?' || c == '!')
         {
             sentences += 1;
         }
+        // if space, increment word variable by one
         else if (isblank(c))
         {
             words += 1;
         }
+        // if alphabetical, increment letter variable by one
         else if (isalpha(c))
         {
             letters += 1;
@@ -43,10 +41,8 @@ int main(void)
     printf("%i\n", words);
     printf("%i\n", letters);
 
-
-
-    // computer the score with the algorithm
-
+    // computer the score with the algorithm (index = 0.0588 * L - 0.296 * S - 15.8)
+    int score = 0.0588 * (L) - 0.296 * (S) - 15.8
 
     // print out the reading level
 
