@@ -40,20 +40,20 @@ int main(int k, string argv[])
 
 
     string ciphertext = "";
-    for (int i = 0; i < plainlen; i++)
-    {
-        if (isupper(plaintext[i]))
-        {
-            ciphertext[i] = plaintext[i] + keychar;
+    //for (int i = 0; i < plainlen; i++)
+    //{
+        //if (isupper(plaintext[i]))
+        //{
+            //ciphertext[i] = plaintext[i] + keychar;
             // Z is 90, if greater than 90, subract 26
 
 
-        }
+        //}
         //else if (islower(argv[1][i]))
         //{
 
         //}
-    }
+    //}
 
     printf("%s\n", ciphertext);
 
