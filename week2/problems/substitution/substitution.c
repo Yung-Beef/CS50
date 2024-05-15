@@ -26,7 +26,7 @@ int main(int k, string argv[])
         printf("Invalid key.\n");
         return 1;
         }
-        string checker = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        char checker[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         for (int j = 0; j < 26; j++)
         {
             if (checker[j] == argv[1][i])
