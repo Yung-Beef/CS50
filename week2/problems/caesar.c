@@ -23,7 +23,6 @@ int main(int k, string argv[])
             return 1;
         }
     }
-    printf("%s\n", argv[1]);
 
     // get user input for plaintext
     string plaintext = get_string("plaintext:  ");
@@ -31,8 +30,8 @@ int main(int k, string argv[])
     // encrypt
     // change user input into a value of 26 or below
     int key = atoi(argv[1]);
+    key = key % 26;
     printf("%i\n", key);
-
 
 
     //for (i = 0; i < k; i++)
