@@ -40,11 +40,7 @@ int main(int k, string argv[])
         }
         for (int j = i + 1; j < 26; j++)
         {
-            if (checker[j] == argv[1][i])
-            {
-                checker[j] = 0;
-            }
-            else if (checker[j] == 0)
+            if (argv[1][j] == argv[1][i])
             {
                 printf("Invalid key.\n");
                 return 1;
