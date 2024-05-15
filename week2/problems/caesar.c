@@ -7,6 +7,11 @@
 int main(int k)
 {
     // define command-line argument, non-negative integer
+    if (k < 1)
+    {
+        printf("Please enter a positive integer.");
+        return 1;
+    }
     
 
         // if they enter 0 or 2+ CLAs, print error and return 1
