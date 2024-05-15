@@ -34,17 +34,12 @@ int main(int k, string argv[])
     key = key % 26;
     printf("%i\n", key);
 
-    // turn the key into a character
-    char keychar = key + 64;
-    printf("%c\n", keychar);
-
-
     string ciphertext = plaintext;
     for (int i = 0; i < plainlen; i++)
     {
         if (isupper(plaintext[i]))
         {
-            ciphertext[i] = plaintext[i] + keychar;
+            ciphertext[i] = plaintext[i] + key;
             // Z is 90, if greater than 90, subract 26
 
 
