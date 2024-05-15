@@ -32,6 +32,7 @@ int main(int k, string argv[])
     //TODO: FIGURE OUT ABOUT THE BULLSHIT DUPLICATE LETTERS
 
     char checker[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    int duplicates[26];
     for (int i = 0; i < keylen; i++)
     {
         if (!isalpha(argv[1][i]))
