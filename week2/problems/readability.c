@@ -24,7 +24,7 @@ int main(void)
     for (int i = 0; i < length; i++)
     {
         char c = text[i];
-        if (c == '.')
+        if (c == '.' || c == '?' || c == '!')
         {
             sentences += 1;
         }
