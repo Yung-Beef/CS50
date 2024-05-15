@@ -40,7 +40,7 @@ int main(void)
 
 }
 
-int countletters(string text);
+int countletters(string text)
 {
     int l = 0;
     for (int i = 0; i < length; i++)
@@ -55,7 +55,7 @@ int countletters(string text);
     return l;
 }
 
-int countwords(string text);
+int countwords(string text)
 {
     int w = 1;
     for (int i = 0; i < length; i++)
@@ -70,7 +70,7 @@ int countwords(string text);
     return w;
 }
 
-int countsentences(string text);
+int countsentences(string text)
 {
     int s = 0;
     for (int i = 0; i < length; i++)
