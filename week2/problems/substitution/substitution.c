@@ -8,7 +8,6 @@ int main(int k, string argv[])
 {
     int keylen = strlen(argv[1]);
     string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    string ciphertext = plaintext;
     // ensure just one command-line argument
     if (k == 1 || k > 2)
     {
@@ -28,9 +27,9 @@ int main(int k, string argv[])
         return 1;
         }
         string checker = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        for (j = 0; j < 26; j++)
+        for (int j = 0; j < 26; j++)
         {
-            if (checker[j] = argv[1][i])
+            if (checker[j] == argv[1][i])
             {
                 checker[j] = 0;
             }
@@ -49,7 +48,7 @@ int main(int k, string argv[])
     // get plaintext input
     string plaintext = get_string("plaintext:  ");
     int plainlen = strlen(plaintext);
-
+    string ciphertext = plaintext;
 
     // substitute character by character
     for (int i = 0; i < plainlen; i++)
