@@ -12,7 +12,11 @@ int main(int k)
         printf("Please enter a positive integer.");
         return 1;
     }
-    
+    else if (isalpha(k) || isblank(k) || ispunct(k))
+    {
+        printf("Usage: ./caesar key");
+        return 1;
+    }
 
         // if they enter 0 or 2+ CLAs, print error and return 1
         // if any of the CLAs are not decimal digits, print error and return 1
