@@ -4,6 +4,10 @@
 #include <stdio.h>
 #include <string.h>
 
+int countletters(string text)
+int countwords(string text)
+int countsentences(string text)
+
 int main(void)
 {
     // prompt user for text
@@ -42,13 +46,48 @@ int main(void)
     printf("%i\n", letters);
 
     // computer the score with the algorithm (index = 0.0588 * L - 0.296 * S - 15.8)
-    int score = (0.0588 * ((letters / words) * 100)) - (0.296 * ((sentences / words) * 100)) - 15.8;
-    printf("%i\n", score);
+    //int score = (0.0588 * ((letters / words) * 100)) - (0.296 * ((sentences / words) * 100)) - 15.8;
+    //printf("%i\n", score);
+
     // print out the reading level
 
 }
 
-//int countletters(string text)
-//{
+int countletters(string text)
+{
+    int letters = 0;
+    for (int i = 0; i < length; i++)
+    {
+        char c = text[i];
+        // if alphabetical, increment letter variable by one
+        if (isalpha(c))
+        {
+            letters += 1;
+        }
+}
 
-//}
+int countwords(string text)
+{
+    int words = 1;
+    for (int i = 0; i < length; i++)
+    {
+        char c = text[i];
+        // if alphabetical, increment letter variable by one
+        if (isblank(c))
+        {
+            words += 1;
+        }
+}
+
+int countsentences(string text)
+{
+    int sentences = 0;
+    for (int i = 0; i < length; i++)
+    {
+        char c = text[i];
+        // if alphabetical, increment letter variable by one
+        if (c == '.' || c == '?' || c == '!')
+        {
+            sentences += 1;
+        }
+}
