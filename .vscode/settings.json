@@ -5,6 +5,7 @@
         "cs50.h": "c",
         "ctype.h": "c",
         "string.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "numbers": "c"
     }
 }
