@@ -80,7 +80,7 @@ bool vote(string name)
 // void print_winner(void)
 // {
 //     // TODO
-//     // set winner variable, iterate through the list
+//     // set winner variable, iterate through the list, set winner equal to the highest one so far
 
 
 //     printf("The winner is: ");
