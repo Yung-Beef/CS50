@@ -1,11 +1,11 @@
-sort1 uses: TODO
+sort1 uses: Bubble Sort
 
-How do you know?: TODO
+How do you know?: It goes through the sorted lists faster than Selection Sort
 
 sort2 uses: Merge Sort
 
 How do you know?: It's faster than sort1 and sort2 on multiple lists
 
-sort3 uses: TODO
+sort3 uses: Selection Sort
 
-How do you know?: TODO
+How do you know?: Process of elimination/slower than Bubble Sort on sorted lists
