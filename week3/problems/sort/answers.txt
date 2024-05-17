@@ -2,9 +2,9 @@ sort1 uses: TODO
 
 How do you know?: TODO
 
-sort2 uses: TODO
+sort2 uses: Merge Sort
 
-How do you know?: TODO
+How do you know?: It's faster than sort1 and sort2 on multiple lists
 
 sort3 uses: TODO
 
