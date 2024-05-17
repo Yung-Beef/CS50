@@ -83,7 +83,7 @@ void print_winner(void)
     // take the list and sort is then search for the last one
     for (int i = 0; i < candidates[i]; i++)
     {
-        
+        // sort the votes, and move the names however the vote scores are moved
     }
 
 
