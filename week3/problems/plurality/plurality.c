@@ -76,13 +76,21 @@ bool vote(string name)
     return false;
 }
 
-// Print the winner (or winners) of the election
-// void print_winner(void)
-// {
-//     // TODO
-//     // set winner variable, iterate through the list, set winner equal to the highest one so far
+Print the winner (or winners) of the election
+void print_winner(void)
+{
+    // TODO
+    // set winner variable, iterate through the list, set winner equal to the highest one so far
+    string winner = candidates[i].name;
+    for (int i = 0; i < (argc - 1); i++)
+    {
+        if (candidates[i + 1].number > candidates[i].number)
+        {
+            winner = candidates[i + 1];
+        }
+    }
 
 
-//     printf("The winner is: ");
-//     return;
-// }
+    printf("The winner is: ");
+    return;
+}
