@@ -80,11 +80,7 @@ bool vote(string name)
 // void print_winner(void)
 // {
 //     // TODO
-//     // take the list and sort is then search for the last one
-//     for (int i = 0; i < candidates[i]; i++)
-//     {
-//         // sort the votes, and move the names however the vote scores are moved
-//     }
+//     // set winner variable, iterate through the list
 
 
 //     printf("The winner is: ");
