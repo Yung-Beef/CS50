@@ -80,17 +80,29 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    // set winner variable, iterate through the list, set winner equal to the highest one so far
-    string winner = candidates[0].name;
+    // find the highest number of votes via one search, then use a 2nd search to find the winner(s)
+    int highvote = candidates[0].votes;
     for (int i = 0; i < (candidate_count); i++)
     {
-        if (candidates[i + 1].votes > //the vote count of winner)
+        if (candidates[i + 1].votes > highvote)
         {
-            winner = candidates[i + 1]name;
+            highvote = candidates[i+1].votes;
         }
     }
+    printf("Highest vote: %i\n", highvote);
 
 
-    printf("The winner is: %s\n", winner);
-    return;
+    // set winner variable, iterate through the list, set winner equal to the highest one so far
+    // string winner = candidates[0].name;
+    // for (int i = 0; i < (candidate_count); i++)
+    // {
+    //     if (candidates[i + 1].votes > //the vote count of winner)
+    //     {
+    //         winner = candidates[i + 1].name;
+    //     }
+    // }
+
+
+    // printf("The winner is: %s\n", winner);
+    // return;
 }
