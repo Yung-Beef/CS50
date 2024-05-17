@@ -11,6 +11,13 @@ int main(void)
 
 void draw(int n)
 {
+
+    // if loop to stop it from going forever
+    if (n <= 0)
+    {
+        return;
+    }
+
     // print pyramid of height n - 1 (always put the most base case at the top of a recursive function so it doesn't loop forever)
     draw(n - 1);
 
