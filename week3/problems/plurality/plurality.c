@@ -65,7 +65,14 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-    // TODO
+    for (i = 0; i < candidate_count; i++)
+    {
+        if (strcmp(name, candidates[i].name == 0))
+        {
+            candidates[i].votes += 1
+            return true;
+        }
+    }
     return false;
 }
 
@@ -73,5 +80,10 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
+    // take the list and sort is then search for the last one
+    
+
+
+
     return;
 }
