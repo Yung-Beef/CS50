@@ -147,17 +147,19 @@ void tabulate(void)
         // iterate through voter i's ranked votes
         for (int j = 0; j < candidate_count; j++)
         {
-            // compare vote i's jth vote against each candidate name
+            // compare voter i's jth vote against each candidate name
             for (int c = 0; c < candidate_count; c++)
             {
-                // if vote is invalid do nothing, break
+                // if vote is for an eliminated candidate, break
                 if ((strcmp(preferences[i][j], candidates[c].name == 0) && candidates[c].eliminated == true)
                 {
                     break;
                 }
+                // otherwise increase their tally
                 else if (strcmp(preferences[i][j], candidates[c].name == 0))
                 {
                     candidates[c].votes += 1;
+                    break;
                 }
             }
         }
