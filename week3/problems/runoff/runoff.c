@@ -141,7 +141,7 @@ bool vote(int voter, int rank, string name)
 // Tabulate (total) the votes for non-eliminated candidates
 void tabulate(void)
 {
-    // go through each voter, check their first vote and increase that vote count by 1
+    // go through each voter, check their first vote and increase that vote count by 1 if it's still valid, or go to their next vote
     for (int i = 0; i < voter_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
