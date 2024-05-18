@@ -147,6 +147,7 @@ void tabulate(void)
         // iterate through voter i's ranked votes
         for (int j = 0; j < candidate_count; j++)
         {
+            // compare vote i's jth vote against each candidate name
             for (int c = 0; c < candidate_count; c++)
             {
                 // if vote is invalid do nothing, break
