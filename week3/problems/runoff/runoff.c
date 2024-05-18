@@ -144,9 +144,10 @@ void tabulate(void)
 {
     // TODO
     // figure out who the winner is
+    
     for (int i = 1, i < candidate_count; i++)
     {
-        
+
     }
 
 
