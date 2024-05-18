@@ -182,18 +182,8 @@ bool print_winner(void)
         }
     }
 
-    // check how many candidates have the winning score
-    int winners = 0;
-    for (int i = 0, i < candidate_count; i++)
-    {
-        if (candidates[i].votes == votes)
-        {
-            winners += 1;
-        }
-    }
-
-    // if there is one winner
-    if (winners == 1)
+    // if there is one winner with more than half of the votes
+    if (votes > (voter_count / 2))
     {
         printf("%s wins!\n", contender);
         return true;
