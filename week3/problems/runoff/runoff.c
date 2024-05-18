@@ -127,6 +127,13 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
+    // add points to the candidate voted for
+    // rank 1 gets as many points as there are candidates, rank 2 gets one less
+    
+
+
+    // if name is not valid, return false
+
     return false;
 }
 
