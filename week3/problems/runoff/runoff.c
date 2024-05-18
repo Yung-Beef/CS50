@@ -172,7 +172,7 @@ void tabulate(void)
 bool print_winner(void)
 {
     // get the highest number of votes
-    string contender = candidates[0].name;
+    string contender = "";
     int votes = 0;
     for (int i = 0; i < candidate_count; i++)
     {
