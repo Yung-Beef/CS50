@@ -170,24 +170,39 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    // TODO
-    // get the highest number and make sure nobody else has that many
+    // get the highest number of votes
     string contender = candidates[0].name;
+    int votes = 0;
     for (int i = 1; i < candidate_count; i++)
     {
         if (candidates[i].votes > contender)
         {
-            contender = condidates[i].name;
+            contender = candidates[i].name;
+            votes = candidates[i].votes;
         }
     }
 
+    // check how many candidates have the winning score
+    int winners = 0;
+    for (int i = 0, i < candidate_count; i++)
+    {
+        if (candidates[i].votes == votes)
+        {
+            winners += 1;
+        }
+    }
 
-    // if there is a winner
-
-
-
+    // if there is one winner
+    if (winners == 1)
+    {
+        printf("%s wins!\n", contender);
+        return true;
+    }
     // if there is no winner
-    return false;
+    else
+    {
+        return false;
+    }
 }
 
 // Return the minimum number of votes any remaining candidate has
