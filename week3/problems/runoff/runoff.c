@@ -144,10 +144,15 @@ void tabulate(void)
 {
     // TODO
     // figure out who the winner is
-    
+    // find the highest score, then check if that equals any other scores
+    string winner = candidates[0].name;
+
     for (int i = 1, i < candidate_count; i++)
     {
-
+        if candidates[i].votes > winner
+        {
+            winner = candidates[i].name;
+        }
     }
 
 
