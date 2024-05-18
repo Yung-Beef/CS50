@@ -145,7 +145,10 @@ void tabulate(void)
     // check if their first vote still exists
     // if yes, increase vote count
     // if no, go to the next vote (recursive?)
-    
+    for (int i = 0; i < voter_count; i++)
+    {
+        if
+    }
 
 
 
