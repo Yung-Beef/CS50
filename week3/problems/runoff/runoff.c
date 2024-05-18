@@ -154,10 +154,10 @@ void tabulate(void)
                 if (strcmp(preferences[i][j], candidates[c].name == 0))
                 {
                     //increase vote for that person
-                    //break
+                    candidates[c].votes += 1;
                 }
             }
-
+            break
         }
     }
 
