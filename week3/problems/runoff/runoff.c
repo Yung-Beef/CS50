@@ -149,7 +149,7 @@ void tabulate(void)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            if (//candidate exists)
+            if (strcmp(preferences[i][j], == 0)candidate exists)
             {
                 //increase vote for that person
                 //break
