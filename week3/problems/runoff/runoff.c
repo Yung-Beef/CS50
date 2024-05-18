@@ -152,12 +152,12 @@ void tabulate(void)
             for (int c = 0; c < candidate_count; c++)
             {
                 // if vote is for an eliminated candidate, break
-                if ((strcmp(candidates[preferences[i][j]].name, candidates[c].name == 0) && candidates[c].eliminated == true)
+                if (strcmp(candidates[preferences[i][j]].name, candidates[c].name) && candidates[c].eliminated == true)
                 {
                     break;
                 }
                 // otherwise increase their tally
-                else if (strcmp(preferences[i][j], candidates[c].name == 0))
+                else if (strcmp(candidates[preferences[i][j]].name, candidates[c].name))
                 {
                     candidates[c].votes += 1;
                     break;
