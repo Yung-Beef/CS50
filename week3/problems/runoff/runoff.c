@@ -184,7 +184,7 @@ bool print_winner(void)
     }
 
     // if there is one winner with more than half of the votes
-    if (votes > (voter_count / 2))
+    if (votes > ((float) (voter_count / 2)))
     {
         printf("%s wins!\n", contender);
         return true;
