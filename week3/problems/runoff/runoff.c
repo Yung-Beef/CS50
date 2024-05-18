@@ -143,6 +143,7 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // TODO
+    // sort highest to lowest
     // figure out who the winner is
     // find the highest score, then check if that equals any other scores
     string winner = candidates[0].name;
