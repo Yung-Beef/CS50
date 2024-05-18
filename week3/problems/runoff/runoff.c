@@ -147,7 +147,10 @@ void tabulate(void)
     // if no, go to the next vote (recursive?)
     for (int i = 0; i < voter_count; i++)
     {
-        if
+        for (int j = 0; j < candidate_count; j++)
+        {
+            
+        }
     }
 
 
