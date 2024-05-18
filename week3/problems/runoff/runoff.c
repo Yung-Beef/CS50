@@ -130,7 +130,10 @@ bool vote(int voter, int rank, string name)
     // add points to the candidate voted for
     // rank 1 gets as many points as there are candidates, rank 2 gets one less
 
-    for (int i = 0; i < )
+    for (int i = 0; i < candidate_count; i++)
+    {
+        
+    }
 
 
     // if name is not valid, return false
