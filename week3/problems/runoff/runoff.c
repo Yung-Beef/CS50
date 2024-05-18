@@ -153,17 +153,13 @@ void tabulate(void)
                 // if vote is invalid do nothing, break
                 if (candidates[c].eliminated == false)
                 {
-                    break
+                    break;
                 }
-
-                // else if blah blah
-                if (strcmp(preferences[i][j], candidates[c].name == 0))
+                else if (strcmp(preferences[i][j], candidates[c].name == 0))
                 {
-                    //increase vote for that person
                     candidates[c].votes += 1;
                 }
             }
-            break;
         }
     }
     return;
