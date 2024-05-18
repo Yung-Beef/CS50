@@ -150,7 +150,7 @@ void tabulate(void)
         {
             // if vote is invalid do nothing
             //else
-            for (int c = 0; c < candidate count; c++)
+            for (int c = 0; c < candidate_count; c++)
             {
                 if (strcmp(preferences[i][j], candidates[c].name == 0) && (candidates[c].eliminated == false))
                 {
