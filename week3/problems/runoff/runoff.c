@@ -172,7 +172,11 @@ bool print_winner(void)
 {
     // TODO
     // get the highest number and make sure nobody else has that many
-    
+    string contender = "";
+    for (int i = 0; i < candidate_count; i++)
+    {
+        
+    }
 
 
     // if there is a winner
