@@ -126,13 +126,12 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-    // add points to the candidate voted for based on their rank
-
+    // record the voter's vote or return false if that candidate doesn't exist
     for (int v = 0; v < candidate_count; v++)
     {
         if (strcmp(name, candidates[v].name) == 0)
         {
-            preferences[i][j] = name
+            preferences[i][j] = v
             return true;
         }
     }
