@@ -217,10 +217,6 @@ int find_min(void)
         {
             loser = candidates[i].votes;
         }
-        else
-        {
-            loser = candidates[0].votes;
-        }
     }
     return votes;
 }
