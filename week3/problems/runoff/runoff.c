@@ -174,9 +174,9 @@ bool print_winner(void)
     // get the highest number of votes
     string contender = candidates[0].name;
     int votes = 0;
-    for (int i = 1; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes > contender)
+        if (candidates[i].votes > votes)
         {
             contender = candidates[i].name;
             votes = candidates[i].votes;
