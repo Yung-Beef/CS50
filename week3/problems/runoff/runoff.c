@@ -141,10 +141,7 @@ bool vote(int voter, int rank, string name)
 // Tabulate (total) the votes for non-eliminated candidates
 void tabulate(void)
 {
-    // TODO
-    // check if their first vote still exists
-    // if yes, increase vote count
-    // if no, go to the next vote (recursive?)
+    // go through each voter, check their first vote and increase that vote count by 1
     for (int i = 0; i < voter_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
@@ -193,6 +190,6 @@ bool is_tie(int min)
 void eliminate(int min)
 {
     // TODO
-    // recreate the whole struct?
+    // update the candidates[].eliminated value
     return;
 }
