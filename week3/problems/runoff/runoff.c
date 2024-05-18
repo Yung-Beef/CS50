@@ -126,9 +126,7 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-    // TODO
-    // add points to the candidate voted for
-    // rank 1 gets as many points as there are candidates, rank 2 gets one less, (n - i)?
+    // add points to the candidate voted for based on their rank
 
     for (int i = 0; i < candidate_count; i++)
     {
