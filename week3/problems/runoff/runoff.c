@@ -171,8 +171,12 @@ void tabulate(void)
 bool print_winner(void)
 {
     // TODO
+    // get the highest number and make sure nobody else has that many
+    
+
 
     // if there is a winner
+
 
 
     // if there is no winner
