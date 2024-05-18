@@ -160,10 +160,6 @@ void tabulate(void)
             break
         }
     }
-
-
-
-
     return;
 }
 
@@ -197,5 +193,6 @@ bool is_tie(int min)
 void eliminate(int min)
 {
     // TODO
+    // recreate the whole struct?
     return;
 }
