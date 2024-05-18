@@ -209,15 +209,13 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
-    // what if the first candidate was already eliminated?
-    string loser = candidates[0].name;
-    int votes = 0;
+    // what if the first candidate was already eliminated? while loop?
+    int loser = 0;
     for (int i = 1; i < candidate_count; i++)
     {
-        if ((candidates[i].votes < loser) && candidates[i].eliminated == false)
+        if ((candidates[i].votes < candidates[i - 1].votes) && (candidates[i].eliminated == false) && (candidates[i - 1].eliminated == false))
         {
-            contender = candidates[i].name;
-            votes = candidates[i].votes;
+            loser = candidates[i].votes;
         }
     }
     return votes;
