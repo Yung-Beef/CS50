@@ -158,6 +158,26 @@ void tabulate(void)
         }
     }
     return;
+
+
+    // go through each voter, check their first vote and increase that vote count by 1 if it's still valid, or go to their next vote
+    for (int i = 0; i < voter_count; i++)
+    {
+        for (int c = 0; c < candidate count; c++)
+        {
+            for (int j = 0; j < candidate_count; j++)
+            {
+                if (strcmp(preferences[i][j], candidates[c].name == 0) && (candidates[c].eliminated == false))
+                {
+                    //increase vote for that person
+                    candidates[c].votes += 1;
+                }
+            }
+            break
+        }
+    }
+    return;
+}
 }
 
 // Print the winner of the election, if there is one
