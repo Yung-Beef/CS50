@@ -128,14 +128,15 @@ bool vote(int voter, int rank, string name)
 {
     // TODO
     // add points to the candidate voted for
-    // rank 1 gets as many points as there are candidates, rank 2 gets one less
+    // rank 1 gets as many points as there are candidates, rank 2 gets one less, (n - i)?
 
     for (int i = 0; i < candidate_count; i++)
     {
-
+        if (strcmp(name, candidates[i].name) == 0)
+        {
+            candidates[i].votes = (-1 * (rank - candidate_count))
+        }
     }
-
-
     return true;
 
     // if name is not valid, return false
