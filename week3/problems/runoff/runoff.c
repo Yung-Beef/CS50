@@ -209,6 +209,7 @@ bool print_winner(void)
 int find_min(void)
 {
     // TODO
+    // what if the first candidate was already eliminated?
     string loser = candidates[0].name;
     int votes = 0;
     for (int i = 1; i < candidate_count; i++)
