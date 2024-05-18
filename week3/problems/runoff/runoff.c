@@ -172,10 +172,13 @@ bool print_winner(void)
 {
     // TODO
     // get the highest number and make sure nobody else has that many
-    string contender = "";
-    for (int i = 0; i < candidate_count; i++)
+    string contender = candidates[0].name;
+    for (int i = 1; i < candidate_count; i++)
     {
-        
+        if (candidates[i].votes > contender)
+        {
+            contender = condidates[i].name;
+        }
     }
 
 
