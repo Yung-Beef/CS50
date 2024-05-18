@@ -143,6 +143,9 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // TODO
+    // figure out who the winner is
+    
+
 
     return;
 }
