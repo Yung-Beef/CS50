@@ -145,7 +145,7 @@ void tabulate(void)
     // check if their first vote still exists
     // if yes, increase vote count
     // if no, go to the next vote (recursive?)
-
+    
 
 
 
