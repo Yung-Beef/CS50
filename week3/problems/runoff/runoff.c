@@ -128,11 +128,11 @@ bool vote(int voter, int rank, string name)
 {
     // add points to the candidate voted for based on their rank
 
-    for (int i = 0; i < candidate_count; i++)
+    for (int v = 0; v < candidate_count; v++)
     {
-        if (strcmp(name, candidates[i].name) == 0)
+        if (strcmp(name, candidates[v].name) == 0)
         {
-            candidates[i].votes = (-1 * (rank - candidate_count))
+            preferences[i][j] = name
             return true;
         }
     }
