@@ -142,11 +142,12 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // go through each voter, check their first vote and increase that vote count by 1 if it's still valid, or go to their next vote
+    // check each voter
     for (int i = 0; i < voter_count; i++)
     {
+        // iterate through voter i's ranked votes
         for (int j = 0; j < candidate_count; j++)
         {
-            if (preferences[i][j] //candidate is valid)
             for (int c = 0; c < candidate count; c++)
             {
                 if (strcmp(preferences[i][j], candidates[c].name == 0) && (candidates[c].eliminated == false))
