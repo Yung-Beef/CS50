@@ -149,6 +149,12 @@ void tabulate(void)
         for (int j = 0; j < candidate_count; j++)
         {
             // compare voter i's jth vote against each candidate name
+            // if vote 0 is for a valid candidate, count it
+            // else if for j + 1 is for a valid candidate, count it
+            // else do nothing
+
+
+
             for (int c = 0; c < candidate_count; c++)
             {
                 // if vote is for an eliminated candidate, break
