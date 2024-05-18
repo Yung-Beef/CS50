@@ -129,7 +129,7 @@ bool vote(int voter, int rank, string name)
     // TODO
     // add points to the candidate voted for
     // rank 1 gets as many points as there are candidates, rank 2 gets one less
-    
+    for (int i = 0; i < )
 
 
     // if name is not valid, return false
