@@ -145,21 +145,15 @@ void tabulate(void)
     // iterate through each voter
     for (int i = 0; i < voter_count; i++)
     {
-
         // iterate through voter i's ranked votes
         for (int j = 0; j < candidate_count; j++)
         {
-            // compare voter i's jth vote against each candidate name
-            // if vote 0 is for a valid candidate, count it
-            // else if for j + 1 is for a valid candidate, count it
-            // else do nothing
-
-
-
+            // check against each candidate
             for (int c = 0; c < candidate_count; c++)
             {
                 // if vote is for an eliminated candidate, break
-                if (strcmp(candidates[preferences[i][j]].name, candidates[c].name) && candidates[c].eliminated == true)
+                if (strcmp(candidates[preferences[i][j]].name, candidates[c].name) &&
+                    candidates[c].eliminated == true)
                 {
                     break;
                 }
@@ -171,8 +165,7 @@ void tabulate(void)
                 }
             }
         }
-        nextvoter:
-        ;
+    nextvoter:;
     }
     return;
 }
@@ -212,7 +205,8 @@ int find_min(void)
     for (int i = 1; i < candidate_count; i++)
     {
         // if both candidates are remaining, check which is lower and save their number of votes as the lowest
-        if ((candidates[i].votes < candidates[i - 1].votes) && (candidates[i].eliminated == false) && (candidates[i - 1].eliminated == false))
+        if ((candidates[i].votes < candidates[i - 1].votes) &&
+            (candidates[i].eliminated == false) && (candidates[i - 1].eliminated == false))
         {
             votes = candidates[i].votes;
         }
