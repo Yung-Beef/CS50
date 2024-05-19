@@ -167,10 +167,11 @@ void tabulate(void)
                 else if (strcmp(candidates[preferences[i][j]].name, candidates[c].name) == 0)
                 {
                     candidates[c].votes += 1;
-                    break;
+                    goto nextvoter;
                 }
             }
         }
+        nextvoter;
     }
     return;
 }
