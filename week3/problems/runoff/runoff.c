@@ -171,7 +171,8 @@ void tabulate(void)
                 }
             }
         }
-        nextvoter;
+        nextvoter:
+        ;
     }
     return;
 }
