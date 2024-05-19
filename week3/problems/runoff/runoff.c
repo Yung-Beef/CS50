@@ -145,6 +145,7 @@ void tabulate(void)
     // iterate through each voter
     for (int i = 0; i < voter_count; i++)
     {
+
         // iterate through voter i's ranked votes
         for (int j = 0; j < candidate_count; j++)
         {
