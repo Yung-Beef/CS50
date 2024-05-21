@@ -36,7 +36,17 @@ int main(int argc, char *argv[])
     // TODO: Copy header from input file to output file
     for (int i = 0; i < 44; i++)
     {
-        
+
+    }
+
+    FILE *src = fopen(argv[1], "rb"); //read binary
+    FILE *dst = fopen(argv[2], "wb"); //write binary
+
+    BYTE b;
+
+    while (fread(&b, sizeof(b), 1, src) != 0)
+    {
+        fwrite(&b, sizeof(b), 1, dst);
     }
 
     // TODO: Read samples from input file and write updated data to output file
