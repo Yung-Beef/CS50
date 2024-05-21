@@ -40,11 +40,11 @@ int main(int argc, char *argv[])
     fwrite(&h, HEADER_SIZE, 1, output);
 
     // TODO: Read samples from input file and write updated data to output file
-    int16_t *b = malloc(2);
-    while (fread(b, 2, 1, &input[44]) != 0)
+    int16_t buffer;
+    while (fread(&buffer, 2, 1, &input[44]) != 0)
     {
-        *b = (2 * *b);
-        fwrite(b, 2, 1, &output[44]);
+        buffer = (2 * buffer);
+        fwrite(&buffer, 2, 1, &output[44]);
     }
     free(b);
 
