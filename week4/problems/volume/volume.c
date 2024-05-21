@@ -41,10 +41,10 @@ int main(int argc, char *argv[])
 
     // TODO: Read samples from input file and write updated data to output file
     int16_t b;
-    while (fread(&b, 2, 1, input[44]) != 0)
+    while (fread(&b, 2, 1, &input[44]) != 0)
     {
         b = (2 * b);
-        fwrite(&b, 2, 1, output[44]);
+        fwrite(&b, 2, 1, &output[44]);
     }
 
     // Close files
