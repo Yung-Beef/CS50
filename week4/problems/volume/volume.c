@@ -45,6 +45,7 @@ int main(int argc, char *argv[])
     int16_t b;
     while (fread(&b, 2, 1, input[44]) != 0)
     {
+        b = (2 * b);
         fwrite(&b, 2, 1, output[44]);
     }
 
