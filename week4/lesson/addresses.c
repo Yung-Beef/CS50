@@ -1,5 +1,6 @@
 #include <stdio.h>
 //#include <cs50.h> only needed this for the string data type which doesn't really exist
+// you can add strings as a data type with "typedef char *string;"
 
 int main(void)
 {
