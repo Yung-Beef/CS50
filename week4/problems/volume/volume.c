@@ -43,9 +43,9 @@ int main(int argc, char *argv[])
 
     // TODO: Read samples from input file and write updated data to output file
     (2 * uint8_t) b;
-    while (fread(&h, 2, 1, src) != 0)
+    while (fread(&h, 2, 1, src[44]) != 0)
     {
-        fwrite(&h, 2, 1, dst);
+        fwrite(&h, 2, 1, dst[44]);
     }
 
     // Close files
