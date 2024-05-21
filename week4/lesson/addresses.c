@@ -4,7 +4,7 @@
 int main(void)
 {
     string s = "HI!";
-    printf("%p\n", s);
+    printf("%p\n", s); // s just poins to the beginning of the string, and it knows the string ends with the null \o
     printf("%p\n", &s[0]);
     printf("%p\n", &s[1]);
     printf("%p\n", &s[2]);
