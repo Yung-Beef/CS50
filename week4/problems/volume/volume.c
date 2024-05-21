@@ -45,9 +45,9 @@ int main(int argc, char *argv[])
     }
 
     // TODO: Read samples from input file and write updated data to output file
-    while (fread(*argv[1][45], 1, 1, src) != 0)
+    while (fread(&argv[1][45], 1, 1, src) != 0)
     {
-        fwrite(*argv[1][45], 1, 1, dst);
+        fwrite(&argv[1][45], 1, 1, dst);
     }
 
     // Close files
