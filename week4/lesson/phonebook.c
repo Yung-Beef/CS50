@@ -5,6 +5,10 @@
 int main(void)
 {
     FILE *file = fopen("phonebook.csv", "a"); // "r" for read, "w" for write, "a" for append vs overwriting with w
+    if (file == NULL)
+    {
+        return 1;
+    }
 
     char *name = get_string("Name: ");
     char *number = get_string("Number: ");
