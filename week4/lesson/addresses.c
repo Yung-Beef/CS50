@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <cs50.h>
+//#include <cs50.h> only needed this for the string data type which doesn't really exist
 
 int main(void)
 {
