@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
     FILE *src = fopen(argv[1], "rb");
     FILE *dst = fopen(argv[2], "wb");
 
-    BYTE b;
+    uint8_t b;
 
     while (fread(&b, 44, 1, src) != 0)
     {
@@ -45,6 +45,7 @@ int main(int argc, char *argv[])
     }
 
     // TODO: Read samples from input file and write updated data to output file
+    
 
     // Close files
     fclose(input);
