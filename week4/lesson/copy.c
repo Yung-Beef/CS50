@@ -31,4 +31,7 @@ int main(void)
 
     printf("%s\n", s);
     printf("%s\n", t);
+
+    free(t); //frees up that memory that was allocated
+    return 0;
 }
