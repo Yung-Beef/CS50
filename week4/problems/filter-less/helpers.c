@@ -7,6 +7,14 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 
     LONG temp[3];
 
+    for (i = 0; i < height; i++)
+    {
+        for (j = 0; j < width; i++)
+        {
+            
+        }
+    }
+
     // do the memory bullshit, each pixel's color is 3 bytes
     // for loop to go through each row i < height
         // for loop to go through each pixel of that row i < width
