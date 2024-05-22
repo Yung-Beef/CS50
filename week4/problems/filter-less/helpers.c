@@ -5,6 +5,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
     // image[height][width].rgbtBlue gives the blue value of that pixel
 
+    
 
     // do the memory bullshit, each pixel's color is 3 bytes
     // for loop to go through each row i < height
