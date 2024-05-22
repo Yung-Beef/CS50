@@ -3,7 +3,7 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
-    // RGBTRIPLE image[height][width] gives the 
+    // image[height][width].rgbtBlue gives the blue value of that pixel
 
 
     // do the memory bullshit
