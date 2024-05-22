@@ -65,7 +65,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
 
-    // go through each pixel with 2 loops
+    // go through each row with a loop
+    // save the entire row to temp memory
+    // use another i-- loop to flip it
 
 
 
