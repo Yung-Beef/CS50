@@ -4,6 +4,8 @@
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
     // 
+    // for loop to go through each row
+        // for loop to go through each pixel of that row
 
 
 
