@@ -79,14 +79,13 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         {
             temp[j] = image[i][j];
         }
-        // flip it and save it again
+        // flip it and save it
         for (int n = 0; n < width; n++)
         {
-            image[i][j] = temp[width - n];
+            image[i][n] = temp[width - n];
         }
     }
     free(temp);
-
 
     return;
 }
