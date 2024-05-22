@@ -68,14 +68,20 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     // go through each row with a loop
     // save the entire row to temp memory
     // use another i-- loop to flip it
+    // rbg values need to stay in the right order, so do 3 in the correct order for each pixel
 
-
+    char *temp = malloc(6 * width);
 
     for (int i = 0; i < height; i++)
     {
+        for (int j = 0; j < width; j--)
+        {
+            // width * 3 bytes, but only width pixels
 
+
+        }
     }
-
+    free(temp);
 
 
     return;
