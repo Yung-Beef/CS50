@@ -11,6 +11,8 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         // for loop to go through each pixel of that row i < width
         // take the average of the BGR
 
+    
+
 
 
 
