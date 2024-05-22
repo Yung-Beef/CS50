@@ -5,13 +5,13 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
     // image[height][width].rgbtBlue gives the blue value of that pixel
 
-    WORD temp;
+    float temp;
 
     for (i = 0; i < height; i++)
     {
         for (j = 0; j < width; i++)
         {
-            temp = image[i][j].rgbtBlue + image[i][j].rgbtGreen + image[i][j].rgbtRed;
+            temp = (image[i][j].rgbtBlue + image[i][j].rgbtGreen + image[i][j].rgbtRed) / 3.0;
             image[i][j].rgbtBlue = temp;
             image[i][j].rgbtGreen = temp;
             image[i][j].rgbtRed = temp;
