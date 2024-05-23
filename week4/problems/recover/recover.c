@@ -5,9 +5,13 @@ int main(int argc, char *argv[])
 {
  // if argc != 2, error
     if (argc != 2)
-    
+    {
+        printf("usage ./recover file\n");
+        return 1;
+    }
 
  // if fileopen returns null, error
+ 
 
 
  // loop 512 bytes at a time
