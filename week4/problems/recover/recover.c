@@ -26,6 +26,12 @@ int main(int argc, char *argv[])
 
     // while memory location + 6? doesn't equal the header, go ahead 512 bytes
 
+    // i is the location in memory
+    while (i != 0xff && i + 1 != 0xd8 && i + 2 != 0xff)
+    {
+        i++
+    }
+
     // malloc to create 512 byte temp file? or just create an array of 512 bytes?
 
     // read the bytes into a temp file
