@@ -95,7 +95,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 {
 
     // go through each pixel with 2 loops
-
+    RGBTRIPLE copy[height][width];
+    
 
 
 
