@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    // while memory location + 6? doesn't equal the header, keep going
 
  // loop 512 bytes at a time
  // go until i find the header signature
