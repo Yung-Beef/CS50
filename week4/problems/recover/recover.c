@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 
     char *temp[512];
     char *digits[3];
-    fprintf(digits, "%i%i%i\n", digits[0], digits[1], digits[2])
+
 
     while (fread(temp, 1, 512, file) == 0)
     {
@@ -38,6 +38,8 @@ int main(int argc, char *argv[])
         {
             // fwrite the temp file data into a new file whose name changes as this loops
             fwrite(temp, 512, 1, )
+            sprintf(digits, "%03i.jpg", i);
+            i++
         }
     }
 
