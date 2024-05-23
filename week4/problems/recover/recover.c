@@ -25,22 +25,23 @@ int main(int argc, char *argv[])
     if fread(file, 7, 1, )
 
     // while memory location + 6? doesn't equal the header, go ahead 512 bytes
-
-    // i is the location in memory
-    while (i != 0xff && i + 1 != 0xd8 && i + 2 != 0xff)
-    {
-        i++
-    }
-
     // malloc to create 512 byte temp file? or just create an array of 512 bytes?
 
-    // read the bytes into a temp file
+    // where i is the location in the file?
+    for (int i = 0; i < //?; i + 512)
+    {
+        if (i = 0xff && i + 1 = 0xd8 && i + 2 = 0xff)
+        {
+        // create a temp file somehow and put the next 512 bytes into it
+        // fwrite the temp file data into a new file whose name changes as this loops
+        }
+    }
 
-    // write the temp file into an output file who's name changes
 
-    // if header found, fwrite the next 512 bytes to a new file
 
-    // repeat loop
+
+
+
 
 
 
