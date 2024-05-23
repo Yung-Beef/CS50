@@ -19,9 +19,11 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    fread()
+
     // while memory location + 6? doesn't equal the header, go ahead 512 bytes
 
-    // if header found, write the next 512 bytes to a new file
+    // if header found, fwrite the next 512 bytes to a new file
 
     // repeat loop
 
