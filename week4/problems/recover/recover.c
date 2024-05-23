@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 
     char *temp[512];
 
-    while (fread(temp, 512, 1, file) < 1)
+    while (fread(temp, 1, 512, file) == 0)
     {
         fread(temp, 512, 1, file);
         int i = 0;
