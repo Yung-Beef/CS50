@@ -37,9 +37,10 @@ int main(int argc, char *argv[])
             FILE *img = fopen(digits, "w");
             // fwrite the temp file data into a new file whose name changes as this loops
             fwrite(temp, 512, 1, digits);
+            fclose(digits);
             i++;
         }
     }
-
-// fclose
+    
+    fclose(argv[1]);
 }
