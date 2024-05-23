@@ -39,6 +39,8 @@ int main(int argc, char *argv[])
             fwrite(temp, 512, 1, digits);
 
             // what if the jpg is bigger than 512 bytes???????
+            // write it 1 bye at a time, checking that the next 3/4 bytes aren't a new header
+            // once header is found, break
 
 
 
