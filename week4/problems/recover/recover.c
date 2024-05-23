@@ -24,8 +24,8 @@ int main(int argc, char *argv[])
     // while fread doesn't return < 1, read the file, if blah blah output, then increase the read location by 512 (handled by fread)
 
     char *temp[512];
-    char *digits[4];
-    
+    char *digits[3];
+    fprintf(digits, "%i%i%i\n", digits[0], digits[1], digits[2])
 
     while (fread(temp, 1, 512, file) == 0)
     {
