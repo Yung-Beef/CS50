@@ -69,7 +69,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     // save the entire row to temp memory
     // use another i-- loop to flip it
 
-    char *temp = malloc(6 * width);
+    RGBTRIPLE temp[width];
 
     // go through each row
     for (int i = 0; i < height; i++)
@@ -85,7 +85,6 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             image[i][n] = temp[width - n];
         }
     }
-    free(temp);
 
     return;
 }
