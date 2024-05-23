@@ -19,6 +19,9 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    // header is 3.5 bytes or 28 bits
+
+
     if fread(file, 7, 1, )
 
     // while memory location + 6? doesn't equal the header, go ahead 512 bytes
