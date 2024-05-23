@@ -23,6 +23,12 @@ int main(int argc, char *argv[])
 
     // while memory location + 6? doesn't equal the header, go ahead 512 bytes
 
+    // malloc to create 512 byte temp file?
+
+    // read the bytes into a temp file
+
+    // write the temp file into an output file who's name changes
+
     // if header found, fwrite the next 512 bytes to a new file
 
     // repeat loop
