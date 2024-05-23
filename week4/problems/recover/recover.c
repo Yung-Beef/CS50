@@ -4,7 +4,8 @@
 int main(int argc, char *argv[])
 {
  // if argc != 2, error
-
+    if (argc != 2)
+    
 
  // if fileopen returns null, error
 
