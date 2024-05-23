@@ -29,6 +29,9 @@ int main(int argc, char *argv[])
     {
         fread(temp, 512, 1, file);
         int i = 0;
+        // fix
+        string output = "%i", i;
+
         if (temp[0] = 0xff && temp[1] = 0xd8 && temp[2] = 0xff)
         {
             // fwrite the temp file data into a new file whose name changes as this loops
