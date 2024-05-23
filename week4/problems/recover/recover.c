@@ -27,6 +27,8 @@ int main(int argc, char *argv[])
     // while memory location + 6? doesn't equal the header, go ahead 512 bytes
     // malloc to create 512 byte temp file? or just create an array of 512 bytes?
 
+    // while fread doesn't return 0, read the file, if blah blah output, then increase the read location by 512
+
     // where i is the location in the file?
     for (int i = 0; i < //?; i + 512)
     {
