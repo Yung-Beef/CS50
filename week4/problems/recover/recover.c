@@ -6,12 +6,16 @@ int main(int argc, char *argv[])
  // if argc != 2, error
     if (argc != 2)
     {
-        printf("usage ./recover file\n");
+        printf("Usage ./recover file\n");
         return 1;
     }
 
  // if fileopen returns null, error
- 
+    if (fopen(argv[1] = NULL))
+    {
+        printf("Invalid file.\n");
+        return 1;
+    }
 
 
  // loop 512 bytes at a time
