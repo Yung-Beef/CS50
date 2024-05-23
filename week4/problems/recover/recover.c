@@ -11,7 +11,9 @@ int main(int argc, char *argv[])
 
  // loop 512 bytes at a time
  // go until i find the header signature
- // start writing everything to a temp until i encounter the next header
+ // open a new file
+ // start writing everything to the new file until i encounter the next header
+ // write 512 bytes at a time
 
 
 
