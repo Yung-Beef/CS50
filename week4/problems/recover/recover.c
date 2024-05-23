@@ -19,48 +19,21 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // header is 3.5 bytes or 28 bits
 
-    // while first 3 bites of temp are correct
-    // malloc to create 512 byte temp file? or just create an array of 512 bytes?
 
-    // while fread doesn't return 0, read the file, if blah blah output, then increase the read location by 512 (handled by fread)
+    // while fread doesn't return < 1, read the file, if blah blah output, then increase the read location by 512 (handled by fread)
 
     char *temp[512];
 
-    while (fread(temp, 512, 1, file) != 0)
+    while (fread(temp, 512, 1, file) < 1)
     {
         fread(temp, 512, 1, file);
         if (temp[0] = 0xff && temp[1] = 0xd8 && temp[2] = 0xff)
         {
-        // create a temp file somehow and put the next 512 bytes into it
-        // fwrite the temp file data into a new file whose name changes as this loops
+            // fwrite the temp file data into a new file whose name changes as this loops
+            
         }
     }
-
-
-
-
-
-
-
-
-    // where i is the location in the file?
-    for (int i = 0; i < //?; i + 512)
-    {
-        if (i = 0xff && i + 1 = 0xd8 && i + 2 = 0xff)
-        {
-        // create a temp file somehow and put the next 512 bytes into it
-        // fwrite the temp file data into a new file whose name changes as this loops
-        }
-    }
-
-
-
-
-
-
-
 
 
 }
