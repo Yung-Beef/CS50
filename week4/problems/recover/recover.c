@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 
     // while memory location + 6? doesn't equal the header, go ahead 512 bytes
 
-    // malloc to create 512 byte temp file?
+    // malloc to create 512 byte temp file? or just create an array of 512 bytes?
 
     // read the bytes into a temp file
 
