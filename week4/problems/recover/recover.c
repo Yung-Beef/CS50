@@ -28,10 +28,11 @@ int main(int argc, char *argv[])
     while (fread(temp, 512, 1, file) < 1)
     {
         fread(temp, 512, 1, file);
+        int i = 0;
         if (temp[0] = 0xff && temp[1] = 0xd8 && temp[2] = 0xff)
         {
             // fwrite the temp file data into a new file whose name changes as this loops
-            
+            fwrite(temp, 512, 1, )
         }
     }
 
