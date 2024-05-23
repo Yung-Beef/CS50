@@ -39,9 +39,8 @@ int main(int argc, char *argv[])
             sprintf(digits, "%03i.jpg", i);
             FILE *img = fopen(digits, "w");
             // fwrite the temp file data into a new file whose name changes as this loops
-            fwrite(temp, 512, 1, digits)
-
-            i++
+            fwrite(temp, 512, 1, digits);
+            i++;
         }
     }
 
