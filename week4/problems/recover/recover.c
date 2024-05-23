@@ -25,14 +25,11 @@ int main(int argc, char *argv[])
 
     char *temp[512];
     char *digits[3];
-
+    int i = 0;
 
     while (fread(temp, 1, 512, file) == 0)
     {
         fread(temp, 512, 1, file);
-        int i = 0;
-        // fix
-        string output = "%i", i;
 
         if (temp[0] = 0xff && temp[1] = 0xd8 && temp[2] = 0xff)
         {
