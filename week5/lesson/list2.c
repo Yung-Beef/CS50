@@ -22,6 +22,7 @@ int main(int argc, char *argv[])
             return 1;
         }
 
+        //prepending new numbers to the beginning of the list
         n->number = number;
         n->next = list;
         list = n;
@@ -35,6 +36,4 @@ int main(int argc, char *argv[])
         printf("%i\n", ptr->number);
         ptr = ptr->next;
     }
-
-
 }
