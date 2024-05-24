@@ -26,6 +26,9 @@ int main(int argc, char *argv[])
     // keep track of how many chunks I write, and write the header of the next one,
     // and then only copy that many minus 1 chunk (avoid the header)?
 
+    // use a 512b buffer to check for the header, but then inside the loop use a giga buffer to store stuff
+    // and then wipe it clean before the loop repeats
+
 
 
 
