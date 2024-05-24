@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define BLOCK_SIZE = 512;
+#define BLOCK_SIZE 512
 
 int main(int argc, char *argv[])
 {
@@ -26,23 +26,19 @@ int main(int argc, char *argv[])
     char digits[8];
     int c = 0;
 
-    while (fread(&temp, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
+    while (fread(&temp, BLOCK_SIZE, 1, file) == 1)
     {
         if (temp[0] == 0xff && temp[1] == 0xd8 && temp[2] == 0xff && (temp[3] & 0xf0) == 0xe0)
         {
             sprintf(digits, "%03i.jpg", c);
             FILE *img = fopen(digits, "a");
-            fwrite(&temp, 1, BLOCK_SIZE, img);
-            fread(&temp, 1, BLOCK_SIZE, file);
+            fwrite(&temp, BLOCK_SIZE, 1, img);
+            fread(&temp, BLOCK_SIZE, 1, file);
 
             while (temp[0] != 0xff && temp[1] != 0xd8 && temp[2] != 0xff && (temp[3] & 0xf0) != 0xe0)
             {
-                if (header found)
-                {
-                    break;
-                }
-                fwrite(&temp, 1, BLOCK_SIZE, img);
-                fread(&temp, 1, BLOCK_SIZE, file);
+                fwrite(&temp, BLOCK_SIZE, 1, img);
+                fread(&temp, BLOCK_SIZE, 1, file);
             }
 
             fclose(img);
