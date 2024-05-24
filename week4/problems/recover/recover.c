@@ -34,7 +34,6 @@ int main(int argc, char *argv[])
         // if buffer1 header is good
             // add buffer1 into buffer2
         // if buffer1 header is bad and buffer2 has the header
-            // read 512 bytes into buffer1
             // add buffer1 into buffer2
             //
         //
