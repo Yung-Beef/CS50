@@ -37,6 +37,10 @@ int main(int argc, char *argv[])
 
             while (temp[0] != 0xff && temp[1] != 0xd8 && temp[2] != 0xff && (temp[3] & 0xf0) != 0xe0)
             {
+                if (header found)
+                {
+                    break;
+                }
                 fwrite(&temp, 1, BLOCK_SIZE, img);
                 fread(&temp, 1, BLOCK_SIZE, file);
             }
