@@ -41,6 +41,25 @@ int main(int argc, char *argv[])
             // clear buffer2
 
 
+    // while (there are still bytes to read)
+        // read 512 bytes into buffer1 (overwrite)
+        // while buffer1 header is good
+            // add buffer1 into buffer2
+        // while beginning of buffer2 has the header
+            // 
+
+
+        // if buffer1 header is good
+            // add buffer1 into buffer2
+        // if buffer1 header is bad and buffer2 has the header
+            // add buffer1 into buffer2
+            //
+        // if read location + 512 is the header
+            // turn buffer2 into a file
+            // clear buffer2
+
+
+
 
 
 
