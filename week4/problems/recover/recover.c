@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
         {
             if (c != 0)
             {
-                fclose(img)
+                fclose(img);
             }
             sprintf(digits, "%03i.jpg", c);
             img = fopen(digits, "w");
@@ -52,6 +52,7 @@ int main(int argc, char *argv[])
             fwrite(temp, BLOCK_SIZE, 1, img);
         }
     }
+    fclose(img);
     fclose(file);
     return 0;
 }
