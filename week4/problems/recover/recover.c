@@ -13,13 +13,13 @@ int main(int argc, char *argv[])
     FILE *file = fopen(argv[1], "r");
 
     // if fopen returns null, error
-    if (FILE == NULL)
+    if (file == NULL)
     {
         printf("Invalid file.\n");
         return 1;
     }
 
-    unit8_t temp[512];
+    uint8_t temp[512];
     char *digits[8];
     int c = 0;
 
