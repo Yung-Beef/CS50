@@ -42,10 +42,6 @@ int main(int argc, char *argv[])
             fclose(img);
             c++;
         }
-        if (c == 49)
-        {
-            return 0;
-        }
     }
     fclose(file);
     return 0;
