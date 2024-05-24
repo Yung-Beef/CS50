@@ -19,12 +19,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-
-    // while fread doesn't return < 1, read the file, if blah blah output, then increase the read location by 512 (handled by fread)
-
     unit8_t temp[512];
     char *digits[3];
-    long s = 0; // check 512 bytes at a time
 
     while (fread(&temp, 1, 512, file) == 512)
     {
@@ -41,27 +37,6 @@ int main(int argc, char *argv[])
                 // don't include that, close the file
             }
         }
-
-
-
-
-        if (temp[0] = 0xff && temp[1] = 0xd8 && temp[2] = 0xff)
-        {
-            sprintf(digits, "%03i.jpg", i);
-            FILE *img = fopen(digits, "w");
-            // fwrite the temp file data into a new file whose name changes as this loops
-            fwrite(temp, 512, 1, digits);
-
-            // what if the jpg is bigger than 512 bytes???????
-            // write it 1 bye at a time, checking that the next 3/4 bytes aren't a new header
-            // once header is found, break
-
-
-
-            fclose(digits);
-            i++;
-        }
     }
-
     fclose(argv[1]);
 }
