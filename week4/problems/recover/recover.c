@@ -32,19 +32,19 @@ int main(int argc, char *argv[])
         {
             sprintf(digits, "%03i.jpg", c);
             FILE *img = fopen(digits, "a");
-            fwrite(&temp, 1, 512, digits);
+            fwrite(&temp, 1, 512, img);
             fread(&temp, 1, 512, file);
 
             while (temp[0] != 0xff && temp[1] != 0xd8 && temp[2] != 0xff)
             {
-                fwrite(&temp, 1, 512, digits);
+                fwrite(&temp, 1, 512, img);
                 fread(&temp, 1, 512, file);
             }
 
-            fclose(digits);
+            fclose(img);
             c++;
         }
 
     }
-    fclose(argv[1]);
+    fclose(file);
 }
