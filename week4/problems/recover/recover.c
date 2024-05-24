@@ -26,7 +26,16 @@ int main(int argc, char *argv[])
     char *temp[512];
     char *digits[3];
     int i = 0;
-    int s = 0;
+    long s = 0; // check 512 bytes at a time
+
+    for (int i = 0; i < ???; i++)
+    {
+        fread(temp, 512, 1, file);
+        if (temp[0] = 0xff && temp[1] = 0xd8 && temp[2] = 0xff)
+        {
+            while 
+        }
+    }
 
     while (fread(temp, 1, 512, file) == 0)
     {
