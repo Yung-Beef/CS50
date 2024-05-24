@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 
     while (fread(&temp, 1, 512, file) == 512)
     {
-        if (temp[0] = 0xff && temp[1] = 0xd8 && temp[2] = 0xff)
+        if (temp[0] == 0xff && temp[1] == 0xd8 && temp[2] == 0xff && (temp[3] & 0xf0) == 0xe0)
         {
             sprintf(digits, "%03i.jpg", c);
             FILE *img = fopen(digits, "w");
