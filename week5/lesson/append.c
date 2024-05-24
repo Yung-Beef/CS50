@@ -39,7 +39,9 @@ int main(int argc, char *argv[])
                 // if at the end of list
                 if (ptr->next = NULL)
                 {
-                    
+                    // append node
+                    ptr->next = n;
+                    break;
                 }
             }
         }
