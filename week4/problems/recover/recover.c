@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
             fwrite(&temp, 1, 512, img);
             fread(&temp, 1, 512, file);
 
-            while (temp[0] != 0xff && temp[1] != 0xd8 && temp[2] != 0xff)
+            while (temp[0] != 0xff && temp[1] != 0xd8 && temp[2] != 0xff && (temp[3] & 0xf0) != 0xe0)
             {
                 fwrite(&temp, 1, 512, img);
                 fread(&temp, 1, 512, file);
