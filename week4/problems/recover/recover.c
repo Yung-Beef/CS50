@@ -25,9 +25,11 @@ int main(int argc, char *argv[])
     int c = 0;
 
     fread(&temp, 1, 512, file);
+    printf("%i\n", temp[0]);
 
     while (fread(&temp, 1, 512, file) == 512)
     {
+        printf("%i\n", temp[0]);
         if (temp[0] == 0xff && temp[1] == 0xd8 && temp[2] == 0xff && (temp[3] & 0xf0) == 0xe0)
         {
             sprintf(digits, "%03i.jpg", c);
