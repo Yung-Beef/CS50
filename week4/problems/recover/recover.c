@@ -20,70 +20,14 @@ int main(int argc, char *argv[])
     }
 
 
-    // read/write 512 bytes at a time to a buffer
-    // if the first 3/4 bytes of that match, then
-    // keep writing until i find a chunk with that same header
-    // keep track of how many chunks I write, and write the header of the next one,
-    // and then only copy that many minus 1 chunk (avoid the header)?
-
-    // use a 512b buffer to check for the header, but then inside the loop use a giga buffer to store stuff
-    // and then wipe it clean before the loop repeats
-
-    // while (there are still bytes to read)
-        // read 512 bytes into buffer1 (overwrite)
-        // if buffer1 header is good
-            // add buffer1 into buffer2
-        // if buffer1 header is bad and buffer2 has the header
-            // add buffer1 into buffer2
-            //
-        // if read location + 512 is the header
-            // turn buffer2 into a file
-            // clear buffer2
-
-
-    // while (there are still bytes to read)
-        // read 512 bytes into buffer1 (overwrite)
-        // while buffer1 header is good
-            // add buffer1 into buffer2
-        // while beginning of buffer2 has the header
-            // 
-
-
-        // if buffer1 header is good
-            // add buffer1 into buffer2
-        // if buffer1 header is bad and buffer2 has the header
-            // add buffer1 into buffer2
-            //
-        // if read location + 512 is the header
-            // turn buffer2 into a file
-            // clear buffer2
-
-
-
-
-
-
-
-
-
-
     // while fread doesn't return < 1, read the file, if blah blah output, then increase the read location by 512 (handled by fread)
 
-    char *temp[512];
+    unit8_t temp[512];
     char *digits[3];
     int i = 0;
     long s = 0; // check 512 bytes at a time
 
-    for (int i = 0; i < ???; i++)
-    {
-        fread(temp, 512, 1, file);
-        if (temp[0] = 0xff && temp[1] = 0xd8 && temp[2] = 0xff)
-        {
-            while
-        }
-    }
-
-    while (fread(temp, 1, 512, file) == 0)
+    while (fread(temp, 1, 512, file) == 512)
     {
         fread(temp, 512, 1, file);
 
