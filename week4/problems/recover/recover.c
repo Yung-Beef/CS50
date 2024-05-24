@@ -20,6 +20,19 @@ int main(int argc, char *argv[])
     }
 
 
+    // read/write 512 bytes at a time to a buffer
+    // if the first 3/4 bytes of that match, then
+    // keep writing until i find a chunk with that same header
+    // keep track of how many chunks I write, and write the header of the next one,
+    // and then only copy that many minus 1 chunk (avoid the header)?
+
+
+
+
+
+
+
+
 
     // while fread doesn't return < 1, read the file, if blah blah output, then increase the read location by 512 (handled by fread)
 
@@ -33,7 +46,7 @@ int main(int argc, char *argv[])
         fread(temp, 512, 1, file);
         if (temp[0] = 0xff && temp[1] = 0xd8 && temp[2] = 0xff)
         {
-            while 
+            while
         }
     }
 
