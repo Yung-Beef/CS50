@@ -20,7 +20,8 @@ int main(int argc, char *argv[])
     }
 
     unit8_t temp[512];
-    char *digits[3];
+    char *digits[8];
+    int c = 0;
 
     while (fread(&temp, 1, 512, file) == 512)
     {
@@ -29,13 +30,21 @@ int main(int argc, char *argv[])
 
         if (temp[0] = 0xff && temp[1] = 0xd8 && temp[2] = 0xff)
         {
-            // while temp[0] etc DOESN'T equal, keep saving to the file
 
-            sprintf(digits, "%03i.jpg", i);
+
+            sprintf(digits, "%03i.jpg", c);
             FILE *img = fopen(digits, "w");
             fwrite(&temp, 512, 1, digits);
-            // keep writing until it finds the header again
-            // don't include that, close the file
+            fread(&temp, 1, 512, file);
+
+            while (temp[0] != 0xff && temp[1] != 0xd8 && temp[2] != 0xff)
+            {
+                fwrite(&temp, 512, 1, digits);
+                fread(&temp, 1, 512, file);
+            }
+
+            fclose(digits);
+            c++;
         }
 
     }
