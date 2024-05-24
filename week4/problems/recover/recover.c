@@ -24,9 +24,6 @@ int main(int argc, char *argv[])
     char digits[8];
     int c = 0;
 
-    fread(&temp, 1, 512, file);
-    printf("%i\n", temp[0]);
-
     while (fread(&temp, 1, 512, file) == 512)
     {
         printf("%i\n", temp[0]);
