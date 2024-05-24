@@ -34,7 +34,8 @@ int main(int argc, char *argv[])
         {
             if (temp[0] = 0xff && temp[1] = 0xd8 && temp[2] = 0xff)
             {
-                
+                sprintf(digits, "%03i.jpg", i);
+                FILE *img = fopen(digits, "w");
             }
         }
 
