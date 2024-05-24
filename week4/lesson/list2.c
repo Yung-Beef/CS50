@@ -18,13 +18,18 @@ int main(int argc, char *argv[])
         node *n = malloc(sizeof(node));
         if (n == NULL)
         {
-            free(n);
+            //free memory thus far
             return 1;
         }
 
         n->number = number;
-        n->next = NULL;
-        
+        n->next = list;
+        list = n;
 
     }
+
+    // print whole list
+    
+
+
 }
