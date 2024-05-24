@@ -23,23 +23,20 @@ int main(int argc, char *argv[])
     char *digits[8];
     int c = 0;
 
+    fread(&temp, 1, 512, file);
+
     while (fread(&temp, 1, 512, file) == 512)
     {
-
-        fread(&temp, 1, 512, file);
-
         if (temp[0] = 0xff && temp[1] = 0xd8 && temp[2] = 0xff)
         {
-
-
             sprintf(digits, "%03i.jpg", c);
             FILE *img = fopen(digits, "w");
-            fwrite(&temp, 512, 1, digits);
+            fwrite(&temp, 1, 512, digits);
             fread(&temp, 1, 512, file);
 
             while (temp[0] != 0xff && temp[1] != 0xd8 && temp[2] != 0xff)
             {
-                fwrite(&temp, 512, 1, digits);
+                fwrite(&temp, 1, 512, digits);
                 fread(&temp, 1, 512, file);
             }
 
