@@ -28,14 +28,17 @@ int main(int argc, char *argv[])
 
     while (fread(&temp, 1, 512, file) == 512)
     {
-        fread(&temp, 1, 512, file);
-
         for (int i = 0, i < 50; i++)
         {
+            fread(&temp, 1, 512, file);
+
             if (temp[0] = 0xff && temp[1] = 0xd8 && temp[2] = 0xff)
             {
                 sprintf(digits, "%03i.jpg", i);
                 FILE *img = fopen(digits, "w");
+                fwrite(temp, 512, 1, digits);
+                // keep writing until it finds the header again
+                // don't include that, close the file
             }
         }
 
