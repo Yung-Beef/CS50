@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
     char *temp[512];
     char *digits[3];
     int i = 0;
+    int s = 0;
 
     while (fread(temp, 1, 512, file) == 0)
     {
