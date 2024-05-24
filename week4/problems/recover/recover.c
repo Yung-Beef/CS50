@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     }
 
     uint8_t temp[512];
-    char *digits[8];
+    char digits[8];
     int c = 0;
 
     fread(&temp, 1, 512, file);
