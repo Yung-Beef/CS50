@@ -1,3 +1,4 @@
+#include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -22,9 +23,10 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    uint8_t temp[BLOCK_SIZE];
-    char digits[8];
-    int c = 0;
+    uint8_t temp[BLOCK_SIZE]; // buffer
+    char digits[8]; // the output filename
+    int c = 0; // counter of how many jpgs have been found
+    bool found = false;
 
     while (fread(&temp, BLOCK_SIZE, 1, file) == 1)
     {
