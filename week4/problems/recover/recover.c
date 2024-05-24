@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
             fclose(img);
             c++;
         }
-        if (c = 49)
+        if (c == 49)
         {
             return 0;
         }
