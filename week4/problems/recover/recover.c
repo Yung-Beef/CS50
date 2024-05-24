@@ -29,6 +29,16 @@ int main(int argc, char *argv[])
     // use a 512b buffer to check for the header, but then inside the loop use a giga buffer to store stuff
     // and then wipe it clean before the loop repeats
 
+    // while (there are still bytes to read)
+        // read 512 bytes into buffer1 (overwrite)
+        // if buffer1 header is good
+            // add buffer1 into buffer2
+        // if buffer1 header is bad and buffer2 has the header
+            // read 512 bytes into buffer1
+            // add buffer1 into buffer2
+            //
+        //
+
 
 
 
