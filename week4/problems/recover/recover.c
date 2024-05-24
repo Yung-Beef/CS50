@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
         for (int i = 0, i < 50; i++)
         {
             fread(&temp, 1, 512, file);
-
+            
             if (temp[0] = 0xff && temp[1] = 0xd8 && temp[2] = 0xff)
             {
                 sprintf(digits, "%03i.jpg", i);
