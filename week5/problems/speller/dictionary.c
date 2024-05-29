@@ -2,6 +2,8 @@
 
 #include <ctype.h>
 #include <stdbool.h>
+#include <stdio.h>
+#include <string.h>
 
 #include "dictionary.h"
 
@@ -35,7 +37,56 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    // TODO
+    // TODO: load it as a hash table
+    FILE dictionary = fopen(*dictionary, "r");
+
+    // TODO: did it open correctly?
+
+    node bank = node[26];
+    char *word[LENGTH + 1];
+    int charcounter = 0;
+
+    while (fread(word, sizeof(char), 1, dictionary) == 1)
+    {
+        // copy a line of the dictionary into the word hash table
+        if (word[charcounter] == "\n")
+        {
+            // store word in bank, character-by-character, based on charcounter
+            *temp = malloc(charcounter * sizeof(char));
+
+
+            // find where it goes first
+            // figure out which letter bucket
+            int b = (word[0] - 'a')
+
+            // search through everything linked in that bucket
+
+            // for loop based on wordcounter, i < wordcounter
+            for (int i = 0; i < wordcounter; i++)
+            {
+            // if ith letter is smaller than THE NEXT NODE'S ith letter, store it here
+            if ()
+
+            // if ith letter is bigger than THE NEXT NODE'S ith letter, go to the next node
+            // else if ith letter is equal to THE NEXT NODE's ith letter, switch to the next letter, etc.
+            }
+
+            charcounter = 0;
+        }
+        else
+        {
+            charcounter++;
+        }
+    }
+
+
+
+
+
+
+
+    // TODO: close the file
+
     return false;
 }
 
