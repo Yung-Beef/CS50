@@ -95,7 +95,6 @@ bool load(const char *dictionary)
                 }
             }
 
-
             charcounter = 0;
         }
         else
