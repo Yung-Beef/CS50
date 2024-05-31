@@ -42,7 +42,12 @@ bool load(const char *dictionary)
 
     // TODO: did it open correctly?
 
-    node bank = node[26];
+     bank = node[26];
+    for (int i = 0; i < 25; i++)
+    {
+        bank[i] = NULL;
+    }
+
     char *word[LENGTH + 1];
     int charcounter = 0;
 
@@ -61,7 +66,7 @@ bool load(const char *dictionary)
             int b = (word[0] - 'a')
 
             // if that bucket is empty, just add the word
-            if (bank[b].next == NULL)
+            if (bank[b] == NULL)
             {
                 bank[b].next = temp;
             }
@@ -74,7 +79,7 @@ bool load(const char *dictionary)
                     // if ith letter is smaller than THE NEXT NODE'S ith letter, store it here
                     if (word[i] < bank[b].next->word[i])
                     {
-                        temp->next = bank[b]
+                        temp->next = bank[b]->next;
                     }
 
                     // if ith letter is bigger than THE NEXT NODE'S ith letter, go to the next node
