@@ -77,9 +77,10 @@ bool load(const char *dictionary)
                 for (int i = 0; i < wordcounter; i++)
                 {
                     // if ith letter is smaller than THE NEXT NODE'S ith letter, store it here
-                    if (word[i] < bank[b].next->word[i])
+                    if (word[i] < bank[b]->word[i])
                     {
                         temp->next = bank[b]->next;
+                        bank[b] = temp;
                     }
 
                     // if ith letter is bigger than THE NEXT NODE'S ith letter, go to the next node
