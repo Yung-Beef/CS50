@@ -1,5 +1,3 @@
-
-
 def main():
     hello()
     name = input("What is your name? ")
@@ -8,6 +6,7 @@ def main():
 def hello(to="world"):
     print("hello,", to)
 
+main()
 
 
 # get user name, remove white space and capitalize
