@@ -59,12 +59,18 @@ bool load(const char *dictionary)
         {
             // store word in bank, character-by-character, based on charcounter
             node *temp = malloc(charcounter * sizeof(char));
-            temp->word = word;
+            char *currentword[charcounter + 1];
+            for (int i = 0; i < (charcounter + 1); i++)
+            {
+                currentword[i] = word[i];
+            }
+
+            temp->word = currentword;
             temp->next = NULL;
 
             // find where it goes first
             // figure out which letter bucket
-            int b = (word[0] - 'a')
+            int b = (currentword[0] - 'a')
 
             // if that bucket is empty, just add the word
             if (bank[b] == NULL)
@@ -78,7 +84,7 @@ bool load(const char *dictionary)
                 for (int i = 0; i < wordcounter; i++)
                 {
                     // if ith letter is smaller than THE NEXT NODE'S ith letter, store it here
-                    if (word[i] < bank[b]->word[i])
+                    if (currentword[i] < bank[b]->word[i])
                     {
                         temp->next = bank[b];
                         bank[b] = temp;
@@ -86,7 +92,7 @@ bool load(const char *dictionary)
                     }
 
                     // if ith letter is bigger than THE NEXT NODE'S ith letter, go to the next node
-                    else if (word[i] > bank[b]->word[i])
+                    else if (currentword[i] > bank[b]->word[i])
                     {
                         bank[b]->next = temp;
                         break;
