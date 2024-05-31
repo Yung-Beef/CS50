@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 #include "dictionary.h"
@@ -10,7 +11,7 @@
 // Represents a node in a hash table
 typedef struct node
 {
-    char word[LENGTH + 1];
+    string word[LENGTH + 1];
     struct node *next;
 } node;
 
@@ -48,13 +49,13 @@ bool load(const char *dictionary)
         bank[i] = NULL;
     }
 
-    char *word[LENGTH + 1];
+    string word[LENGTH + 1];
     int charcounter = 0;
 
     while (fread(word, sizeof(char), 1, dict) == 1)
     {
         // copy a line of the dictionary into the word hash table
-        if (word[charcounter] == "\n")
+        if (strcmp(word[charcounter], "\n") == 0)
         {
             // store word in bank, character-by-character, based on charcounter
             node *temp = malloc(charcounter * sizeof(char));
