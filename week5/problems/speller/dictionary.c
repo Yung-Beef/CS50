@@ -68,7 +68,7 @@ bool load(const char *dictionary)
             // if that bucket is empty, just add the word
             if (bank[b] == NULL)
             {
-                bank[b].next = temp;
+                bank[b]->next = temp;
             }
             else
             {
