@@ -38,7 +38,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO: load it as a hash table
-    FILE dictionary = fopen(*dictionary, "r");
+    FILE *dict = fopen(dictionary, "r");
 
     // TODO: did it open correctly?
 
@@ -51,7 +51,7 @@ bool load(const char *dictionary)
     char *word[LENGTH + 1];
     int charcounter = 0;
 
-    while (fread(word, sizeof(char), 1, dictionary) == 1)
+    while (fread(word, sizeof(char), 1, dict) == 1)
     {
         // copy a line of the dictionary into the word hash table
         if (word[charcounter] == "\n")
