@@ -78,10 +78,10 @@ bool load(const char *dictionary)
             {
                 // else, search through everything linked in that bucket
                 // for loop based on wordcounter, i < wordcounter
-                for (int i = 0; i < wordcounter; i++)
+                for (int i = 0; i < charcounter; i++)
                 {
                     // if ith letter is smaller than THE NEXT NODE'S ith letter, store it here
-                    if (word[i] < bank[b]->word[i])
+                    if (*word[i] < bank[b]->word[i])
                     {
                         temp->next = bank[b];
                         bank[b] = temp;
