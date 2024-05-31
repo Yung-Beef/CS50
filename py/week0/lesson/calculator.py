@@ -1,5 +1,5 @@
-x = 1
-y = 2
+x = input("X: ")
+y = input("Y: ")
 
 z = x + y
 
