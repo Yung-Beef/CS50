@@ -1,7 +1,5 @@
-name = input("What's your name? ")
-
-#remove white space from beginning and end of str and capitalize
-name = name.strip().title()
+# get user name, remove white space and capitalize
+name = input("What's your name? ").strip().title()
 
 print(f"hello, {name}")
 
