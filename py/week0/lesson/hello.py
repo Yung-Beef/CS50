@@ -4,7 +4,7 @@ name = input("What's your name? ")
 name = name.strip()
 
 #capitalize the name
-name = name.capitalize()
+name = name.title()
 
 print(f"hello, {name}")
 
