@@ -1,7 +1,7 @@
 x = float(input("X: "))
 y = float(input("Y: "))
 
-z = round(x / y, 2)
+z = x / y
 
 # adds , seperators for thousands
-print(z)
+print(f"{z:.2f}")
