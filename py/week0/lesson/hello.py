@@ -1,5 +1,8 @@
 name = input("What's your name? ")
 
+#remove white space from str
+name = name.strip()
+
 print(f"hello, {name}")
 
 #print("hello,", name)
