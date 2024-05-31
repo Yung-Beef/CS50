@@ -7,5 +7,6 @@ print("hello,", name)
 
 #print("hello,", name, sep="???")
 
+#print("hello, \"friend\"")
 
 # comments
