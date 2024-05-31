@@ -59,12 +59,15 @@ bool load(const char *dictionary)
         {
             // store word in bank, character-by-character, based on charcounter
             node *temp = malloc(charcounter * sizeof(char));
-            temp->word = word;
+            for (int i = 0; i < (charcounter + 1); i++)
+            {
+                temp->word[i] = *word[i];
+            }
             temp->next = NULL;
 
             // find where it goes first
             // figure out which letter bucket
-            int b = (word[0] - 'a')
+            int b = (*word[0] - 'a');
 
             // if that bucket is empty, just add the word
             if (bank[b] == NULL)
