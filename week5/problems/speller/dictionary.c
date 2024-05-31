@@ -79,7 +79,7 @@ bool load(const char *dictionary)
                     // if ith letter is smaller than THE NEXT NODE'S ith letter, store it here
                     if (word[i] < bank[b]->word[i])
                     {
-                        temp->next = bank[b]->next;
+                        temp->next = bank[b];
                         bank[b] = temp;
                     }
 
