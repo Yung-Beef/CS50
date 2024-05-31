@@ -81,17 +81,18 @@ bool load(const char *dictionary)
                     {
                         temp->next = bank[b];
                         bank[b] = temp;
+                        break;
                     }
 
                     // if ith letter is bigger than THE NEXT NODE'S ith letter, go to the next node
                     else if (word[i] > bank[b]->word[i])
                     {
-                        
+                        bank[b]->next = temp;
+                        break;
                     }
 
-
-                    // else if ith letter is equal to THE NEXT NODE's ith letter, switch to the next letter, etc.
-                    }
+                    // else if ith letter is equal to THE NEXT NODE's ith letter, switch to the next letter
+                }
             }
 
 
