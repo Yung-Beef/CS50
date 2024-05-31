@@ -52,20 +52,19 @@ bool load(const char *dictionary)
         if (word[charcounter] == "\n")
         {
             // store word in bank, character-by-character, based on charcounter
-            *temp = malloc(charcounter * sizeof(char));
-
+            node *temp = malloc(charcounter * sizeof(char));
+            temp.word = word;
 
             // find where it goes first
             // figure out which letter bucket
             int b = (word[0] - 'a')
 
             // search through everything linked in that bucket
-
             // for loop based on wordcounter, i < wordcounter
             for (int i = 0; i < wordcounter; i++)
             {
             // if ith letter is smaller than THE NEXT NODE'S ith letter, store it here
-            if ()
+            if (word[i] < bank[b]->word)
 
             // if ith letter is bigger than THE NEXT NODE'S ith letter, go to the next node
             // else if ith letter is equal to THE NEXT NODE's ith letter, switch to the next letter, etc.
