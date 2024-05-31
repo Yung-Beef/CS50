@@ -11,7 +11,7 @@
 // Represents a node in a hash table
 typedef struct node
 {
-    string word[LENGTH + 1];
+    char word[LENGTH + 1];
     struct node *next;
 } node;
 
@@ -49,7 +49,7 @@ bool load(const char *dictionary)
         bank[i] = NULL;
     }
 
-    string word[LENGTH + 1];
+    char *word[LENGTH + 1];
     int charcounter = 0;
 
     while (fread(word, sizeof(char), 1, dict) == 1)
