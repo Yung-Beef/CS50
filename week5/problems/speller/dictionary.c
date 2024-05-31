@@ -42,7 +42,7 @@ bool load(const char *dictionary)
 
     // TODO: did it open correctly?
 
-     bank = node[26];
+    node *bank[26];
     for (int i = 0; i < 25; i++)
     {
         bank[i] = NULL;
