@@ -6,7 +6,8 @@ def main():
         print("Odd")
 
 def iseven(n):
-    return True if n % 2 == 0 else False
+    return n % 2 == 0
+    #return True if n % 2 == 0 else False
 
 main()
 
