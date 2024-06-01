@@ -7,11 +7,11 @@ def main():
 
 def iseven(n):
     if n % 2 == 0:
-        return true
+        return True
     else:
-        return false
+        return False
 
-
+main()
 
 
 
