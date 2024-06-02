@@ -5,8 +5,8 @@ students = {
     "Draco": "Slytherin",
 }
 
-print(students["Hermoine"])
-print(students["Draco"])
+for student in students:
+    print(student)
 
 
 #students = ["Hermoine", "Harry", "Ron"]
