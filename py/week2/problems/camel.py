@@ -1,6 +1,4 @@
 input = input("camelCase: ")
-first = ""
-second = ""
 counter = 0
 
 for _ in input:
