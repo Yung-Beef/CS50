@@ -7,14 +7,14 @@ for _ in input:
         else:
              first_length += 1
 
-second_length = len(input) - counter
+second_length = len(input) - first_length
 first = [range(first_length)]
 second = [range(second_length)]
 
-for _ in range(counter):
+for _ in range(first_length):
     first[_] = input[_]
 for _ in range(second_length):
-    second.join(input[_ + counter])
+    second.join(input[_ + first_length])
 
 first_word.join(first)
 
