@@ -1,3 +1,12 @@
-z, y, z = input("Expression: ").split(" ")
+x, y, z = input("Expression: ").split(" ")
 
-print(z, y, z)
+
+match y:
+    case "+":
+        print(x ++ z)
+    case "-":
+        print(x - z)
+    case "*":
+        print(x * z)
+    case "/":
+        print(x / z)
