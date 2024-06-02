@@ -1,7 +1,7 @@
 x, y, z = input("Expression: ").split(" ")
 
-x = int(x)
-z = int(z)
+x = float(x)
+z = float(z)
 
 match y:
     case "+":
