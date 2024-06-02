@@ -3,6 +3,12 @@ first = None
 second = None
 
 for _ in input:
+    while isupper(input[_]) == False:
+        first = first + input[_]
+
+
+
+
     if isupper(input[_])
         i = 1
         while i < _:
