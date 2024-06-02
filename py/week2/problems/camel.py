@@ -1,6 +1,6 @@
 input = input("camelCase: ")
-first = None
-second = None
+first = ""
+second = ""
 counter = 0
 
 for _ in input:
@@ -10,9 +10,11 @@ for _ in input:
 
 second_length = len(input) - counter
 
-for _ in counter:
-    first = first + input[_]
-for _ in second_length:
-    second = second + input[_ + counter]
+for _ in range(counter):
+    first.join(input[_])
+for _ in range(second_length):
+    second.join(input[_ + counter])
+
+print(first)
 
 print(first + "_" + second)
