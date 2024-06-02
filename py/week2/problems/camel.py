@@ -5,11 +5,14 @@ counter = 0
 
 for _ in input:
     counter += 1
-    if isupper(input[_]):
+    if input.isupper(input[_]):
         break
 
 second_length = len(input) - counter
 
-for counter in input:
-    first = first + counter
-for 
+for _ in counter:
+    first = first + input[_]
+for _ in second_length:
+    second = second + input[_ + counter]
+
+print(first + "_" + second)
