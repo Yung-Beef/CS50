@@ -17,4 +17,4 @@ for _ in range(second_length):
 
 print(first)
 
-print(f"{first} + '_' + {second}")
+print(first + "_" + second)
