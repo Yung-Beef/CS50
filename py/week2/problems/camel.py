@@ -8,16 +8,12 @@ for _ in input:
              first_length += 1
 
 second_length = len(input) - first_length
-first = [range(first_length)]
-second = [range(second_length)]
 
 for _ in range(first_length):
-    first[_] = input[_]
+    print(input[_])
+
+print("_")
+
 for _ in range(second_length):
-    second.join(input[_ + first_length])
+    print(input[_ + first_length])
 
-first_word.join(first)
-
-print(first_word)
-
-print(first + "_" + second)
