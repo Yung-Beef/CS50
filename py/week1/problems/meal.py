@@ -11,6 +11,9 @@ def main():
 
 def convert(input):
     h, m = input.split(":")
+    h = int(h)
+    m = int(m)
+
     #convert minutes into a decimal of an hour
     m = float(m / 60)
     time = float(h + m)
