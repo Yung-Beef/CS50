@@ -6,7 +6,7 @@ students = {
 }
 
 for student in students:
-    print(student, students[student])
+    print(student, students[student], sep=", ")
 
 
 #students = ["Hermoine", "Harry", "Ron"]
