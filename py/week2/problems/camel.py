@@ -5,7 +5,7 @@ counter = 0
 
 for _ in input:
     counter += 1
-    if input.isupper(input[_]):
+    if input[_].isupper():
         break
 
 second_length = len(input) - counter
