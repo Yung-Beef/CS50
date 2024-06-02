@@ -1,13 +1,15 @@
 input = input("camelCase: ")
-counter = 0
+first_length = 0
 
 for _ in input:
-    counter += 1
-    if 'input[_]'.isupper():
-        break
+        if 'input[_]'.isupper():
+            break
+        else:
+             first_length += 1
 
 second_length = len(input) - counter
-first = [range(counter)]
+first = [range(first_length)]
+second = [range(second_length)]
 
 for _ in range(counter):
     first[_] = input[_]
