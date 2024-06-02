@@ -7,12 +7,15 @@ for _ in input:
         break
 
 second_length = len(input) - counter
+first = [range(counter)]
 
 for _ in range(counter):
-    first.join(input[_])
+    first[_] = input[_]
 for _ in range(second_length):
     second.join(input[_ + counter])
 
-print(first)
+first_word.join(first)
+
+print(first_word)
 
 print(first + "_" + second)
