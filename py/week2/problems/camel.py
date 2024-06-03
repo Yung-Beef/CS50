@@ -1,8 +1,8 @@
 input = input("camelCase: ")
 first_length = 0
 
-for _ in input:
-        if 'input[_]'.isupper():
+for character in input:
+        if character.isupper():
             break
         else:
              first_length += 1
