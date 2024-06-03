@@ -19,9 +19,12 @@ def is_valid(s):
         if character.isnumeric():
             if (character[counter:len(s)].isnumeric() == 1):
                 return False
+            elif character[counter] == "0":
+                return False
         else:
             counter += 1
-
+    #no periods, spaces, or punctuation
+    
 
 
 
