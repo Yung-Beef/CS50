@@ -7,13 +7,15 @@ for character in input:
         else:
              first_length += 1
 
+lowered = input.lower()
+
 second_length = len(input) - first_length
 
 for _ in range(first_length):
-    print(input[_])
+    print(lowered[_])
 
 print("_")
 
 for _ in range(second_length):
-    print(input[_ + first_length].lower)
+    print(lowered[_ + first_length])
 
