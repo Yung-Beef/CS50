@@ -7,7 +7,8 @@ def main():
 
 
 def is_valid(s):
-    ...
+    ##must start with 2 letters
+    if s[0:1]
 
 
 main()
