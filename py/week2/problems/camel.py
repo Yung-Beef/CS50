@@ -8,14 +8,15 @@ for character in input:
              first_length += 1
 
 lowered = input.lower()
-
 second_length = len(input) - first_length
 
 for _ in range(first_length):
-    print(lowered[_])
+    print(lowered[_], end="")
 
-print("_")
+print("_", end="")
 
 for _ in range(second_length):
-    print(lowered[_ + first_length])
+    print(lowered[_ + first_length], end="")
+
+print("")
 
