@@ -24,7 +24,15 @@ def is_valid(s):
         else:
             counter += 1
     #no periods, spaces, or punctuation
-    
+    for character in s:
+        if character.isalpha():
+            continue
+        elif character.isnumeric():
+            continue
+        else:
+            return False
+
+    return True
 
 
 
