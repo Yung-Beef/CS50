@@ -15,7 +15,8 @@ def is_valid(s):
         return False
     #numbers must come at the end, and the first number cannot be a 0
     for character in s:
-        
+        if character.isnumeric():
+            
 
 
 
