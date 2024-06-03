@@ -11,3 +11,5 @@ while coins != 50:
             print(f"Amount due: {50 - coins}")
         if coins > 50:
             print(f"Change owed: {coins - 50}")
+    if coins - 50 >= 0:
+        break
