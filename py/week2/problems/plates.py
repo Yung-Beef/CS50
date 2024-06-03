@@ -13,8 +13,10 @@ def is_valid(s):
     #2-6 characters
     if len(s) < 2 or len(s) > 6:
         return False
-    #numbers must come at the end
-    
+    #numbers must come at the end, and the first number cannot be a 0
+    for character in s:
+        
+
 
 
 
