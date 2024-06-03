@@ -4,9 +4,9 @@ coins = 0
 print("Amount due: 50")
 
 while coins != 50:
-    input = int(input("Insert coin: "))
-    if input == 5 or 10 or 25:
-        coins = coins + input
+    deposit = int(input("Insert coin: "))
+    if deposit == 5 or 10 or 25:
+        coins = coins + deposit
         if coins < 50:
             print(f"Amount due: {50 - coins}")
         if coins > 50:
