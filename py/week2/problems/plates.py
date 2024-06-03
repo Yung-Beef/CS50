@@ -18,7 +18,7 @@ def is_valid(s):
     for character in s:
         if character.isnumeric():
             print(f"{s[counter:len(s)]}")
-            if s[counter:len(s)].isnumeric():
+            if s[counter:len(s)].isnumeric() is False:
                 return False
             elif character == "0":
                 return False
