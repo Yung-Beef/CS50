@@ -14,9 +14,13 @@ def is_valid(s):
     if len(s) < 2 or len(s) > 6:
         return False
     #numbers must come at the end, and the first number cannot be a 0
+    counter = 0
     for character in s:
         if character.isnumeric():
-            
+            if (character[counter:len(s)].isnumeric() == 1):
+                return False
+        else:
+            counter += 1
 
 
 
