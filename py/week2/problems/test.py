@@ -1,5 +1,5 @@
 input = input("camelCase: ")
 
-for i in input:
-        if input[i].isupper():
+for character in input:
+        if character.isupper():
             print("Y")
