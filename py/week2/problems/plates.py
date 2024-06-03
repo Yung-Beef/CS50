@@ -17,14 +17,12 @@ def is_valid(s):
     counter = 0
     for character in s:
         if character.isnumeric():
-            print(f"{s[counter:len(s)]}")
             if s[counter:len(s)].isnumeric() is False:
                 return False
+        elif character.isalpha() and (s[counter + 1] == "0"):
+            return False
         else:
             counter += 1
-    for character in s:
-        if character.isalpha() and ((character + 1) == 0):
-            return False
     #no periods, spaces, or punctuation
     for character in s:
         if character.isalnum():
