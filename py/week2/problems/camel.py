@@ -15,5 +15,5 @@ for _ in range(first_length):
 print("_")
 
 for _ in range(second_length):
-    print(input[_ + first_length])
+    print(input[_ + first_length].lower)
 
