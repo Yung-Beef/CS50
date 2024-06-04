@@ -6,7 +6,7 @@ while True:
         if food not in groceries:
             groceries[food] = 1
         if food in groceries:
-            groceries[food] += 1
+            groceries[food] = groceries.get(food) + 1
     except EOFError:
         break
 
