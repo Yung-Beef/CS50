@@ -2,5 +2,10 @@ groceries = {}
 
 while True:
     try:
-        
-    except:
+        food = input()
+        groceries.d[food]
+    except EOFError:
+        break
+
+
+
