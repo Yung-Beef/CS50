@@ -13,5 +13,5 @@ while True:
 groceries = sorted(groceries)
 
 for key in groceries:
-    print(f"{get(key)} {key}")
+    print(f"{groceries.get(key)} {key}")
 
