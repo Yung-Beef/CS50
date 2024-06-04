@@ -1,6 +1,4 @@
-groceries = {
-    "bitch": 1,
-}
+groceries = {}
 
 while True:
     try:
@@ -14,7 +12,7 @@ while True:
 
 groceries = sorted(groceries)
 
-#for key in groceries:
-   # qty = groceries.get(key)
-    #print(f"{qty} {key}")
+for key in groceries:
+    qty = groceries.get(key)
+    print(f"{qty} {key}")
 
