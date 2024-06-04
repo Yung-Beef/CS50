@@ -1,3 +1,4 @@
-string = input("Fraction: ")
+x, y = input("Fraction: ").split(sep="/")
 
-
+print(x)
+print(y)
