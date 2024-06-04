@@ -1,4 +1,4 @@
-groceries = {name, quantity}
+groceries = {}
 
 while True:
     try:
@@ -10,5 +10,8 @@ while True:
     except EOFError:
         break
 
+groceries = sorted(groceries)
 
+for key in groceries:
+    print(f"{get[key]} {key}")
 
