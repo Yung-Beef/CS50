@@ -1,4 +1,6 @@
-groceries = {}
+groceries = {
+    "bitch": 1,
+}
 
 while True:
     try:
@@ -6,12 +8,11 @@ while True:
         if food not in groceries:
             groceries[food] = 1
         if food in groceries:
-            groceries[food] = groceries.get(food) + 1
+            groceries[food] += 1
     except EOFError:
         break
 
 groceries = sorted(groceries)
-print(groceries)
 
 #for key in groceries:
    # qty = groceries.get(key)
