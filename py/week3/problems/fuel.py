@@ -4,16 +4,17 @@ y = int(string[1])
 
 percent = round(float(x / y) * 100)
 
-try:
-    if percent <= 1:
-        print("E")
-    elif percent >= 99:
-        print("F")
-    else:
-        print(percent)
-except ValueError:
-    pass
-except ZeroDivisionError:
-    pass
+while True:
+    try:
+        if percent <= 1:
+            print("E")
+        elif percent >= 99:
+            print("F")
+        else:
+            print(percent)
+    except ValueError:
+        pass
+    except ZeroDivisionError:
+        pass
 
 #print(percent)
