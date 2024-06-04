@@ -10,9 +10,8 @@ while True:
     except EOFError:
         break
 
-sortedgroc = sorted(groceries.items())
-#print(sortedgroc)
+groceries = sorted(groceries.items())
 
-for key in sortedgroc:
+for key in groceries:
     print(f"{key[1]} {key[0]}")
 
