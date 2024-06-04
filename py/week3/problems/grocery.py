@@ -10,9 +10,11 @@ while True:
     except EOFError:
         break
 
-groceries = sorted(groceries)
+sortedgroc = sorted(groceries.items())
+print(sortedgroc)
 
-for key in groceries:
-    qty = groceries.get(key)
-    print(f"{qty} {key}")
+for key in sortedgroc:
+    #print(sortedgroc.get(key))
+    print(key)
+    print("\n")
 
