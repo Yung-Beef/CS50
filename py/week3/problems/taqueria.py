@@ -17,6 +17,8 @@ while True:
         order = input("Item: ").lower().title()
         total = total + prices.get(order)
         print(f"Total: ${total:.2f}")
+    except TypeError:
+        pass
     except EOFError:
         print("\n")
         break
