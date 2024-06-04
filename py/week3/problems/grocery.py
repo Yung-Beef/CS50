@@ -2,7 +2,7 @@ groceries = {}
 
 while True:
     try:
-        food = input()
+        food = input().upper()
         if food in groceries:
             groceries[food] += 1
         if food not in groceries:
