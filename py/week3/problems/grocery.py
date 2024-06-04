@@ -11,8 +11,9 @@ while True:
         break
 
 groceries = sorted(groceries)
+print(groceries)
 
-for key in groceries:
-    qty = groceries.get(key)
-    print(f"{qty} {key}")
+#for key in groceries:
+   # qty = groceries.get(key)
+    #print(f"{qty} {key}")
 
