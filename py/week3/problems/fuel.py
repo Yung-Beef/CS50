@@ -1,4 +1,7 @@
-x, y = input("Fraction: ").split(sep="/")
+string = input("Fraction: ").split(sep="/")
+x = int(string[0])
+y = int(string[1])
 
-print(x)
-print(y)
+percent = int(float(x / y) * 100)
+
+print(percent)
