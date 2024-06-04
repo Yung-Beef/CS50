@@ -10,10 +10,12 @@ prices = {
     "Tortilla Salad": 8.00
 }
 
+total = 0
+
 while True:
     try:
         order = input("Item: ")
-        total = 
+        total = total + get(order)
     except EOFError:
         print("\n")
         break
