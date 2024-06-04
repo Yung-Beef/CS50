@@ -14,8 +14,9 @@ total = 0
 
 while True:
     try:
-        order = input("Item: ")
-        total = total + get(order)
+        order = input("Item: ").lower().titlecase()
+        total = total + prices.get(order)
+        print(f"Total: ${total}")
     except EOFError:
         print("\n")
         break
