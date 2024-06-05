@@ -11,14 +11,12 @@ if len(sys.argv) == 2:
 else:
     sys.exit("Invalid entry")
 
-print(n)
+try:
+    response = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
 
-# try:
-#     response = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
-
-#     price = response.json()["bpi"]["USD"]["rate_float"]
-# except:
-#     print("Error fetching price")
+    price = response.json()["bpi"]["USD"]["rate_float"]
+except:
+    print("Error fetching price")
 
 
 
