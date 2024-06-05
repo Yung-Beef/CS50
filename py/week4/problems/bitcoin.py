@@ -15,7 +15,7 @@ try:
     response = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
 
     price = response.json()["bpi"]["USD"]["rate_float"]
-except:
+except requests.RequestException:
     print("Error fetching price")
 
 
