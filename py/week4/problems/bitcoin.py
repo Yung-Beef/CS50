@@ -18,7 +18,7 @@ try:
 except requests.RequestException:
     print("Error fetching price")
 
-print(f")
+print(f"{(n * price):}",
 
 
 
