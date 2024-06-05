@@ -2,20 +2,33 @@ import random
 
 
 def main():
-    ...
+    level = get_level()
+    score = 0
 
-level = get_level()
+    for _ in range(10):
+        x = generate_integer(level)
+        y = generate_integer(level)
+        tries = 0
+
+        while True:
+            if tries == 3:
+                print(f"{x + y}")
+                break
+
+            try:
+                answer = int(input(f"{x} + {y} = "))
+                if answer != (x + y):
+                    print("EEE")
+                    tries += 1
+                else:
+                    score += 1
+                    break
+            except ValueError:
+                print("EEE")
+                tries += 1
 
 
-
-
-
-
-
-
-problems = []
-    for _ in range(9):
-        problems[_] = [generate_integer(level), generate_integer(level)]
+    print(score)
 
 
 def get_level():
@@ -27,9 +40,9 @@ def get_level():
         except ValueError:
             pass
 
-def generate_integer(level):
-    return randint(1, (10 ^ level))
 
+def generate_integer(level):
+    return random.randint(1, (10 ^ level))
 
 
 if __name__ == "__main__":
