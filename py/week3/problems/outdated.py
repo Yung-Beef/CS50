@@ -13,9 +13,8 @@ months = [
     "December"
 ]
 
-old_date = input("Date: ")
-
 while True:
+    old_date = input("Date: ")
     if len(old_date) <= 10:
         month, day, year = old_date.split(sep="/")
     else:
@@ -30,7 +29,7 @@ while True:
     if (int(month) <= 12) and (int(day) <= 31):
         break
 
-
+month = str(month)
 if len(month) < 2:
     month = month.zfill(2)
 if len(day) < 2:
