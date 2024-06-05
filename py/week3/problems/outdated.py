@@ -15,18 +15,23 @@ months = [
 
 old_date = input("Date: ")
 
-if len(old_date) <= 10:
-    month, day, year = old_date.split(sep="/")
-else:
-    month_name, day, year = old_date.split(sep=" ")
-    day = day.removesuffix(",")
-    counter = 1
-    for _ in months:
-        if month_name == _:
-            month = counter
-        else:
-            counter += 1
-    month = str(month)
+while True:
+    if len(old_date) <= 10:
+        month, day, year = int(old_date.split(sep="/"))
+        break
+    elif:
+        month_name, day, year = old_date.split(sep=" ")
+        day = day.removesuffix(",")
+        day = int(day)
+        year = int(year)
+        counter = 1
+        for _ in months:
+            if month_name == _:
+                month = counter
+            else:
+                counter += 1
+    if (month <= 12) and (day <= 31) and
+        break
 
 if len(month) < 2:
     month = month.zfill(2)
