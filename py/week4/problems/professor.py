@@ -28,7 +28,7 @@ def main():
                 tries += 1
 
 
-    print(score)
+    print(f"Score: {score}")
 
 
 def get_level():
