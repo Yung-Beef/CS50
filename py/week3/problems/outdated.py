@@ -24,12 +24,13 @@ while True:
             month = months.index(month_name) + 1
         if (int(month) <= 12) and (int(day) <= 31):
             break
+        month = int(month)
+        day = int(day)
+        year = int(year)
     except ValueError:
         pass
 
-month = int(month)
-day = int(day)
-year = int(year)
+
 
 print(f"{year}-{month:02}-{day:02}")
 
