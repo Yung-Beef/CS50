@@ -26,11 +26,11 @@ else:
     counter = 1
     for month in months:
         if month_name == month:
-            month_name = month
+            print(f"{months[month]}")
         else:
             counter += 1
 
-    print(counter)
+
     print(month_name)
     print(day)
     print(year)
