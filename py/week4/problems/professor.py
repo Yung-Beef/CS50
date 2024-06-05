@@ -17,7 +17,7 @@ def get_level():
 def generate_integer(level):
     problems = []
     for _ in range(9):
-        problems[_] = [random(), random()]
+        problems[_] = [randint(1, (10 ^ n)), randint(1, (10 ^ n))]
 
 
 
