@@ -16,7 +16,7 @@ elif len(names) > 2:
     #loop for each name and concatenate
     for name in names[1:-1]:
         phrase = (phrase + ", " + name)
-    phrase = (phrase + ", and " + names[len(names)])
+    phrase = (phrase + ", and " + names[len(names) - 1])
 
 #print out adieu shit plus the entire string of names that i already made
 print(f"Adieu, adieu, to {phrase}")
