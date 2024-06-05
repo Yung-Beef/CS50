@@ -26,6 +26,7 @@ else:
             month = counter
         else:
             counter += 1
+    month = str(month)
 
 if len(month) < 2:
     month = month.zfill(2)
