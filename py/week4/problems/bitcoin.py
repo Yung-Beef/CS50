@@ -6,5 +6,7 @@ response = response.json()
 
 
 
-price = response[list(response)[3]]
+currencies = response[list(response)[3]]
+USD = currencies["USD"]
+price = USD["rate_float"]
 print(price)
