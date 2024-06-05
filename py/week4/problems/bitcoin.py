@@ -2,13 +2,16 @@ import requests
 import sys
 
 
-while True:
-    if len(argv) == 2:
-        try:
-            n = float(input("Bitcoins: "))
 
+if len(sys.argv) == 2:
+    try:
+        n = float(sys.argv[1])
+    except ValueError:
+        sys.exit("Invalid number")
+else:
+    sys.exit("Invalid entry")
 
-
+print(n)
 
 # try:
 #     response = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
