@@ -24,11 +24,9 @@ else:
     month_name, day, year = old_date.split(sep=" ")
     day = day.removesuffix(",")
     counter = 1
-    for month in months:
-        if month_name == month:
-            print(f"{months[month]}")
-        else:
-            counter += 1
+    for i in months:
+        if month_name == months[i]:
+            print(i)
 
 
     print(month_name)
