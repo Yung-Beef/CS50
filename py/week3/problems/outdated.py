@@ -16,7 +16,7 @@ months = [
 while True:
     old_date = input("Date: ")
     try:
-        if len(old_date) <= 10:
+        if "/" in old_date:
             month, day, year = old_date.split(sep="/")
         else:
             month_name, day, year = old_date.split(sep=" ")
