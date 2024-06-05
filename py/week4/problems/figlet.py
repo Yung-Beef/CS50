@@ -5,6 +5,8 @@ import sys
 
 
 # if none entered, set font to random
+if len(argv) == 1:
+    
 
 
 # elif 2 entered, check if valid, set font accordingly
