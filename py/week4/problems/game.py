@@ -11,7 +11,7 @@ while True:
 
 #number = n
 #if n != 1:
-number = random.randrange(n)
+number = random.randrange(1, n)
 print(number)
 while True:
     try:
