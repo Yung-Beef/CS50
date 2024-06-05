@@ -3,7 +3,7 @@ import sys
 if len(sys.argv) < 2:
     sys.exit("Too few arguments")
 
-for arg in sys.argv:
+for arg in sys.argv[1:]: #starts at position 1 and goes to the end (end omitted - defaults to the end)
     print("Hello, my name is", arg)
 
 
