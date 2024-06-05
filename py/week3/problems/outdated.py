@@ -27,13 +27,11 @@ while True:
     except ValueError:
         pass
 
-month = str(month)
-if len(month) < 2:
-    month = month.zfill(2)
-if len(day) < 2:
-    day = day.zfill(2)
+month = int(month)
+day = int(day)
+year = int(year)
 
-print(f"{year}-{month}-{day}")
+print(f"{year}-{month:02}-{day:02}")
 
 
 
