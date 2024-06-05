@@ -1,5 +1,6 @@
 
 
+#prompt for name, keep going until ctrl d
 
 
 
