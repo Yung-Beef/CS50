@@ -21,13 +21,7 @@ while True:
         else:
             month_name, day, year = old_date.split(sep=" ")
             day = day.removesuffix(",")
-            month = months.index(month_name)
-            #counter = 1
-            #for _ in months:
-                #if month_name == _:
-                    #month = counter
-                #else:
-                    #counter += 1
+            month = months.index(month_name) + 1
         if (int(month) <= 12) and (int(day) <= 31):
             break
     except ValueError:
