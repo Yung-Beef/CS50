@@ -21,8 +21,13 @@ if len(old_date) <= 10:
     print(day)
     print(year)
 else:
-    month, day, year = old_date.split(sep=" ")
-    print(month)
+    month_name, day, year = old_date.split(sep=" ")
+    day = day.removesuffix(",")
+    for month in months:
+        if month_name == month:
+            month_name = month
+
+    print(month_name)
     print(day)
     print(year)
 
