@@ -28,9 +28,11 @@ else:
             counter += 1
 
 if len(month) < 2:
-    
+    month = month.zfill(2)
+if len(day) < 2:
+    day = day.zfill(2)
 
-print(month)
+print(f"{year}-{month}-{day}")
 
 
 
