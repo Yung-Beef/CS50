@@ -27,6 +27,8 @@ else:
         else:
             counter += 1
 
+if len(month) < 2:
+    month = month.format
 
 
 
