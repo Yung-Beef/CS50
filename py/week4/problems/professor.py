@@ -4,10 +4,18 @@ import random
 def main():
     ...
 
+level = get_level()
+
+
+
+
+
+
+
 
 problems = []
     for _ in range(9):
-        problems[_] = [randint(1, (10 ^ n)), randint(1, (10 ^ n))]
+        problems[_] = [generate_integer(level), generate_integer(level)]
 
 
 def get_level():
@@ -20,9 +28,7 @@ def get_level():
             pass
 
 def generate_integer(level):
-    try:
-        return randint(1, (10 ^ n))
-    except ValueError if :
+    return randint(1, (10 ^ level))
 
 
 
