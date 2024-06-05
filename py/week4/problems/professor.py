@@ -12,7 +12,7 @@ def main():
 
         while True:
             if tries == 3:
-                print(f"{x + y}")
+                print(f"{x} + {y} = {x + y}")
                 break
 
             try:
@@ -42,7 +42,7 @@ def get_level():
 
 
 def generate_integer(level):
-    return random.randint(1, (10 ^ level))
+    return random.randint(1, (10 ** level))
 
 
 if __name__ == "__main__":
