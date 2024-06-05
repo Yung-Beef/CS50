@@ -22,4 +22,4 @@ phrase = phrase.join(names)
 #     phrase = (phrase + ", and " + names[len(names) - 1])
 
 #print out adieu shit plus the entire string of names that i already made
-print(f"Adieu, adieu, to {phrase}")
+print(f"\nAdieu, adieu, to {phrase}")
