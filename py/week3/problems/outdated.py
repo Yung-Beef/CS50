@@ -17,7 +17,7 @@ old_date = input("Date: ")
 
 while True:
     if len(old_date) <= 10:
-        month, day, year = old_date.split(sep="/")
+        month, day, year = int(old_date.split(sep="/"))
     else:
         month_name, day, year = old_date.split(sep=" ")
         day = day.removesuffix(",")
@@ -33,6 +33,7 @@ while True:
 
 month = str(month)
 day = str(day)
+year = str(year)
 
 if len(month) < 2:
     month = month.zfill(2)
