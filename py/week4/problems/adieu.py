@@ -11,7 +11,7 @@ while True:
 
 #create a string with all of the names and commas and stuff
 phrase = ""
-phrase.join(names)
+phrase = phrase.join(names)
 
 # if len(names) == 2:
 #     phrase = (phrase + " and " + names[1])
