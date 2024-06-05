@@ -15,7 +15,10 @@ def get_level():
             pass
 
 def generate_integer(level):
-    
+    problems = []
+    for _ in range(9):
+        problems[_] = [random(), random()]
+
 
 
 if __name__ == "__main__":
