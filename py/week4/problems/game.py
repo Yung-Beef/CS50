@@ -9,10 +9,8 @@ while True:
     except ValueError:
         pass
 
-#number = n
-#if n != 1:
-number = random.randrange(1, n)
-print(number)
+number = random.randint(1, n)
+
 while True:
     try:
         g = int(input("Guess: "))
