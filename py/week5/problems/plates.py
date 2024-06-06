@@ -19,6 +19,8 @@ def is_valid(s):
         if character.isnumeric():
             if s[counter:len(s)].isnumeric() is False:
                 return False
+        elif (character.isalnum() == 1):
+            return False
         elif character.isalpha() and (s[counter + 1] == "0"):
             return False
         else:
