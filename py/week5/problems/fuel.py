@@ -13,14 +13,17 @@ def convert(fraction):
     try:
         x = int(fraction[0])
         y = int(fraction[1])
+        if x > y:
+             ValueError
 
         percent = round(float(x / y) * 100)
-        return percent
 
     except ValueError:
         print("Error")
     except ZeroDivisionError:
         print("Error")
+
+    return percent
 
 def gauge(percentage):
     if percentage <= 1:
