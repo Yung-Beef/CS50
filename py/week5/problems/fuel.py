@@ -1,3 +1,5 @@
+import sys
+
 def main():
     #gets a valid user input
 
@@ -10,18 +12,20 @@ def main():
 
 
 def convert(fraction):
+    x = int(fraction[0])
+    y = int(fraction[1])
+    if x > y:
+         return ValueError
     try:
-        x = int(fraction[0])
-        y = int(fraction[1])
-
         percent = round(float(x / y) * 100)
+        return percent
 
     except ValueError:
-        print("Error")
+        sys.exit("Error")
     except ZeroDivisionError:
-        print("Error")
+        sys.exit("Error")
 
-    return percent
+
 
 def gauge(percentage):
     if percentage <= 1:
