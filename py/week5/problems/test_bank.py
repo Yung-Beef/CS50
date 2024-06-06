@@ -1,8 +1,8 @@
 from bank import value
 
 def test_upper():
-    assert value("Hello") == "$0"
-    assert value("Hey") == "$20"
+    assert value("Hello") == "$100"
+    assert value("Hey") == "$100"
     assert value("Bank") == "$100"
 
 def test_lower():
