@@ -14,3 +14,5 @@ def test_gauge():
     with pytest.raises(TypeError):
         gauge("dog")
     assert gauge(50.5) == f"{50.5}%"
+    assert gauge(0.5) == "E"
+    assert gauge(99.5) == "F"
