@@ -1,5 +1,6 @@
 def main():
-    s = input("Greeting: ").lower
+    s = input("Greeting: ")
+    s = s.lower
     print(value(s))
 
 def value(greeting):
