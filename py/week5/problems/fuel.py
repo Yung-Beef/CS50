@@ -14,7 +14,7 @@ def main():
 def convert(fraction):
     x = int(fraction[0])
     y = int(fraction[1])
-    if x > y:
+    if x > y and y > 0:
         raise ValueError
 
     percent = round(float(x / y) * 100)
