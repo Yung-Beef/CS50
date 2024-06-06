@@ -7,3 +7,8 @@ def test_convert():
         convert(["10", "0"])
     with pytest.raises(ValueError):
         convert(["cat", "dog"])
+
+def test_gauge():
+    with pytest.raises(ValueError):
+        gauge("dog")
+    assert gauge(50.5) == f"{50.5}%"
