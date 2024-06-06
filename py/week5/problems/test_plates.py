@@ -4,7 +4,7 @@ def test_start_letters():
     assert is_valid("12AAAA") == False
     assert is_valid("5ABCDE") == False
     assert is_valid("A2BCDE") == False
-    assert is_valid("ab12r3") == True
+    assert is_valid("AB12r3") == True
 
 def test_length():
     assert is_valid("A") == False
