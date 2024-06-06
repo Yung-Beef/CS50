@@ -1,8 +1,4 @@
 def main():
-    ...
-
-
-def convert(fraction):
     #gets a valid user input
     while True:
         try:
@@ -18,12 +14,24 @@ def convert(fraction):
         except ZeroDivisionError:
             pass
 
+    percentage = convert(string)
+    gauge(percentage)
+
+
+def convert(fraction):
+    x = int(fraction[0])
+    y = int(fraction[1])
+
     percent = round(float(x / y) * 100)
     return percent
 
-
 def gauge(percentage):
-    ...
+    if percentage <= 1:
+            return "E"
+    elif percentage >= 99:
+            return "F"
+    else:
+            return f"{percent}%"
 
 
 if __name__ == "__main__":
