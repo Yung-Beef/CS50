@@ -10,4 +10,4 @@ with open("students.csv") as file:
 
 
 for student in students:
-    print(f"{student["name"]} is in {student["house"]}")
+    print(f"{student['name']} is in {student['house']}")
