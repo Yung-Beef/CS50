@@ -8,23 +8,18 @@ def main():
     try:
         with open(sys.argv[1], "r") as before:
             reader = csv.DictReader(before)
+
             with open(sys.argv[2], "a") as after:
+                #set the header names for the new file
                 fieldnames = ["first", "last", "house"]
                 writer = csv.DictWriter(after, fieldnames=fieldnames)
-
                 writer.writeheader()
+
                 for row in reader:
+                    #split the name string into 2 parts
                     last, first = row["name"].split(", ")
                     house = row["house"]
                     writer.writerow({"first": first, "last": last, "house": house})
-                    print(first, last, house)
-
-
-
-
-
-
-                #file.write(f"{name}\n")
 
     except FileNotFoundError:
         sys.exit("File not found")
