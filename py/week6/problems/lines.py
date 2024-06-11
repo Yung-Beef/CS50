@@ -24,10 +24,6 @@ def number_of_lines(file):
         else:
             lines += 1
 
-
-
-
-
     return lines
 
 
