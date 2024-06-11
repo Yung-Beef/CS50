@@ -11,14 +11,9 @@ def main():
     try:
         with open(sys.argv[1], "r") as csvfile:
             reader = csv.reader(csvfile)
-            print(reader)
-            price_grid(reader)
+            print(tabulate(reader), headers="firstrow")
     except FileNotFoundError:
         sys.exit("File not found")
-
-
-def price_grid(file):
-    print(tabulate(file), headers="firstrow")
 
 
 if __name__ == "__main__":
