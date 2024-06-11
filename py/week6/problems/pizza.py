@@ -10,13 +10,13 @@ def main():
         sys.exit("Invalid file type")
     try:
         with open(sys.argv[1], "r") as file:
-            price_grid()
+            price_grid(file)
     except FileNotFoundError:
         sys.exit("File not found")
 
 
-def price_grid():
-
+def price_grid(file):
+    
 
 
 if __name__ == "__main__":
