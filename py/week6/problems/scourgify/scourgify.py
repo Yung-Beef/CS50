@@ -9,7 +9,7 @@ def main():
         with open(sys.argv[1], "r") as before:
             reader = csv.DictReader(before)
 
-            with open(sys.argv[2], "a") as after:
+            with open(sys.argv[2], "w") as after:
                 #set the header names for the new file
                 fieldnames = ["first", "last", "house"]
                 writer = csv.DictWriter(after, fieldnames=fieldnames)
