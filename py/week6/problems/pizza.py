@@ -16,7 +16,7 @@ def main():
 
 
 def price_grid(file):
-    print(tabulate(file))
+    print(tabulate(file), headers="firstrow")
 
 
 if __name__ == "__main__":
