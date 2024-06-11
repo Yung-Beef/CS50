@@ -11,7 +11,9 @@ def main():
     try:
         with open(sys.argv[1], "r") as csvfile:
             reader = csv.DictReader(csvfile)
-            print(tabulate(reader), headers="firstrow")
+            for row in reader:
+                print(row)
+            #print(tabulate(reader), headers="firstrow")
     except FileNotFoundError:
         sys.exit("File not found")
 
