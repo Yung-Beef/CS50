@@ -18,8 +18,10 @@ def number_of_lines(file):
     for line in file:
         stripped = line.lstrip()
         if stripped.startswith("#"):
+            continue
+        elif something:
+            lines += 1
 
-        
 
 
 
