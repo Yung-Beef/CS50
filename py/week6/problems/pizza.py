@@ -9,8 +9,9 @@ def main():
     if sys.argv[1].endswith(".csv") is False:
         sys.exit("Invalid file type")
     try:
-        with open(sys.argv[1], "r") as file:
-            price_grid(file)
+        with open(sys.argv[1], "r") as csvfile:
+            reader = csv.DictReader(csvfile)
+            price_grid(reader)
     except FileNotFoundError:
         sys.exit("File not found")
 
