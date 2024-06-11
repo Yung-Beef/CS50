@@ -23,7 +23,7 @@ def main():
 
         input = Image.open(sys.argv[1])
         altered = ImageOps.fit(input, size=size)
-        output = Image.paste(altered, shirt)
+        altered.paste(shirt, shirt)
         Image.save(sys.argv[2])
 
     except FileNotFoundError:
