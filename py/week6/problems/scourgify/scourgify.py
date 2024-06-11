@@ -2,7 +2,7 @@ import csv
 import sys
 
 def main():
-# ensure there's only 1 CLA, and that it's a valid file (sys.exit() if not)
+# ensure there's only 2 CLAs, and that it's a valid file (sys.exit() if not)
     if len(sys.argv) != 3:
         sys.exit("Invalid")
     try:
