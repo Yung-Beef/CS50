@@ -10,7 +10,7 @@ def main():
         sys.exit("Invalid file type")
     try:
         with open(sys.argv[1], "r") as csvfile:
-            reader = csv.reader(csvfile, fieldnames="Siciian Pizza", "Small", "Large")
+            reader = csv.DictReader(csvfile, fieldnames=("Siciian Pizza", "Small", "Large"))
             print(tabulate(reader), headers="firstrow")
     except FileNotFoundError:
         sys.exit("File not found")
