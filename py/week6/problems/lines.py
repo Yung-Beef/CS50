@@ -5,8 +5,8 @@ def main():
     if len(sys.argv) != 2:
         sys.exit("Invalid")
     # if the file extension is not .py
-
-
+    if sys.argv[1].endswith(".py") is False:
+        sys.exit("Invalid file type")
     try:
         with open(sys.argv[1], "r") as file:
             print(number_of_lines(file))
