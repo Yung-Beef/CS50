@@ -10,7 +10,7 @@ def main():
         sys.exit("Invalid file type")
     try:
         with open(sys.argv[1], "r") as csvfile:
-            reader = csv.DictReader(csvfile, fieldnames=["Sicilian Pizza", "Small", "Large"])
+            reader = csv.DictReader(csvfile)
             price_grid(reader)
     except FileNotFoundError:
         sys.exit("File not found")
