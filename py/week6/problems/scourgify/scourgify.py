@@ -11,10 +11,13 @@ def main():
             with open(sys.argv[2], "a") as after:
                 fieldnames = ["name", "house"]
                 writer = csv.DictWriter(after, fieldnames=fieldnames)
+
+                writer.writeheader()
                 for row in reader:
-                    full = row[0]
-                    house = row[1]
-                    print(row)
+                    last, first = row["name"].split(", ")
+                    house = row["house"]
+                    writer.writerow({"first": first, "last": last, "house": house})
+                    print(first, last, house)
 
 
 
