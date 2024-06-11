@@ -16,6 +16,7 @@ def main():
 
 
     try:
+        shirt = Image.open(shirt.png)
         with Image.open(shirt.png) as shirt:
             size = shirt.size
             with Image.open(sys.argv[1]) as input:
