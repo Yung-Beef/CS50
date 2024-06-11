@@ -9,8 +9,9 @@ def main():
         with open(sys.argv[1], "r") as before:
             reader = csv.DictReader(before)
             with open(sys.argv[2], "a") as after:
+                writer = csv.DictWriter(after)
                 for row in reader:
-                    
+
 
 
 
