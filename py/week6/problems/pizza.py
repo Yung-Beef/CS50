@@ -1,5 +1,5 @@
 import csv
-import tabulate
+from tabulate import tabulate
 import sys
 
 def main():
@@ -10,10 +10,11 @@ def main():
         sys.exit("Invalid file type")
     try:
         with open(sys.argv[1], "r") as csvfile:
-            reader = csv.DictReader(csvfile)
-            for row in reader:
-                print(row)
-            #print(tabulate(reader), headers="firstrow")
+            reader = csv.reader(csvfile)
+            print(tabulate(reader, headers="firstrow"))
+            # for row in reader:
+            #     print(tabulate(row, headers="firstrow"))
+            #print(tabulate(row, headers="firstrow"))
     except FileNotFoundError:
         sys.exit("File not found")
 
