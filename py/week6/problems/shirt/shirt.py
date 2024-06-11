@@ -16,7 +16,8 @@ def main():
 
 
     try:
-        with PIL.Image.open(sys.argv[1]) as csvfile:
+        with PIL.Image.open(sys.argv[1]) as input:
+            altered = PIL.ImageOps.fit()
 
     except FileNotFoundError:
         sys.exit("File not found")
