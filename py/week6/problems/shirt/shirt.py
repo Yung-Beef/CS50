@@ -19,7 +19,9 @@ def main():
         with PIL.Image.open(shirt.png) as shirt:
             size = shirt.size
             with PIL.Image.open(sys.argv[1]) as input:
-                altered = PIL.ImageOps.fit(input, size=shirt)
+                altered = PIL.ImageOps.fit(input, size=size)
+                output = PIL.Image.paste(altered, shirt)
+                PIL.Image.save(output)
 
     except FileNotFoundError:
         sys.exit("File not found")
