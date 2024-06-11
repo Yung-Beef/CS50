@@ -12,6 +12,9 @@ def main():
                 fieldnames = ["name", "house"]
                 writer = csv.DictWriter(after, fieldnames=fieldnames)
                 for row in reader:
+                    print(row)
+
+
 
 
 
