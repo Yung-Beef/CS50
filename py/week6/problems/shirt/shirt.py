@@ -17,13 +17,12 @@ def main():
 
     try:
         shirt = Image.open(shirt.png)
-        with Image.open(shirt.png) as shirt:
-            size = shirt.size
-            with Image.open(sys.argv[1]) as input:
-                altered = PIL.ImageOps.fit(input, size=size)
-                output = PIL.Image.paste(altered, shirt)
-                Image.save(sys.argv[2])
+        size = shirt.size
 
+        input = Image.open(sys.argv[1])
+        altered = ImageOps.fit(input, size=size)
+        output = Image.paste(altered, shirt)
+        Image.save(sys.argv[2])
 
     except FileNotFoundError:
         sys.exit("File not found")
