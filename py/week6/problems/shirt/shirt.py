@@ -8,20 +8,22 @@ def main():
     if len(sys.argv) != 3:
         sys.exit("Invalid")
 
+    # checks that both inputs have a valid file extension
     valid = (".jpg", ".jpeg", ".png")
-    if sys.argv[1].endswith(valid) is False:
+    if os.path.splitext(sys.argv[1])[1] or os.path.splitext(sys.argv[2])[1] not in valid:
         sys.exit("Invalid file type")
-    if sys.argv[2].endswith(valid) is False:
-        sys.exit("Invalid file type")
+
+    # checks that the both inputs have the same file extension
     if os.path.splitext(sys.argv[1])[1] != os.path.splitext(sys.argv[2])[1]:
         sys.exit("Please enter two files of the same type")
 
 
     try:
+        # open the input and shirt images, crop the input image to match the shirt, paste the shirt onto the input, and save
         shirt = Image.open("shirt.png")
         size = shirt.size
-
         input = Image.open(sys.argv[1])
+
         altered = ImageOps.fit(input, size=size)
         altered.paste(shirt, shirt)
         altered.save(sys.argv[2])
