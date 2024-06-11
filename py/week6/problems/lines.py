@@ -9,7 +9,7 @@ def main():
     except FileNotFoundError:
         sys.exit("File not found")
 
-    number_of_lines(file)
+    print(number_of_lines(file))
 
     close(file)
 
@@ -17,6 +17,9 @@ def number_of_lines():
 
 
 
+
+
+    return lines
 
 
 if __name__ == "__main__":
