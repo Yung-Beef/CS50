@@ -13,7 +13,7 @@ def main():
         sys.exit("Invalid file type")
     if sys.argv[2].endswith(valid) is False:
         sys.exit("Invalid file type")
-    if (sys.argv[1].rpartition("."))[2] != (sys.argv[2].rpartition("."))[2]:
+    if os.path.splitext(sys.argv[1])[1] != os.path.splitext(sys.argv[2])[1]:
         sys.exit("Please enter two files of the same type")
 
 
@@ -23,8 +23,8 @@ def main():
 
         input = Image.open(sys.argv[1])
         altered = ImageOps.fit(input, size=size)
-        output = altered.paste(shirt, shirt)
-        output.save(sys.argv[2])
+        altered.paste(shirt, shirt)
+        altered.save(sys.argv[2])
 
     except FileNotFoundError:
         sys.exit("File not found")
