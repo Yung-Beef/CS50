@@ -6,7 +6,7 @@ def main():
     if len(sys.argv) != 3:
         sys.exit("Invalid")
 
-    valid = [".jpg", ".jpeg", ".png"]
+    valid = (".jpg", ".jpeg", ".png")
     if sys.argv[1].endswith(valid) is False:
         sys.exit("Invalid file type")
     if sys.argv[2].endswith(valid) is False:
