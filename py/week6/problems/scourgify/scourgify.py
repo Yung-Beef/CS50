@@ -9,7 +9,8 @@ def main():
         with open(sys.argv[1], "r") as before:
             reader = csv.DictReader(before)
             with open(sys.argv[2], "a") as after:
-                writer = csv.DictWriter(after)
+                fieldnames = ["name", "house"]
+                writer = csv.DictWriter(after, fieldnames=fieldnames)
                 for row in reader:
 
 
