@@ -11,7 +11,7 @@ def main():
     try:
         with open(sys.argv[1], "r") as csvfile:
             reader = csv.reader(csvfile)
-            print(tabulate(reader, headers="firstrow"))
+            print(tabulate(reader, headers="firstrow", tablefmt="grid"))
             # for row in reader:
             #     print(tabulate(row, headers="firstrow"))
             #print(tabulate(row, headers="firstrow"))
