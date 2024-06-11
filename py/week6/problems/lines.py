@@ -4,6 +4,9 @@ def main():
 # ensure there's only 1 CLA, and that it's a valid file (sys.exit() if not)
     if len(sys.argv) != 2:
         sys.exit("Invalid")
+    # if the file extension is not .py
+
+    
     try:
         file = open(sys.argv[1])
     except FileNotFoundError:
