@@ -1,4 +1,4 @@
-from PIL import Image
+import PIL
 import sys
 
 def main():
@@ -13,11 +13,13 @@ def main():
         sys.exit("Invalid file type")
     if (sys.argv[1].rpartition("."))[2] != (sys.argv[2].rpartition("."))[2]:
         sys.exit("Please enter two files of the same type")
-    # try:
-    #     with open(sys.argv[1], "r") as csvfile:
 
-    # except FileNotFoundError:
-    #     sys.exit("File not found")
+
+    try:
+        with PIL.Image.open(sys.argv[1]) as csvfile:
+
+    except FileNotFoundError:
+        sys.exit("File not found")
 
 
 if __name__ == "__main__":
