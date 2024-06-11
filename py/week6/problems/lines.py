@@ -5,9 +5,13 @@ def main():
     if len(sys.argv) != 2:
         sys.exit("Invalid")
     try:
-        open
+        file = open(sys.argv[1])
     except FileNotFoundError:
         sys.exit("File not found")
+
+    number_of_lines(file)
+
+    close(file)
 
 def number_of_lines():
 
