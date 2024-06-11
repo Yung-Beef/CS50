@@ -6,15 +6,13 @@ def main():
         sys.exit("Invalid")
     # if the file extension is not .py
 
-    
+
     try:
-        file = open(sys.argv[1])
+        with open(sys.argv[1], "r") as file:
+            print(number_of_lines(file))
     except FileNotFoundError:
         sys.exit("File not found")
 
-    print(number_of_lines(file))
-
-    close(file)
 
 def number_of_lines(file):
     lines = 0
