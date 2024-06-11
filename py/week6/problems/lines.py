@@ -13,8 +13,10 @@ def main():
 
     close(file)
 
-def number_of_lines():
-
+def number_of_lines(file):
+    lines = 0
+    for line in file:
+        
 
 
 
