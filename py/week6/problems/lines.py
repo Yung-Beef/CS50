@@ -16,6 +16,9 @@ def main():
 def number_of_lines(file):
     lines = 0
     for line in file:
+        stripped = line.lstrip()
+        if stripped.startswith("#"):
+
         
 
 
