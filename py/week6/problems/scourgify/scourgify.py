@@ -7,9 +7,10 @@ def main():
         sys.exit("Invalid")
     try:
         with open(sys.argv[1], "r") as before:
-            reader = csv.reader(before)
+            reader = csv.DictReader(before)
             with open(sys.argv[2], "a") as after:
-                for row in before:
+                for row in reader:
+                    
 
 
 
