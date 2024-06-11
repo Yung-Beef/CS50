@@ -11,7 +11,8 @@ def main():
     try:
         with open(sys.argv[1], "r") as csvfile:
             reader = csv.DictReader(csvfile)
-            price_grid(reader)
+            print(reader)
+            #price_grid(reader)
     except FileNotFoundError:
         sys.exit("File not found")
 
