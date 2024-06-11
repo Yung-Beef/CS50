@@ -1,4 +1,5 @@
 from PIL import Image
+from PIL import ImageOps
 import os
 import sys
 
@@ -17,7 +18,7 @@ def main():
 
 
     try:
-        shirt = Image.open(os.path.splitext("shirt.png"))
+        shirt = Image.open("shirt.png")
         size = shirt.size
 
         input = Image.open(sys.argv[1])
