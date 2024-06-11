@@ -11,8 +11,7 @@ def main():
         sys.exit("Invalid file type")
     if sys.argv[2].endswith(valid) is False:
         sys.exit("Invalid file type")
-
-    if sys.argv[1].rpartition(".")[3] != sys.argv[2].rpartition(".")[3]:
+    if (sys.argv[1].rpartition("."))[2] != (sys.argv[2].rpartition("."))[2]:
         sys.exit("Please enter two files of the same type")
     # try:
     #     with open(sys.argv[1], "r") as csvfile:
