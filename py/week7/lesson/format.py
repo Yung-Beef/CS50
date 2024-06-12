@@ -2,8 +2,7 @@ import re
 
 name = input("What is your name? ").strip()
 
-matches = re.esarch(r"^(.+), (.+)$)", name)
-if matches:
+if matches = re.esarch(r"^(.+), (.+)$)", name):
     name = matches.group(2) + " " + matches.group(1)
     # last = matches.group(1)
     # first = matches.group(2)
