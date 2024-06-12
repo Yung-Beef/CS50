@@ -1,7 +1,8 @@
 import re
 
 url = import("URL: ").strip()
-print(url)
+
+username = url.replace("https://twitter.com/", "")
 
 
 
