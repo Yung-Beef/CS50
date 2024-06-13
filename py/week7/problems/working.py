@@ -16,7 +16,7 @@ def convert(s):
             minute1 = int(minute1)
         else:
             hour1 = int(time1)
-            miunte1 = 0
+            minute1 = 0
         if ":" in time2:
             hour2, minute2 = time2.split(":")
             hour2 = int(hour2)
@@ -25,24 +25,24 @@ def convert(s):
             hour2 = int(time2)
             minute2 = 0
 
-        first = [hour1, half1]
-        second = [hour2, half2]
+        first = [hour1, minute1, half1]
+        second = [hour2, minute2, half2]
         t = [first, second]
 
         for time in t:
-            if time[0] == 12 and time[1] == "AM":
+            if time[0] == 12 and time[2] == "AM":
                 time[0] = 0
-            elif time[1] == "PM":
+            elif time[2] == "PM":
                 time[0] = time[0] + 12
 
-        print(time1, half1, time2, half2)
+        print(first[0], first[1], first[2], second[0], second[1], second[2])
 
         # if hour1 > 12 or hour2 > 12 or minute1 > 60 or minute2 > 60:
         #     raise ValueError
     except AttributeError:
         raise ValueError
 
-    return f"{time1:02} to {time2:02}"
+    return f"{first[0]:02}:{first[1]:02} to {second[0]:02}:{second[1]:02}"
 
 ...
 
