@@ -7,10 +7,9 @@ def main():
 
 
 def count(s):
-    re.search(" um[^a-z]", s, re.IGNORECASE)
+    matches = re.findall(" um[^a-z]", s, re.IGNORECASE)
+    print(matches)
 
-
-...
 
 
 if __name__ == "__main__":
