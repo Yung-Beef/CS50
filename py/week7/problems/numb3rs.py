@@ -7,7 +7,7 @@ def main():
 
 
 def validate(ip):
-    match = re.fullmatch(r"[0-2][0-5]?[0-5]?\.[0-2][0-5]?[0-5]?\.[0-2][0-5]?[0-5]?\.[0-2][0-5]?[0-5]?", ip)
+    match = re.fullmatch(r"[0-255]", ip)
     if match:
         return True
     else:
