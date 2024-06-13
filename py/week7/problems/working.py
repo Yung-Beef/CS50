@@ -29,6 +29,9 @@ def convert(s):
         second = [hour2, minute2, half2]
         t = [first, second]
 
+        if first[0] > 12 or second[0] > 12 or first[1] >= 60 or second[1] >= 60:
+            raise ValueError
+
         for time in t:
             if time[0] == 12 and time[2] == "AM":
                 time[0] = 0
@@ -37,8 +40,7 @@ def convert(s):
 
         print(first[0], first[1], first[2], second[0], second[1], second[2])
 
-        if first[0] > 12 or second[0] > 12 or first[1] > 60 or second[1] > 60:
-            raise ValueError
+
     except AttributeError:
         raise ValueError
 
