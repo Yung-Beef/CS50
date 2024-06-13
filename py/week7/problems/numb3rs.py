@@ -8,9 +8,9 @@ def main():
 
 def validate(ip):
     ...
-    re.
+    re.fullmatch(r"\w", ip)
 
-
+#.#.#.#
 ...
 
     return True
