@@ -1,4 +1,4 @@
-import validators
+from validator_collection import validators
 
 email = input("Email: ")
 
