@@ -7,10 +7,13 @@ def main():
 
 
 def validate(ip):
-    match = re.fullmatch(r"([0-255]\.){3}[0-255]", ip)
-    if match:
-        return True
-    else:
+    try:
+        matches = re.fullmatch(r"([0-9][0-9]?[0-9]?)\.([0-9][0-9]?[0-9]?)\.([0-9][0-9]?[0-9]?)\.([0-9][0-9]?[0-9]?)", ip)
+        if int(matches.group(1)) > 255 or int(matches.group(2)) > 255 or int(matches.group(3)) > 255 or int(matches.group(4)) > 255:
+            return False
+        else:
+            return True
+    except AttributeError:
         return False
 
 
