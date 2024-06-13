@@ -2,4 +2,8 @@ import validators
 
 email = input("Email: ")
 
-validators.email(email)
+try:
+    validators.email(email)
+    print("Valid")
+except ValueError:
+    print("Invalid")
