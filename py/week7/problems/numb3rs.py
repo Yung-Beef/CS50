@@ -12,6 +12,8 @@ def validate(ip):
 
 ...
 
+    return True
+    return False
 
 if __name__ == "__main__":
     main()
