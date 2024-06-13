@@ -13,6 +13,10 @@ def validate(ip):
     else:
         return False
 
+#under 200
+[0-1]\d{0-2}
+#under 250
+
 
 if __name__ == "__main__":
     main()
