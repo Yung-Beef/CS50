@@ -8,6 +8,7 @@ def main():
 
 def validate(ip):
     ...
+    re.
 
 
 ...
