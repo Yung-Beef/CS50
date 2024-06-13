@@ -7,7 +7,7 @@ def main():
 
 
 def count(s):
-    re.search(" um", s, re.IGNORECASE)
+    re.search(" um[^a-z]", s, re.IGNORECASE)
 
 
 ...
