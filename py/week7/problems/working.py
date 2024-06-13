@@ -39,6 +39,8 @@ def convert(s):
         for time in t:
             if time[0] == 12 and time[2] == "AM":
                 time[0] = 0
+            elif time[0] == 12 and time[2] == "PM":
+                time[0] = 12
             elif time[2] == "PM":
                 time[0] = time[0] + 12
     except AttributeError:
