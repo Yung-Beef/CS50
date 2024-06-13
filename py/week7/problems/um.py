@@ -7,7 +7,7 @@ def main():
 
 
 def count(s):
-    matches = re.findall(" um[^a-z]", s, re.IGNORECASE)
+    matches = re.findall("[^a-z]?(um)[^a-z]?", s, re.IGNORECASE)
     print(matches)
 
 
