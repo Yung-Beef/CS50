@@ -10,6 +10,8 @@ def convert(s):
     try:
         times = re.fullmatch(r"([0-9][0-9]?(?::[0-9][0-9])?) (AM|PM) to ([0-9][0-9]?(?::[0-9][0-9])?) (AM|PM)", s)
         time1, half1, time2, half2 = times.group(1), times.group(2), times.group(3), times.group(4)
+
+        #handles 9 AM vs 9:00 AM and gets all of the variables set up and as integers
         if ":" in time1:
             hour1, minute1 = time1.split(":")
             hour1 = int(hour1)
@@ -29,25 +31,20 @@ def convert(s):
         second = [hour2, minute2, half2]
         t = [first, second]
 
+        # raises value error if invalid time format
         if first[0] > 12 or second[0] > 12 or first[1] >= 60 or second[1] >= 60:
             raise ValueError
 
+        # converts the times
         for time in t:
             if time[0] == 12 and time[2] == "AM":
                 time[0] = 0
             elif time[2] == "PM":
                 time[0] = time[0] + 12
-
-        print(first[0], first[1], first[2], second[0], second[1], second[2])
-
-
     except AttributeError:
         raise ValueError
 
     return f"{first[0]:02}:{first[1]:02} to {second[0]:02}:{second[1]:02}"
-
-...
-
 
 if __name__ == "__main__":
     main()
