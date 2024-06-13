@@ -37,8 +37,8 @@ def convert(s):
 
         print(first[0], first[1], first[2], second[0], second[1], second[2])
 
-        # if hour1 > 12 or hour2 > 12 or minute1 > 60 or minute2 > 60:
-        #     raise ValueError
+        if first[0] > 12 or second[0] > 12 or first[1] > 60 or second[1] > 60:
+            raise ValueError
     except AttributeError:
         raise ValueError
 
