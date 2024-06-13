@@ -35,22 +35,6 @@ def convert(s):
             elif time[1] == "PM":
                 time[0] = time[0] + 12
 
-
-
-
-
-            if half2 == "AM" and hour2 == "12":
-                hour2 = "0"
-            elif half2 == "PM":
-                hour2 = str(int(hour2) + 12)
-            time2 = hour2 + ":" + minute2
-        else:
-            if half2 == "AM" and time2 == "12":
-                time2 = "0"
-            elif half2 == "PM":
-                time2 = str(int(time2) + 12)
-
-
         print(time1, half1, time2, half2)
 
         # if hour1 > 12 or hour2 > 12 or minute1 > 60 or minute2 > 60:
@@ -58,7 +42,7 @@ def convert(s):
     except AttributeError:
         raise ValueError
 
-    return f"{time1} to {time2}"
+    return f"{time1:02} to {time2:02}"
 
 ...
 
