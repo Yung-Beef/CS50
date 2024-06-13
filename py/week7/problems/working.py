@@ -12,20 +12,15 @@ def convert(s):
         time1, half1, time2, half2 = times.group(1), times.group(2), times.group(3), times.group(4)
         if ":" in time1:
             hour1, minute1 = time1.split(":")
-            if half1 == "AM" and hour1 == "12":
-                hour1 = "0"
-            elif half1 == "PM":
-                hour1 = str(int(hour1) + 12)
-            time1 = hour1 + ":" + minute1
-        else:
-            if half1 == "AM" and time1 == "12":
-                time1 = "0"
-            elif half1 == "PM":
-                time1 = str(int(time1) + 12)
-
-        #time2
         if ":" in time2:
             hour2, minute2 = time2.split(":")
+
+
+
+
+
+
+
             if half2 == "AM" and hour2 == "12":
                 hour2 = "0"
             elif half2 == "PM":
