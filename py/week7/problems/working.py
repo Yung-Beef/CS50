@@ -15,12 +15,17 @@ def convert(s):
         if ":" in time2:
             hour2, minute2 = time2.split(":")
 
-        first = [hour1, half1]
-        second = [hour2, half2]
+        first = [int(hour1), half1]
+        second = [int(hour2), half2]
         t = [first, second]
+        minute1 = int(minute1)
+        minute2 = int(minute2)
 
-        for _ in t:
-            if _[0] == "12" and _[1] == "AM"
+        for time in t:
+            if time[0] == 12 and time[1] == "AM":
+                time[0] = 0
+            elif time[1] == "PM":
+                time[0] = time[0] + 12
 
 
 
