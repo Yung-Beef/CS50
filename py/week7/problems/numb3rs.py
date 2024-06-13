@@ -8,7 +8,7 @@ def main():
 
 def validate(ip):
     ...
-    re.fullmatch(r"\w", ip)
+    re.fullmatch(r"(\w){3,5}\.(\w){3,5}\.(\w){3,5}\.(\w){3,5}", ip)
 
 #.#.#.#
 ...
