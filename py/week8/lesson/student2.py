@@ -13,12 +13,7 @@ class Student:
         return cls(name, house)
 
 def main():
-    student = get_student()
-    print(student)
-
-def get_student():
-
-    return Student(name, house)
+    print(Student.get())
 
 if __name__ == "__main__":
     main()
