@@ -13,6 +13,9 @@ def main():
     print(birthdate)
     print(today)
 
+    timedelta = today - birthdate
+    print(timedelta)
+
     # one object for today's date, one object for their birth date
 
     # operator overload to subtract?
