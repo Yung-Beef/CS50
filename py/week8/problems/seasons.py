@@ -3,14 +3,14 @@ import inflect
 import sys
 
 def main():
-    print(text_convert(time_difference()))
-
-def time_difference():
     try:
         birthdate = date.fromisoformat(input("Birth date: "))
     except ValueError:
         sys.exit("Invalid date")
 
+    print(text_convert(time_difference(birthdate)))
+
+def time_difference(birthdate):
     return (date.today() - birthdate).days * 1440
 
 def text_convert(minutes):
