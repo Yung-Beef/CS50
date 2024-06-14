@@ -1,3 +1,5 @@
+import random
+
 class Hat():
     def __init__(self):
         self.houses = ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]
