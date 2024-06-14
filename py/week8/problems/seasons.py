@@ -14,6 +14,7 @@ def main():
     print(text_convert(time_difference(birthdate)))
 
 def time_difference(birthdate):
+    print(birthdate)
     today = date.today()
     return (today - birthdate).days * 1440
 
