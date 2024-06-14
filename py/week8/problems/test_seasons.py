@@ -1,9 +1,10 @@
+from datetime import date
 import seasons
 
 def test_time_difference():
-    assert seasons.time_difference((2024, 6, 13)) == 1440
-    assert seasons.time_difference("2023-06-15") == 525600
-    assert seasons.time_difference("2024-06-14") == 0
+    assert seasons.time_difference(date.fromisoformat("2024-06-13")) == 1440
+    assert seasons.time_difference(date.fromisoformat("2023-06-15")) == 525600
+    assert seasons.time_difference(date.fromisoformat("2024-06-14")) == 0
 
 def test_text_convert():
     assert seasons.text_convert(0) == "zero"
