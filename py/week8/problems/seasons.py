@@ -5,7 +5,11 @@ def main():
     ...
     # get date input, sys.exit if invalid format
 
-    
+    # one object for today's date, one object for their birth date
+
+    # operator overload to subtract?
+
+    # convert into the output text
 
 ...
 
