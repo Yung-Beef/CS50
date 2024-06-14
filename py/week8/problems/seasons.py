@@ -16,7 +16,8 @@ def time_difference():
     return (today - birthdate).days * 1440
 
 def text_convert(minutes):
-    return inflect.
+    words = inflect.engine.number_to_words(minutes, andword="")
+    return words
 
 
 ...
