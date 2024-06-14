@@ -3,10 +3,13 @@ import inflect
 import sys
 
 def main():
-    try:
-        birthdate = date.fromisoformat(input("Birth date: "))
-    except ValueError:
-        sys.exit("Invalid date")
+    while True:
+        try:
+            birthdate = date.fromisoformat(input("Birth date: "))
+            if birthdate < date.today():
+                break
+        except ValueError:
+            sys.exit("Invalid date")
 
     print(text_convert(time_difference(birthdate)))
 
