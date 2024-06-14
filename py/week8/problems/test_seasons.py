@@ -1,7 +1,7 @@
 import seasons
 
 def test_time_difference():
-    assert seasons.time_difference(2024-06-13) == 1440
+    assert seasons.time_difference((2024, 6, 13)) == 1440
     assert seasons.time_difference("2023-06-15") == 525600
     assert seasons.time_difference("2024-06-14") == 0
 
