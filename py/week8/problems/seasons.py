@@ -3,7 +3,9 @@ from datetime import date
 
 def main():
     ...
+    # get date input, sys.exit if invalid format
 
+    
 
 ...
 
