@@ -4,10 +4,9 @@ class Student:
             raise ValueError("Missing name")
         self.name = name
         self.house = house
-        self.patronus = patronus
 
     def __str__(self):
-        return f"{self.name} from {sef.house}"
+        return f"{self.name} from {self.house}"
 
     # getter
     @property
