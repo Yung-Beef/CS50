@@ -3,7 +3,11 @@ from datetime import date
 
 def main():
     ...
-    # get date input, sys.exit if invalid format
+    # get date input with regex, sys.exit if invalid format
+
+    birthdate = date.fromisoformat(input("Birth date: "))
+
+    print(birthdate)
 
     # one object for today's date, one object for their birth date
 
