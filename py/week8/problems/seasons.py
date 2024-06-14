@@ -10,12 +10,7 @@ def main():
         sys.exit("Invalid date")
     today = date.today()
 
-    print(birthdate)
-    print(today)
-
-    timedelta = today - birthdate
-
-    minutes = timedelta.days * 1440
+    minutes = (today - birthdate).days * 1440
 
     print(minutes)
 
