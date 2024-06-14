@@ -1,4 +1,5 @@
 from datetime import date
+import inflect
 import sys
 
 def main():
@@ -15,7 +16,7 @@ def time_difference():
     return (today - birthdate).days * 1440
 
 def text_convert(minutes):
-    
+    return inflect.
 
 
 ...
