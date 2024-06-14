@@ -6,8 +6,10 @@ def main():
     # get date input with regex, sys.exit if invalid format
 
     birthdate = date.fromisoformat(input("Birth date: "))
+    today = date.today()
 
     print(birthdate)
+    print(today)
 
     # one object for today's date, one object for their birth date
 
