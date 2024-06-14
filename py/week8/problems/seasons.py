@@ -3,7 +3,8 @@ import inflect
 import sys
 
 def main():
-    print(text_convert(time_difference()))
+    minutes = time_difference()
+    text_convert(minutes)
 
 def time_difference():
     try:
