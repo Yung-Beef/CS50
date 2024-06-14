@@ -14,7 +14,10 @@ def main():
     print(today)
 
     timedelta = today - birthdate
-    print(timedelta)
+
+    minutes = timedelta.days * 1440
+
+    print(minutes)
 
     # one object for today's date, one object for their birth date
 
