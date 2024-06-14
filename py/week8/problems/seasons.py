@@ -1,11 +1,13 @@
 from datetime import date
-
+import sys
 
 def main():
     ...
     # get date input with regex, sys.exit if invalid format
-
-    birthdate = date.fromisoformat(input("Birth date: "))
+    try:
+        birthdate = date.fromisoformat(input("Birth date: "))
+    except ValueError:
+        sys.exit("Invalid date")
     today = date.today()
 
     print(birthdate)
