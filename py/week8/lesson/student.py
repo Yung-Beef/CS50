@@ -7,6 +7,9 @@ class Student:
         self.name = name
         self.house = house
 
+    def __str__(self):
+        return f"{self.name} from {sef.house}"
+
 def main():
     student = get_student()
     print(f"{student.name} from {student.house}")
