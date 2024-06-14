@@ -1,5 +1,5 @@
 class Student:
-    def __init__(self, name, house, patronus):
+    def __init__(self, name, house):
         if not name: # if name == ""
             raise ValueError("Missing name")
         if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]:
@@ -11,27 +11,15 @@ class Student:
     def __str__(self):
         return f"{self.name} from {sef.house}"
 
-    def charm(self):
-        match self.patronus:
-            case "Stag":
-                return "horse emoji"
-            case "Otter":
-                return "otter emoji"
-            case "Jack Russel terrier":
-                return "dog emoji"
-            case _:
-                return "magical wand emoji"
 
 def main():
     student = get_student()
-    print("Expecto Patronum!")
-    print(student.charm())
+    print(student)
 
 def get_student():
     name = input("Name: ")
     house = input("House: ")
-    patronus = input("Patronus: ")
-    return Student(name, house, patronus)
+    return Student(name, house)
 
 if __name__ == "__main__":
     main()
