@@ -11,9 +11,21 @@ class Student:
     def __str__(self):
         return f"{self.name} from {sef.house}"
 
+    def charm(self):
+        match self.patronus:
+            case "Stag":
+                return "horse emoji"
+            case "Otter":
+                return "otter emoji"
+            case "Jack Russel terrier":
+                return "dog emoji"
+            case _:
+                return "magical wand emoji"
+
 def main():
     student = get_student()
-    print(f"{student.name} from {student.house}")
+    print("Expecto Patronum!")
+    print(student.charm())
 
 def get_student():
     name = input("Name: ")
