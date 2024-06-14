@@ -8,7 +8,7 @@ def main():
         birthdate = date.fromisoformat(input("Birth date: "))
     except ValueError:
         sys.exit("Invalid date")
-    today = date.today()
+    today = datetime.today()
 
     print(birthdate)
     print(today)
