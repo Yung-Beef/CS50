@@ -3,8 +3,10 @@ class Jar:
         # __init__ should initialize a cookie jar with the given capacity (user input, or default of 12),
         # which represents the maximum number of cookies that can fit in the cookie jar.
         # If capacity is not a non-negative int, though, __init__ should instead raise a ValueError.
-        if capacity
-        self.capacity = capacity
+        if int(capacity) >= 0:
+            self.capacity = capacity
+        else:
+            raise ValueError
 
     def __str__(self):
         # __str__ should return a str with 🍪, where is the number of cookies in the cookie jar.
