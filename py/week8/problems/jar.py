@@ -12,7 +12,6 @@ class Jar:
     def __str__(self):
         # __str__ should return a str with 🍪, where is the number of cookies in the cookie jar.
         # For instance, if there are 3 cookies in the cookie jar, then str should return "🍪🍪🍪"
-
         string = ""
         for _ in self.size:
             string += "🍪"
@@ -27,7 +26,6 @@ class Jar:
         else:
             self.size += int(n)
 
-
     def withdraw(self, n):
         # withdraw should remove n cookies from the cookie jar.
         # Nom nom nom. If there aren’t that many cookies in the cookie jar, though, withdraw should instead raise a ValueError.
@@ -35,7 +33,6 @@ class Jar:
             raise ValueError
         else:
             self.size -= int(n)
-
 
     @property
     def capacity(self):
