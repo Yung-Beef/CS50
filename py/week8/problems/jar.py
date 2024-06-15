@@ -7,28 +7,40 @@ class Jar:
             self.capacity = capacity
         else:
             raise ValueError
+        self.cookies = 0
 
     def __str__(self):
         # __str__ should return a str with 🍪, where is the number of cookies in the cookie jar.
         # For instance, if there are 3 cookies in the cookie jar, then str should return "🍪🍪🍪"
 
         string = ""
-        for _ in cookies:   # but what is cookies?
-            string = string + "🍪"
+        for _ in self.cookies:
+            string += "🍪"
 
         return string
 
     def deposit(self, n):
         # deposit should add n cookies to the cookie jar.
         # If adding that many would exceed the cookie jar’s capacity, though, deposit should instead raise a ValueError.
+        if (self.cookies + int(n)) > self.capacity:
+            raise ValueError
+        else:
+            self.cookies += int(n)
+
 
     def withdraw(self, n):
         # withdraw should remove n cookies from the cookie jar.
         # Nom nom nom. If there aren’t that many cookies in the cookie jar, though, withdraw should instead raise a ValueError.
+        if (self.cookies - int(n)) <= 0:
+            raise ValueError
+        else:
+            self.cookies -= int(n)
+
 
     @property
     def capacity(self):
         # capacity should return the cookie jar’s capacity.
+        return self._capacity
 
     @property
     def size(self):
