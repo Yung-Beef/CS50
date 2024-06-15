@@ -1,8 +1,23 @@
 from jar import Jar
 
 def test_init():
+    assert jar = Jar(jar, 10)
+    assert jar = Jar(jar, -2)
+    assert jar = Jar(jar, "doinks")
+
+def test_str():
     jar = Jar()
-    assert init(self, capacity="10") ==
+    assert str(jar) == ""
+    jar.deposit(1)
+    assert str(jar) == "🍪"
+    jar.deposit(11)
+    assert str(jar) == "🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪🍪"
 
 
-# check about the value errors in init, if the input is a negative number or if it's not a number at all
+def test_deposit():
+    ...
+
+
+def test_withdraw():
+    ...
+
