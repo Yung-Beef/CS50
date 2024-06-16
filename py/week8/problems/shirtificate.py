@@ -6,10 +6,10 @@ string = f'{name} took CS50'
 
 pdf = FPDF()
 pdf.add_page()
-pdf.set_font('helvetica', 'B', 16)
+pdf.set_font('helvetica', 'B', 48)
 pdf.image("shirtificate.png", x=Align.C, y=50)
 
-pdf.set_x()
+pdf.set_y(25)
 
 pdf.cell(text='CS50 Shirtificate', align=Align.C, center=True)
 
