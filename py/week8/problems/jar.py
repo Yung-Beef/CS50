@@ -37,9 +37,9 @@ class Jar:
     @property
     def capacity(self):
         # capacity should return the cookie jar’s capacity.
-        return self._capacity
+        return self.capacity
 
     @property
     def size(self):
         # size should return the number of cookies actually in the cookie jar, initially 0.
-        return self._size
+        return self.size
