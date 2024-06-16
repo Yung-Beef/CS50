@@ -13,7 +13,10 @@ pdf.set_y(25)
 
 pdf.cell(text='CS50 Shirtificate', align=Align.C, center=True)
 
-# pdf.cell(text=string, align=Align.C, center=True) # text is not on top of image
+pdf.set_y(100)
+pdf.set_font('helvetica', 'B', 36)
+
+pdf.cell(text=string, align=Align.C, center=True) # text is not on top of image
 
 pdf.output("pdf-with-image.pdf")
 
