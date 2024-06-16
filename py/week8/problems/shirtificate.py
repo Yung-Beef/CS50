@@ -7,7 +7,9 @@ string = f'{name} took CS50'
 pdf = FPDF()
 pdf.add_page()
 pdf.set_font('helvetica', 'B', 16)
-pdf.image("shirtificate.png", x=Align.C, y=50) # picture is not centered
+pdf.image("shirtificate.png", x=Align.C, y=50)
+
+pdf.set_x()
 
 pdf.cell(text='CS50 Shirtificate', align=Align.C, center=True)
 
