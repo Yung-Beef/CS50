@@ -15,6 +15,7 @@ pdf.cell(text='CS50 Shirtificate', align=Align.C, center=True)
 
 pdf.set_y(100)
 pdf.set_font('helvetica', 'B', 36)
+pdf.set_draw_color()
 
 pdf.cell(text=string, align=Align.C, center=True) # text is not on top of image
 
