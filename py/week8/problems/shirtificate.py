@@ -17,7 +17,7 @@ pdf.set_y(100)
 pdf.set_font('helvetica', 'B', 36)
 
 with pdf.local_context(text_mode="FILL"):
-    pdf.set_fill_color(r=255, g=255, b=255)
+    pdf.set_text_color(r=255, g=255, b=255)
     pdf.cell(text=string, align=Align.C, center=True) # text is not on top of image
 
 pdf.output("pdf-with-image.pdf")
