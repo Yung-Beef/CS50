@@ -2,6 +2,8 @@ from jar import Jar
 import pytest
 
 def test_init():
+    jar = Jar()
+    assert jar.capacity == 12
     assert Jar(10)
     with pytest.raises(ValueError):
         assert Jar(-2)
