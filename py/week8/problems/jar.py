@@ -17,18 +17,16 @@ class Jar:
     def deposit(self, n):
         # deposit should add n cookies to the cookie jar.
         # If adding that many would exceed the cookie jar’s capacity, though, deposit should instead raise a ValueError.
-        if (self._size + int(n)) > self._capacity:
+        if self._size + int(n) > self._capacity:
             raise ValueError
-        else:
-            self._size += int(n)
+        self._size += int(n)
 
     def withdraw(self, n):
         # withdraw should remove n cookies from the cookie jar.
         # Nom nom nom. If there aren’t that many cookies in the cookie jar, though, withdraw should instead raise a ValueError.
-        if (self._size - int(n)) < 0:
+        if self._size - int(n) < 0:
             raise ValueError
-        else:
-            self._size -= int(n)
+        self._size -= int(n)
 
     @property
     def capacity(self):
