@@ -20,6 +20,6 @@ with pdf.local_context(text_mode="FILL"):
     pdf.set_text_color(r=255, g=255, b=255)
     pdf.cell(text=string, align=Align.C, center=True) # text is not on top of image
 
-pdf.output("pdf-with-image.pdf")
+pdf.output("shirtificate.pdf")
 
 
