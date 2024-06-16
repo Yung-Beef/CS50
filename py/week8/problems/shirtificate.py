@@ -1,4 +1,5 @@
 from fpdf import FPDF
+from fpdf import Align
 
 name = input('Name: ')
 string = f'{name} took CS50'
