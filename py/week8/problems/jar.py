@@ -12,7 +12,7 @@ class Jar:
     def __str__(self):
         # __str__ should return a str with 🍪, where is the number of cookies in the cookie jar.
         # For instance, if there are 3 cookies in the cookie jar, then str should return "🍪🍪🍪"
-        return self.size * "🍪"
+        return self.size * '🍪'
 
     def deposit(self, n):
         # deposit should add n cookies to the cookie jar.
