@@ -3,7 +3,10 @@ def main():
 
 
 def yell(words):
-    print(phrase.upper())
+    uppercased = []
+    for word in words:
+        uppercased.append(word.upper())
+    print(*uppercased)
 
 if __name__ == "__main__":
     main()
