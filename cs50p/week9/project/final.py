@@ -15,7 +15,7 @@ def main():
         
 
 
-def flight_info():
+def flight_info(flight): # pass in the flight object
     while True:
         try:
             food = input().upper()
