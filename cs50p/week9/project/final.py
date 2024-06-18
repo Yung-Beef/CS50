@@ -13,8 +13,7 @@ def main():
     no_of_flights = int(input("How many flights do you have? "))
     flights = {}
     for i in range(no_of_flights):
-        flight_name = f"flight_{i}"
-        flights[i] = flight_name
+        flights[i] = f"flight_{i}"
         f"flight_{i}" = Flight()
 
 
