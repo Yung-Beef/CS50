@@ -15,6 +15,7 @@ def main():
     for _ in range(no_of_flights):
         flights.append(Flight())
 
+    print(flights)
 
 
 
