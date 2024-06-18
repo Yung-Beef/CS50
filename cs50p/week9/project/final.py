@@ -32,6 +32,8 @@ def flight_info(flight): # pass in the flight object
         except EOFError:
             break
 
+        # Do you have another flight to add?
+
 
 
 if __name__ == "__main__":
