@@ -10,10 +10,12 @@ import flight
 from time_convert import convert
 
 def main():
+    no_of_flights = int(input("How many flights do you have? "))
+    for _ in range(no_of_flights):
+        
 
 
-
-def user_inputs():
+def flight_info():
     while True:
         try:
             food = input().upper()
