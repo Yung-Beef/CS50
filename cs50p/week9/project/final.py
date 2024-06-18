@@ -11,16 +11,14 @@ from time_convert import convert
 
 def main():
     no_of_flights = int(input("How many flights do you have? "))
-    flights = {}
-    for i in range(no_of_flights):
-        flights[i] = f"flight_{i}"
-        f"flight_{i}" = Flight()
+    flights = []
+    for _ in range(no_of_flights):
+        flights.append(Flight())
 
 
 
 
 
-        # TODO: initialize each flight object
 
 
 def flight_info(flight): # pass in the flight object
