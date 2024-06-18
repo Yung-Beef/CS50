@@ -7,7 +7,7 @@ Program prints out each flight with it's locations, departure/arrival times, and
 Flight data is stored in Flight class objects
 '''
 from flight_class import Flight
-from time_convert import convert
+from time_convert import convert_time
 
 def main():
     no_of_flights = int(input("How many flights do you have? "))
@@ -31,7 +31,7 @@ def flight_info(flight, n):
                 break
             except ValueError:
                 continue
-        flight.dep_time = convert(input("Time of departure: "))
+        flight.dep_time = convert_time.convert(input("Time of departure: "))
         flight.dest_city = input("Destination: ")
         while True:
             try:
@@ -39,7 +39,7 @@ def flight_info(flight, n):
                 break
             except ValueError:
                 continue
-        flight.dest_time = convert(input("Arrival time: "))
+        flight.dest_time = convert_time.convert(input("Arrival time: "))
         flight.flight_time()
 
 if __name__ == "__main__":
