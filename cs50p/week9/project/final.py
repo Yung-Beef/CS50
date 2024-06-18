@@ -6,7 +6,7 @@ Loop repeats until the user breaks it via keyboard input
 Program prints out each flight with it's locations, departure/arrival times, and flight time, and the overall total flight time at the end
 Flight data is stored in Flight class objects
 '''
-from flight import Flight
+from flight_class import Flight
 from time_convert import convert
 
 def main():
