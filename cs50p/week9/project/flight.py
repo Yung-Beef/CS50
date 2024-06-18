@@ -1,4 +1,4 @@
-from convert import convert
+
 
 class Flight:
     def __init__(self):

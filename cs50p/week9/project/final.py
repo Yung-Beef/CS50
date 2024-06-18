@@ -7,3 +7,4 @@ Program prints out each flight with it's locations, departure/arrival times, and
 Flight data is stored in Flight class objects
 '''
 import flight
+from time_convert import convert
