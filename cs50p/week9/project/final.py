@@ -16,7 +16,7 @@ def main():
         flights.append(Flight())
         flight_info(flights[_])
 
-
+    # loop through the objects and add up the flight time
 
 
 
