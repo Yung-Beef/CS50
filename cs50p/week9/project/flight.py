@@ -10,9 +10,9 @@ class Flight:
 
     def __str__(self):
         # print out all of the attributes
-        return f"
+        return f"Departing {dep_city} at {dep_time}\nArriving to {dest_city} at {dest_time}\nFlight time: {flight_time}"
 
-
+    # Depature city
     @property
     def dep_city(self):
         return self._dep_city
@@ -23,6 +23,7 @@ class Flight:
             raise ValueError("Missing city")
         self._dep_city = dep_city
 
+    # Departure time
     @property
     def dep_time(self):
         return self._dep_time
@@ -33,6 +34,7 @@ class Flight:
             raise ValueError("Missing time")
         self._dep_time = dep_time
 
+    # Departure timezone
     @property
     def dep_timezone(self):
         return self._dep_timezone
@@ -43,6 +45,7 @@ class Flight:
             raise ValueError("Missing timezone")
         self._dep_timezone = dep_timezone
 
+    # Destination city
     @property
     def dest_city(self):
         return self._dest_city
@@ -53,6 +56,7 @@ class Flight:
             raise ValueError("Missing city")
         self._dest_city = dest_city
 
+    # Arrival time
     @property
     def dest_time(self):
         return self._dest_time
@@ -63,6 +67,7 @@ class Flight:
             raise ValueError("Missing time")
         self._dest_time = dest_time
 
+    # Destination timezone
     @property
     def dest_timezone(self):
         return self._dest_timezone
@@ -73,6 +78,7 @@ class Flight:
             raise ValueError("Missing timezone")
         self._dest_timezone = dest_timezone
 
+    # Flight time
     @property
     def flight_time(self):
         return self._flight_time
