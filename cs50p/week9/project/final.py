@@ -40,7 +40,7 @@ def flight_info(flight, n):
             except ValueError:
                 continue
         flight.dest_time = convert_time.convert(input("Arrival time: "))
-        flight.flight_time()
+        flight.flight_time(flight.dep_time, flight.dep_timezone, flight.dest_time, flight.dest_timezone)
 
 if __name__ == "__main__":
     main()
