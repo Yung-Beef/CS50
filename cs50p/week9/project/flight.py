@@ -2,8 +2,10 @@ class Flight:
     def __init__(self):
         self._dep_city = ""
         self._dep_time = 0 # store as a number, h * 60 + m, import convert(s) from watch.py in week7
+        self._dep_timezone = 0
         self._dest_city = ""
         self._dest_time = 0 # store as a number, h * 60 + m, import convert(s) from watch.py in week7
+        self._dest_timezone = 0
         self._flight_time = 0
 
     def __str__(self):
@@ -35,6 +37,16 @@ class Flight:
         self._dep_time = dep_time
 
     @property
+    def dep_timezone(self):
+        return self._dep_timezone
+
+    @dep_timezone.setter
+    def dep_timezone(self, dep_timezone):
+        if not dep_timezone: # if dep_timezone == ""
+            raise ValueError("Missing timezone")
+        self._dep_timezone = dep_timezone
+
+    @property
     def dest_city(self):
         return self._dest_city
 
@@ -55,12 +67,22 @@ class Flight:
         self._dest_time = dest_time
 
     @property
+    def dest_timezone(self):
+        return self._dest_timezone
+
+    @dest_timezone.setter
+    def dest_timezone(self, dest_timezone):
+        if not dest_timezone: # if dest_timezone == ""
+            raise ValueError("Missing timezone")
+        self._dest_timezone = dest_timezone
+
+    @property
     def flight_time(self):
         return self._flight_time
 
+    #TODO
     @flight_time.setter
-    def flight_time(self, dep_time, dest_time):
-        if not flight_time: # if flight_time == ""
-            raise ValueError("Missing time")
-        self._flight_time = flight_time
+    def flight_time(self, dep_time, dep_timezone, dest_time, dest_timezone):
+
+        self._flight_time =
 
