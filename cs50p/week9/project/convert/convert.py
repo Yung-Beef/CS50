@@ -1,5 +1,9 @@
 import re
 
+def main():
+    s = input("Time: ")
+    print(convert(s))
+
 def convert(s):
     try:
         times = re.fullmatch(r"([0-9][0-9]?(?::[0-9][0-9])?) (AM|PM)", s)
@@ -19,13 +23,18 @@ def convert(s):
             raise ValueError
 
         # converts the times
-        if time["hour"] == 12 and time["half"] == "AM":
-            time["hour"] = 0
-        elif time["hour"] == 12 and time["half"] == "PM":
-            time["hour"] = 12
-        elif time["half"] == "PM":
-            time["hour"] = time["hour"] + 12
+        if hour == 12 and half == "AM":
+            hour = 0
+        elif hour == 12 and half == "PM":
+            hour = 12
+        elif half == "PM":
+            hour = hour + 12
     except AttributeError:
         raise ValueError
 
-    return f"{first[0]:02}:{first[1]:02} to {second[0]:02}:{second[1]:02}"
+    total_minutes = hour * 60 + minute
+
+    return total_minutes
+
+if __name__ == "__main__":
+    main()
