@@ -24,17 +24,20 @@ def main():
 def flight_info(flight): # pass in the flight object
     while True:
         try:
-            food = input().upper()
-            if food in groceries:
-                groceries[food] += 1
-            if food not in groceries:
-                groceries[food] = 1
+            flight.dep_city = input("Departure city: ")
+            flight.dep_timezone = input("Timezone of departure city: ")
+            flight.dep_time = input("Time of departure: ")
+            flight.dest_city = input("Destination: ")
+            flight.dest_timezone = input("Timezone of destination: ")
+            flight.dest_time = input("Arrival time: ")
+            while True:
+                more = input("Do you have another flight to add? Please answer Yes or No.\n")
+                if more == "Yes" or "No":
+                    break
+            if more == "No":
+                break
         except EOFError:
             break
-
-        # Do you have another flight to add?
-
-
 
 if __name__ == "__main__":
     main()
