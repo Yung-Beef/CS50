@@ -8,3 +8,23 @@ Flight data is stored in Flight class objects
 '''
 import flight
 from time_convert import convert
+
+def main():
+
+
+
+def user_inputs():
+    while True:
+        try:
+            food = input().upper()
+            if food in groceries:
+                groceries[food] += 1
+            if food not in groceries:
+                groceries[food] = 1
+        except EOFError:
+            break
+
+
+
+if __name__ == "__main__":
+    main()
