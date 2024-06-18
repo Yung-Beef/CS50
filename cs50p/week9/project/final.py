@@ -15,7 +15,7 @@ def main():
     for i in range(no_of_flights):
         flight_name = f"flight_{i}"
         flights[i] = flight_name
-
+        f"flight_{i}" = Flight()
 
 
 
