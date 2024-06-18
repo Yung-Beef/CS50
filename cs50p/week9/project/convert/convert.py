@@ -2,43 +2,29 @@ import re
 
 def convert(s):
     try:
-        times = re.fullmatch(r"([0-9][0-9]?(?::[0-9][0-9])?) (AM|PM) to ([0-9][0-9]?(?::[0-9][0-9])?) (AM|PM)", s)
-        time1, half1, time2, half2 = times.group(1), times.group(2), times.group(3), times.group(4)
+        times = re.fullmatch(r"([0-9][0-9]?(?::[0-9][0-9])?) (AM|PM)", s)
+        time, half = times.group(1), times.group(2)
 
         #handles 9 AM vs 9:00 AM and gets all of the variables set up and as integers
-        if ":" in time1:
-            hour1, minute1 = time1.split(":")
-            hour1 = int(hour1)
-            minute1 = int(minute1)
+        if ":" in time:
+            hour, minute = time.split(":")
+            hour = int(hour)
+            minute = int(minute)
         else:
-            hour1 = int(time1)
-            minute1 = 0
-        if ":" in time2:
-            hour2, minute2 = time2.split(":")
-            hour2 = int(hour2)
-            minute2 = int(minute2)
-        else:
-            hour2 = int(time2)
-            minute2 = 0
-
-        first = [hour1, minute1, half1]
-        first = {"hour": hour1, "minute": minute1, "half": half1}
-        second = [hour2, minute2, half2]
-        second = {"hour": hour2, "minute": minute2, "half": half2}
-        t = [first, second]
+            hour = int(time)
+            minute = 0
 
         # raises value error if invalid time format
-        if first["hour"] > 12 or second["hour"] > 12 or first["minute"] >= 60 or second["minute"] >= 60:
+        if hour > 12 or minute >= 60:
             raise ValueError
 
         # converts the times
-        for time in t:
-            if time[0] == 12 and time[2] == "AM":
-                time[0] = 0
-            elif time[0] == 12 and time[2] == "PM":
-                time[0] = 12
-            elif time[2] == "PM":
-                time[0] = time[0] + 12
+        if time["hour"] == 12 and time["half"] == "AM":
+            time["hour"] = 0
+        elif time["hour"] == 12 and time["half"] == "PM":
+            time["hour"] = 12
+        elif time["half"] == "PM":
+            time["hour"] = time["hour"] + 12
     except AttributeError:
         raise ValueError
 
