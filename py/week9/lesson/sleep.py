@@ -5,10 +5,8 @@ def main():
 
 
 def sheep(n):
-    flock = []
     for i in range(n):
-        flock.append("Sheep" * i)
-    return flock
+        yield "Sheep" * i
 
 if __name__ == "__main__":
     main()
