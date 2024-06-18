@@ -23,18 +23,23 @@ def main():
 
 # Collects the needed info for a flight, passing in the object for that light and which flight it is in their list
 def flight_info(flight, n):
-    try:
         print(f"Flight {n}")
         flight.dep_city = input("Departure city: ")
-        flight.dep_timezone = int(input("UTC timezone of departure city: "))
+        while True:
+            try:
+                flight.dep_timezone = int(input("UTC timezone of departure city: "))
+                break
+            except ValueError:
+                continue
         flight.dep_time = input("Time of departure: ")
         flight.dest_city = input("Destination: ")
-        flight.dest_timezone = int(input("UTC timezone of destination: "))
+        while True:
+            try:
+                flight.dest_timezone = int(input("UTC timezone of destination: "))
+                break
+            except ValueError:
+                continue
         flight.dest_time = input("Arrival time: ")
-    except EOFError:
-        break
-
-
 
 
 if __name__ == "__main__":
