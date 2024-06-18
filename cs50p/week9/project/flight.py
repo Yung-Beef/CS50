@@ -10,10 +10,7 @@ class Flight:
 
     def __str__(self):
         # print out all of the attributes
-
-
-
-    def check_flight_time(self, self.dep_time, self.dest_time):
+        return f"
 
 
     @property
