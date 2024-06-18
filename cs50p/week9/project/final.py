@@ -11,7 +11,16 @@ from time_convert import convert
 
 def main():
     no_of_flights = int(input("How many flights do you have? "))
-    for _ in range(no_of_flights):
+    flights = {}
+    for i in range(no_of_flights):
+        flight_name = f"flight_{i}"
+        flights[i] = flight_name
+
+
+
+
+
+
         # TODO: initialize each flight object
 
 
