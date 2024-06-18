@@ -14,28 +14,23 @@ def main():
     flights = []
     for _ in range(no_of_flights):
         flights.append(Flight())
-        flight_info(flights[_])
+        flight_info(flights[_], _ + 1)
 
-    # loop through the objects and add up the flight time
-
-
+    # TODO: loop through the objects and add up the flight time
 
 
-def flight_info(flight): # pass in the flight object
+
+# Collects the needed info for a flight, passing in the object for that light and which flight it is in their list
+def flight_info(flight, n):
     while True:
         try:
+            print(f"Flight {n}")
             flight.dep_city = input("Departure city: ")
             flight.dep_timezone = input("Timezone of departure city: ")
             flight.dep_time = input("Time of departure: ")
             flight.dest_city = input("Destination: ")
             flight.dest_timezone = input("Timezone of destination: ")
             flight.dest_time = input("Arrival time: ")
-            while True:
-                more = input("Do you have another flight to add? Please answer Yes or No.\n")
-                if more == "Yes" or "No":
-                    break
-            if more == "No":
-                break
         except EOFError:
             break
 
