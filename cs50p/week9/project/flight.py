@@ -59,7 +59,7 @@ class Flight:
         return self._flight_time
 
     @flight_time.setter
-    def flight_time(self, flight_time):
+    def flight_time(self, dep_time, dest_time):
         if not flight_time: # if flight_time == ""
             raise ValueError("Missing time")
         self._flight_time = flight_time
