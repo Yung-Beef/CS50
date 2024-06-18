@@ -31,7 +31,7 @@ def flight_info(flight, n):
                 break
             except ValueError:
                 continue
-        flight.dep_time = input("Time of departure: ")
+        flight.dep_time = convert(input("Time of departure: "))
         flight.dest_city = input("Destination: ")
         while True:
             try:
@@ -39,7 +39,7 @@ def flight_info(flight, n):
                 break
             except ValueError:
                 continue
-        flight.dest_time = input("Arrival time: ")
+        flight.dest_time = convert(input("Arrival time: "))
         flight.flight_time()
 
 if __name__ == "__main__":
