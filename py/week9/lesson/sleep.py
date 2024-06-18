@@ -1,11 +1,14 @@
 def main():
     n = int(input("What's N? "))
+    for s in sheep(n):
+        print(s)
 
-    for i in range(n):
-        print(sheep(i))
 
 def sheep(n):
-    return "Sheep" * n
+    flock = []
+    for i in range(n):
+        flock.append("Sheep" * i)
+    return flock
 
 if __name__ == "__main__":
     main()
