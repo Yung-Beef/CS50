@@ -7,8 +7,9 @@ def main():
 
 def convert(s):
     try:
-        date = re.fullmatch(r"([0-9][0-9]?)/([0-9][0-9]?)/([0-9][0-9](?:[0-9][0-9])?)", s)
+        date = re.fullmatch(r"([0-9][0-9])/([0-9][0-9])/([0-9][0-9][0-9][0-9])", s)
         month, day, year = int(date.group(1)), int(date.group(2)), int(date.group(3))
+
 
         # raises value error if invalid time format
         if month > 12 or day > 31:

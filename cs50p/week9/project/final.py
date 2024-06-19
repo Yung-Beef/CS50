@@ -39,7 +39,7 @@ def flight_info(flight, n):
         while True:
             try:
                 # get the date
-                year, month, day = convert_date.convert(input("Date of departure: "))
+                year, month, day = convert_date.convert(input("Date of departure (MM/DD/YYYY): "))
                 break
             except ValueError:
                 continue
