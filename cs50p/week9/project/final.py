@@ -22,7 +22,8 @@ def main():
         total_seconds = 0
         total_seconds = total_seconds + flight_times[_]
 
-    print(str(timedelta(seconds=total_seconds)))
+    flight_time = str(timedelta(seconds=total_seconds))
+    print(f"Total flight time: {flight_time}")
 
 
     # TODO: loop through the objects and add up the flight time
