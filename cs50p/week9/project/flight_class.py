@@ -10,7 +10,7 @@ class Flight:
 
     def __str__(self):
         # print out all of the attributes
-        return f"Departing {dep_city} at {dep_time}\nArriving to {dest_city} at {dest_time}\nFlight time: {flight_time}"
+        return f"Departing {self.dep_city} at {self.dep_time}\nArriving to {self.dest_city} at {self.dest_time}\nFlight time: {self.flight_time}"
 
     # Depature city
     @property
