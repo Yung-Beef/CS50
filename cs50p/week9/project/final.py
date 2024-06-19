@@ -97,7 +97,7 @@ def flight_info(flight, n):
 
         # Calculates flight time and prints
         time = flight.dest_time - flight.dep_time
-        print(f"Flight time: {time}")
+        print(f"Flight {n} time: {time}")
         return time.seconds
 
 
