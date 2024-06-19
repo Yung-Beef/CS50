@@ -12,14 +12,15 @@ from datetime import datetime, timedelta
 
 def main():
     no_of_flights = int(input("How many flights do you have? "))
-    flights = []
-    flight_times = []
-    for _ in range(no_of_flights):
-        flights.append(Flight())
-        flight_times.append(flight_info(flights[_], _ + 1))
+    flights = [], flight_times = []
+    total_seconds = 0
 
     for _ in range(no_of_flights):
-        total_seconds = 0
+        # Create each flight object
+        flights.append(Flight())
+        # Get data for each flight
+        flight_times.append(flight_info(flights[_], _ + 1))
+        # Add up the times for all the flights
         total_seconds = total_seconds + flight_times[_]
 
     flight_time = str(timedelta(seconds=total_seconds))
