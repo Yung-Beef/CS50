@@ -16,7 +16,7 @@ def main():
     flight_times = []
     for _ in range(no_of_flights):
         flights.append(Flight())
-        flight_info(flights[_], _ + 1)
+        flight_times.append(flight_info(flights[_], _ + 1))
 
     for _ in range(no_of_flights):
         total_time = datetime()
@@ -94,8 +94,8 @@ def flight_info(flight, n):
 
         # Calculates flight time and prints
         time = flight.dest_time - flight.dep_time
-        global flight_times.append(time)
         print(f"Flight time: {time}")
+        return time
 
 
 if __name__ == "__main__":
