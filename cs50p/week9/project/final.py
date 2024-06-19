@@ -13,14 +13,14 @@ from datetime import datetime, timedelta
 def main():
     no_of_flights = int(input("How many flights do you have? "))
     flights = []
-    times = []
+    flight_times = []
     for _ in range(no_of_flights):
         flights.append(Flight())
         flight_info(flights[_], _ + 1)
 
     for _ in range(no_of_flights):
         total_time = datetime()
-        total_time = total_time + times[_]
+        total_time = total_time + flight_times[_]
 
     print(total_time)
 
@@ -94,7 +94,7 @@ def flight_info(flight, n):
 
         # Calculates flight time and prints
         time = flight.dest_time - flight.dep_time
-        times.append(time)
+        global flight_times.append(time)
         print(f"Flight time: {time}")
 
 
