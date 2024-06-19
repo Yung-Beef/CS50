@@ -51,6 +51,7 @@ def flight_info(flight, n):
                 hour, minute = convert_time.convert(input("Time of departure: "))
                 break
             except ValueError:
+                print("Please input a correct time format, such as 11:14 PM\n")
                 continue
 
 
