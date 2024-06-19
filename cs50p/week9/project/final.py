@@ -31,7 +31,18 @@ def flight_info(flight, n):
                 break
             except ValueError:
                 continue
-        flight.dep_time = convert_time.convert(input("Time of departure: "))
+
+        # while True: # for date
+
+
+        #time  convert_time.convert(input("Time of departure: "))
+
+
+
+        # put date and time into some datetime thing
+
+        # flight.dep_time = datetime
+
         flight.dest_city = input("Destination: ")
         # Ensure correct input
         while True:
