@@ -6,7 +6,7 @@ def main():
 
 def convert(s):
     try:
-        date = 
+        date = re.fullmatch(f"([0-9][0-9]?)/([0-9][0-9]?)/([0-9][0-9]?)", s)
         times = re.fullmatch(r"([0-9][0-9]?(?::[0-9][0-9])?) (AM|PM)", s)
         time, half = times.group(1), times.group(2)
 
@@ -20,7 +20,7 @@ def convert(s):
             minute = 0
 
         # raises value error if invalid time format
-        if hour > 12 or minute >= 60:
+        if month > 12 or day > 31:
             raise ValueError
 
     except AttributeError:
