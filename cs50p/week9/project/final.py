@@ -51,8 +51,8 @@ def flight_info(flight, n):
                 continue
 
         # Create datetime object for departure
-        local = datetime.datetime(year, month, day, hour=hour, minute=minute)
-        flight.dep_time = local - timedelta(hours=flight.dep_timezone)
+        departure = datetime.datetime(year, month, day, hour=hour, minute=minute)
+        flight.dep_time = departure - timedelta(hours=flight.dep_timezone)
 
 
         ## Destination
@@ -80,13 +80,15 @@ def flight_info(flight, n):
                 print("Please input a correct time format, such as 11:14 PM\n")
                 continue
 
-        # Create datetime object for departure
-        local = datetime.datetime(year, month, day, hour=hour, minute=minute)
-        flight.dest_time = local - timedelta(hours=flight.dest_timezone)
+        # Create datetime object for destination
+        destination = datetime.datetime(year, month, day, hour=hour, minute=minute)
+        flight.dest_time = destination - timedelta(hours=flight.dest_timezone)
 
         # Calculates flight time and prints
-        flight.set_flight_time()
-        print(flight)
+        time = flight.dest_time - flight.dep_time
+        print(time)
+        #flight.set_flight_time()
+        #print(flight)
 
 if __name__ == "__main__":
     main()
