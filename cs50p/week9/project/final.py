@@ -26,28 +26,23 @@ def main():
 def flight_info(flight, n):
         print(f"\nFlight {n}")
         flight.dep_city = input("Departure city: ")
-        # Ensure correct input
+        # Ensure correct timezone input
         while True:
             try:
                 flight.dep_timezone = int(input("UTC timezone of departure city: "))
                 break
             except ValueError:
                 continue
-
-
-        # get the day with correct input
+        # Ensure correct date input
         while True:
             try:
-                # get the date
                 year, month, day = convert_date.convert(input("Date of departure (MM/DD/YYYY): "))
                 break
             except ValueError:
                 continue
-
-        # get the time with correct input
+        # Ensure correct time input
         while True:
             try:
-                # get the date
                 hour, minute = convert_time.convert(input("Time of departure: "))
                 break
             except ValueError:
