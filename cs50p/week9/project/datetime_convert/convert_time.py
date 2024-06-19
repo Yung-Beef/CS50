@@ -34,7 +34,7 @@ def convert(s):
 
     total_minutes = hour * 60 + minute
 
-    return total_minutes
+    return hour, minute
 
 if __name__ == "__main__":
     main()

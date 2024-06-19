@@ -8,6 +8,7 @@ Flight data is stored in Flight class objects
 '''
 from flight_class import Flight
 from datetime_convert import convert_time
+from datetime_convert import convert_date
 from datetime import datetime
 
 def main():
@@ -33,7 +34,24 @@ def flight_info(flight, n):
             except ValueError:
                 continue
 
-        # while True: # for date
+
+        # get the day with correct input
+        while True:
+            try:
+                # get the date
+                year, month, day = convert_date.convert(input("Date of departure: "))
+                break
+            except ValueError:
+                continue
+
+        # get the time with correct input
+        while True:
+            try:
+                # get the date
+                hour, minute = convert_time.convert(input("Time of departure: "))
+                break
+            except ValueError:
+                continue
 
 
         #time  convert_time.convert(input("Time of departure: "))
@@ -42,9 +60,10 @@ def flight_info(flight, n):
 
         # put date and time into some datetime thing
 
-        # flight.dep_time = datetime
+        flight.dep_time = datetime.datetime(year, month, day, hour=hour, minute=minute, tzinfo=)
 
-        dt = datetime.datetime(year, month, day, hour=, minute=, second=, tzinfo=)
+
+
 
 
 

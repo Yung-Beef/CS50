@@ -2,7 +2,8 @@ import re
 
 def main():
     s = input("Date: ")
-    print(convert(s))
+    month, day, year = convert(s)
+    print(f"{month}/{day}/{year}")
 
 def convert(s):
     try:
@@ -16,9 +17,7 @@ def convert(s):
     except AttributeError:
         raise ValueError
 
-
-
-    return f"{month}/{day}/{year}"
+    return year, month, day
 
 if __name__ == "__main__":
     main()
