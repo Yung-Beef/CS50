@@ -2,7 +2,8 @@ import re
 
 def main():
     s = input("Time: ")
-    print(convert(s))
+    hour, minute = convert(s)
+    print(f"{hour}:{minute}")
 
 def convert(s):
     try:
@@ -31,8 +32,6 @@ def convert(s):
             hour = hour + 12
     except AttributeError:
         raise ValueError
-
-    total_minutes = hour * 60 + minute
 
     return hour, minute
 
