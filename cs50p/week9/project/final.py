@@ -24,6 +24,8 @@ def main():
 # Collects the needed info for a flight, passing in the object for that flight and which flight it is in their list
 def flight_info(flight, n):
         print(f"\nFlight {n}")
+
+        ## Departure
         flight.dep_city = input("Departure city: ")
         # Ensure correct timezone input
         while True:
@@ -32,14 +34,6 @@ def flight_info(flight, n):
                 break
             except ValueError:
                 continue
-
-
-        #timezone shit
-        datetime.timezone(-timedelta(hours=24))
-
-
-
-
         # Ensure correct date input
         while True:
             try:
@@ -56,28 +50,40 @@ def flight_info(flight, n):
                 print("Please input a correct time format, such as 11:14 PM\n")
                 continue
 
+        # Create datetime object for departure
+        local = datetime.datetime(year, month, day, hour=hour, minute=minute)
+        flight.dep_time = local - timedelta(hours=flight.dep_timezone)
 
 
-
-
-
-        # put date and time into some datetime thing
-        flight.dep_time = datetime.datetime(year, month, day, hour=hour, minute=minute, tzinfo=timezone(timedelta(hours=flight.dep_timezone)))
-
-
-
-
-
-
+        ## Destination
         flight.dest_city = input("Destination: ")
-        # Ensure correct input
+        # Ensure correct timezone input
         while True:
             try:
                 flight.dest_timezone = int(input("UTC timezone of destination: "))
                 break
             except ValueError:
                 continue
-        flight.dest_time = convert_time.convert(input("Arrival time: "))
+        # Ensure correct date input
+        while True:
+            try:
+                year, month, day = convert_date.convert(input("Date of arrival (MM/DD/YYYY): "))
+                break
+            except ValueError:
+                continue
+        # Ensure correct time input
+        while True:
+            try:
+                hour, minute = convert_time.convert(input("Time of arrival: "))
+                break
+            except ValueError:
+                print("Please input a correct time format, such as 11:14 PM\n")
+                continue
+
+        # Create datetime object for departure
+        local = datetime.datetime(year, month, day, hour=hour, minute=minute)
+        flight.dest_time = local - timedelta(hours=flight.dest_timezone)
+
         # Calculates flight time and prints
         flight.set_flight_time()
         print(flight)
