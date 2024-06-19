@@ -43,6 +43,10 @@ def flight_info(flight, n):
 
         # flight.dep_time = datetime
 
+        flight.datetime
+
+
+
         flight.dest_city = input("Destination: ")
         # Ensure correct input
         while True:
