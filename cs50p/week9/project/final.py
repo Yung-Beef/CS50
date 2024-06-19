@@ -21,11 +21,8 @@ def main():
     for _ in range(no_of_flights):
         total_seconds = 0
         total_seconds = total_seconds + flight_times[_]
-        minutes = total_seconds % 60
-        hours = total_seconds % 3600
-        
 
-    print(total_time)
+    print(str(timedelta(seconds=total_seconds)))
 
 
     # TODO: loop through the objects and add up the flight time
