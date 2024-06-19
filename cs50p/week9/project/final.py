@@ -1,9 +1,9 @@
 '''
 Total Flying Time Calculator
-User inputs a departure city and time and a destination city and time
+User inputs a number of flights
+User then inputs a departure city, date, time, and timezone, and the same for a destination city
 User can then enter another flight
-Loop repeats until the user breaks it via keyboard input
-Program prints out each flight with it's locations, departure/arrival times, and flight time, and the overall total flight time at the end
+Program prints out each flight's time, and the overall total flight time at the end
 Flight data is stored in Flight class objects
 '''
 from flight_class import Flight
