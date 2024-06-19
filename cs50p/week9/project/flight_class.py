@@ -86,7 +86,6 @@ class Flight:
     def flight_time(self):
         return self._flight_time
 
-
     def set_flight_time(self):
         dep_updated = self.dep_time - (self.dep_timezone * 60)
         dest_updated = self.dest_time - (self.dest_timezone * 60)
