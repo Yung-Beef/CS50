@@ -84,13 +84,12 @@ class Flight:
             raise ValueError("Missing timezone")
         self._dest_timezone = dest_timezone
 
-    # Flight time
-    @property
-    def flight_time(self):
-        return self._flight_time
+    # # Flight time
+    # @property
+    # def flight_time(self):
+    #     return self._flight_time
 
-    def set_flight_time(self):
-        dep_updated = self.dep_time - (self.dep_timezone * 60)
-        dest_updated = self.dest_time - (self.dest_timezone * 60)
-        self._flight_time = dest_updated - dep_updated
+    # @flight_time.setter
+    # def flight_time(self):
+
 
