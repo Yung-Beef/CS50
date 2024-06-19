@@ -43,7 +43,7 @@ def flight_info(flight, n):
         while True:
             try:
                 flight.dep_timezone = int(input("UTC timezone of departure city: "))
-                if -12 < flight.dep_timezone < 14:
+                if -12 <= flight.dep_timezone <= 14:
                     break
             except ValueError:
                 continue
@@ -60,7 +60,7 @@ def flight_info(flight, n):
                 hour, minute = convert_time.convert(input("Time of departure: "))
                 break
             except ValueError:
-                print("Please input a correct time format, such as 11:14 PM\n")
+                print("Please input a correct time format, such as 11:14 PM")
                 continue
 
         # Create datetime object for departure
