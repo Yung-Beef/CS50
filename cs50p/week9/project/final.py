@@ -9,6 +9,7 @@ Flight data is stored in Flight class objects
 from flight_class import Flight
 from datetime_convert import convert_date, convert_time
 from datetime import datetime
+import pytz
 
 def main():
     no_of_flights = int(input("How many flights do you have? "))
@@ -62,8 +63,8 @@ def flight_info(flight, n):
 
 
         # put date and time into some datetime thing
-
-        flight.dep_time = datetime.datetime(year, month, day, hour=hour, minute=minute, tzinfo=)
+        original = datetime.datetime(year, month, day, hour=hour, minute=minute, tzinfo=)
+        flight.dep_time = original.astimezone(pytz.UTC)
 
 
 
