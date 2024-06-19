@@ -28,10 +28,6 @@ def main():
     print(f"Total flight time: {flight_time}")
 
 
-    # TODO: loop through the objects and add up the flight time
-    # create a function that accepts the list of flights and returns the total time
-
-
 # Collects the needed info for a flight, passing in the object for that flight and which flight it is in their list
 def flight_info(flight, n):
         print(f"\nFlight {n}")
