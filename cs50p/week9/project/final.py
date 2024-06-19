@@ -18,7 +18,8 @@ def main():
         flight_info(flights[_], _ + 1)
 
     for _ in range(no_of_flights):
-        total_time
+        times = []
+        times.append(flights[_].)
 
     # TODO: loop through the objects and add up the flight time
     # create a function that accepts the list of flights and returns the total time
