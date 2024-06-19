@@ -8,6 +8,7 @@ Flight data is stored in Flight class objects
 '''
 from flight_class import Flight
 from datetime_convert import convert_time
+from datetime import datetime
 
 def main():
     no_of_flights = int(input("How many flights do you have? "))
@@ -43,7 +44,7 @@ def flight_info(flight, n):
 
         # flight.dep_time = datetime
 
-        flight.datetime
+        datetime = datetime.datetime()
 
 
 
