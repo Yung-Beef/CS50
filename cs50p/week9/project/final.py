@@ -62,7 +62,7 @@ def flight_info(flight, n):
 
 
         # put date and time into some datetime thing
-        flight.dep_time = datetime.datetime(year, month, day, hour=hour, minute=minute, tzinfo=timedelta(hours=flight.dep_timezone))
+        flight.dep_time = datetime.datetime(year, month, day, hour=hour, minute=minute, tzinfo=timezone(timedelta(hours=flight.dep_timezone)))
 
 
 
