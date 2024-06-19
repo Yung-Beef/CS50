@@ -74,7 +74,8 @@ def flight_info(flight, n):
         while True:
             try:
                 flight.dest_timezone = int(input("UTC timezone of destination: "))
-                break
+                if -12 <= flight.dest_timezone <= 14:
+                    break
             except ValueError:
                 continue
         # Ensure correct date input
