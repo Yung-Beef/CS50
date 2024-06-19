@@ -18,11 +18,14 @@ def main():
         flights.append(Flight())
         flight_times.append(flight_info(flights[_], _ + 1))
 
-    # for _ in range(no_of_flights):
-    #     total_time = datetime()
-    #     total_time = total_time + flight_times[_]
+    for _ in range(no_of_flights):
+        total_seconds = 0
+        total_seconds = total_seconds + flight_times[_]
+        minutes = total_seconds % 60
+        hours = total_seconds % 3600
+        
 
-    # print(total_time)
+    print(total_time)
 
 
     # TODO: loop through the objects and add up the flight time
@@ -95,8 +98,7 @@ def flight_info(flight, n):
         # Calculates flight time and prints
         time = flight.dest_time - flight.dep_time
         print(f"Flight time: {time}")
-        print(time.seconds)
-        #return time
+        return time.seconds
 
 
 if __name__ == "__main__":
