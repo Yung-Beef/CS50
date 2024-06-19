@@ -11,7 +11,12 @@ from datetime_convert import convert_date, convert_time
 from datetime import datetime, timedelta
 
 def main():
-    no_of_flights = int(input("How many flights do you have? "))
+    while True:
+        try:
+            no_of_flights = int(input("How many flights do you have? "))
+            break
+        except ValueError:
+            continue
     flights = []
     flight_times = []
     total_seconds = 0
