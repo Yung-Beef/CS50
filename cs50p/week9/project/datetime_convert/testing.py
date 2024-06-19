@@ -1,3 +1,5 @@
 from datetime import tzinfo
+from datetime import datetime
 
-print(tzinfo.utcoffset())
+a = datetime.today()
+print(tzinfo.utcoffset(a))
