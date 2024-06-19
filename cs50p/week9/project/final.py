@@ -33,6 +33,14 @@ def flight_info(flight, n):
                 break
             except ValueError:
                 continue
+
+
+        #timezone shit
+        datetime.timezone(-timedelta(hours=24))
+
+
+
+
         # Ensure correct date input
         while True:
             try:
@@ -50,7 +58,7 @@ def flight_info(flight, n):
                 continue
 
 
-        #time  convert_time.convert(input("Time of departure: "))
+
 
 
 
