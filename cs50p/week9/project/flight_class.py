@@ -11,7 +11,7 @@ class Flight:
     def __str__(self):
         # print out all of the attributes
         minutes = self.flight_time % 60
-        hours = (self.flight_time - minutes) / 60
+        hours = int((self.flight_time - minutes) / 60)
         time_string = f"{hours} hours and {minutes:} minutes"
         return f"\nFlight time from {self.dep_city} to {self.dest_city}: {time_string}"
 
