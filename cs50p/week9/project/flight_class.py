@@ -4,7 +4,7 @@ class Flight:
         self._dep_time = 0 # store as a number, h * 60 + m, import convert(s) from watch.py in week7
         self._dep_timezone = 0
         self._dest_city = ""
-        self._dest_time = 0 # store as a number, h * 60 + m, import convert(s) from watch.py in week7
+        self._dest_time = 0 # store as a number, h * 60 + m, minutes since midnight
         self._dest_timezone = 0
         self._flight_time = 0
 
@@ -12,7 +12,10 @@ class Flight:
         # print out all of the attributes
         minutes = self.flight_time % 60
         hours = int((self.flight_time - minutes) / 60)
-        time_string = f"{hours} hours and {minutes:} minutes"
+        if minutes > 0:
+            time_string = f"{hours} hours and {minutes:} minutes"
+        else:
+            time_string = f"{hours} hours"
         return f"\nFlight time from {self.dep_city} to {self.dest_city}: {time_string}"
 
     # Depature city
