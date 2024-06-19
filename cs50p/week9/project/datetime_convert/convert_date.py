@@ -18,7 +18,7 @@ def convert(s):
 
 
 
-    return f"{month}/{date}/{year}"
+    return f"{month}/{day}/{year}"
 
 if __name__ == "__main__":
     main()
