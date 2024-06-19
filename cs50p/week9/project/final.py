@@ -20,10 +20,11 @@ def main():
     # create a function that accepts the list of flights and returns the total time
 
 
-# Collects the needed info for a flight, passing in the object for that light and which flight it is in their list
+# Collects the needed info for a flight, passing in the object for that flight and which flight it is in their list
 def flight_info(flight, n):
         print(f"\nFlight {n}")
         flight.dep_city = input("Departure city: ")
+        # Ensure correct input
         while True:
             try:
                 flight.dep_timezone = int(input("UTC timezone of departure city: "))
@@ -32,6 +33,7 @@ def flight_info(flight, n):
                 continue
         flight.dep_time = convert_time.convert(input("Time of departure: "))
         flight.dest_city = input("Destination: ")
+        # Ensure correct input
         while True:
             try:
                 flight.dest_timezone = int(input("UTC timezone of destination: "))
@@ -39,6 +41,7 @@ def flight_info(flight, n):
             except ValueError:
                 continue
         flight.dest_time = convert_time.convert(input("Arrival time: "))
+        # Calculates flight time and prints
         flight.set_flight_time()
         print(flight)
 
