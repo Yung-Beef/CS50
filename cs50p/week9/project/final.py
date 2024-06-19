@@ -63,7 +63,7 @@ def flight_info(flight, n):
 
 
         # put date and time into some datetime thing
-        original = datetime.datetime(year, month, day, hour=hour, minute=minute, tzinfo=)
+        original = datetime.datetime(year, month, day, hour=hour, minute=minute, tzinfo=timedelta(hours=flight.dep_timezone))
         flight.dep_time = original.astimezone(pytz.UTC)
 
 
