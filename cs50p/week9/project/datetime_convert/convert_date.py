@@ -2,7 +2,7 @@ import re
 
 def main():
     s = input("Date: ")
-    month, day, year = convert(s)
+    year, month, day = convert(s)
     print(f"{month}/{day}/{year}")
 
 def convert(s):
