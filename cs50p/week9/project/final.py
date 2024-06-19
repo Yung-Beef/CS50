@@ -44,7 +44,7 @@ def flight_info(flight, n):
 
         # flight.dep_time = datetime
 
-        datetime = datetime.datetime()
+        dt = datetime.datetime(year, month, day, hour=, minute=, second=, tzinfo=)
 
 
 
